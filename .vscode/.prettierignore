@@ -1,0 +1,19 @@
+# do not run Prettier against JavaScript files
+# in "snapshots/" folders
+**/snapshots/*.js
+
+# do not format dist folder and node modules
+/node_modules
+/dist
+
+stats.json
+
+# Logs
+logs
+*.log
+
+# dotenv environment variables file
+.env
+
+*.js
+
