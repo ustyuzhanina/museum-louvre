@@ -2,7 +2,6 @@
   "trailingComma": "es5",
   "tabWidth": 2,
   "semi": false,
-  "singleQuote": true,
   "proseWrap": "always",
   "printWidth": 80,
   "arrowParens": "avoid",
@@ -28,13 +27,15 @@
     {
       "files": "*.css",
       "options": {
-        "parser": "css"
+        "parser": "css",
+        "singleQuote": false
       }
     },
     {
       "files": "*.scss",
       "options": {
-        "parser": "css"
+        "parser": "css",
+        "singleQuote": false
       }
     },
     {

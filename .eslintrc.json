@@ -35,9 +35,9 @@
         // "unicorn/prevent-abbreviations": "off",
         // "unicorn/no-null": "off",
         "import/no-extraneous-dependencies": "off",
-        "import/prefer-default-export": "off"
-        // "quotes": ["warn", "single", {
-        //   "allowTemplateLiterals": true
-        // }]
+        "import/prefer-default-export": "off",
+        "quotes": ["warn", "single", {
+        "allowTemplateLiterals": true
+        }]
     }
 }

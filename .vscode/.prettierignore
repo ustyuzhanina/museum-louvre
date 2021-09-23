@@ -17,3 +17,5 @@ logs
 
 *.js
 
+webpack.config.js
+

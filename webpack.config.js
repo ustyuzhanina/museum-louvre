@@ -87,7 +87,7 @@ module.exports = {
     new CleanWebpackPlugin(),
 
     new HtmlWebpackPlugin({
-      title: "Home",
+      title: "museum",
       template: "./index.html",
       minify: {
         collapseWhitespace: isProd,
@@ -101,8 +101,8 @@ module.exports = {
     new CopyPlugin({
       patterns: [
         {
-          from: "assets/images/static/",
-          to: "../dist/images/static",
+          from: "assets/svg/",
+          to: "../dist/assets/svg/",
         },
       ],
     }),
