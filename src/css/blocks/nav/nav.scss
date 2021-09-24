@@ -25,6 +25,14 @@
         letter-spacing: 2px;
         line-height: 25.3px;
       }
+
+      &:hover a {
+        color: $link-hover;
+      }
+
+      &:active a {
+        color: $link-active;
+      }
     }
   }
 }

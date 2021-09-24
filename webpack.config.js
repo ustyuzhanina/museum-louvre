@@ -78,7 +78,7 @@ module.exports = {
   devServer: {
     overlay: true,
     hot: isDev,
-    port: 4200,
+    port: 3000,
   },
 
   devtool: isDev ? "source-map" : "",
@@ -101,8 +101,12 @@ module.exports = {
     new CopyPlugin({
       patterns: [
         {
-          from: "assets/svg/",
-          to: "../dist/assets/svg/",
+          from: "assets/svg",
+          to: "assets/svg/",
+        },
+        {
+          from: "assets/img",
+          to: "assets/img/",
         },
       ],
     }),
@@ -142,63 +146,20 @@ module.exports = {
 
       //images
       {
-        test: /\.(png|jpe?g|gif)$/i,
+        test: /\.(png|jpe?g|gif|ico|svg)$/i,
         use: [
           {
-            loader: "file-loader",
+            loader: 'file-loader',
             options: {
               esModule: false,
-              name: "[name].[ext]",
-              outputPath: "assets/img",
-              publicPath: "../assets/img/",
+              name: '[name].[ext]',
+              outputPath: 'assets/img',
+              publicPath: '../assets/img/',
               emitFile: true,
             },
           },
           {
-            loader: "image-webpack-loader",
-            options: {
-              esModule: false,
-              mozjpeg: {
-                progressive: true,
-                quality: 65,
-              },
-              optipng: {
-                enabled: false,
-              },
-              pngquant: {
-                quality: [0.65, 0.9],
-                speed: 4,
-              },
-              gifsicle: {
-                interlaced: false,
-              },
-              webp: {
-                quality: 85,
-              },
-              svgo: {
-                enabled: true,
-              },
-            },
-          },
-        ],
-      },
-
-      //icons
-      {
-        test: /\.(ico|svg)$/i,
-        use: [
-          {
-            loader: "file-loader",
-            options: {
-              esModule: false,
-              name: "[name].[ext]",
-              outputPath: "assets/svg",
-              publicPath: "../assets/svg/",
-              emitFile: true,
-            },
-          },
-          {
-            loader: "image-webpack-loader",
+            loader: 'image-webpack-loader',
             options: {
               esModule: false,
               mozjpeg: {
