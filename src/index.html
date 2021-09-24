@@ -10,9 +10,119 @@
       htmlWebpackPlugin.options.title %></title>
 </head>
 
-<body>
+<body class="page">
+    <header class="header">
+        <div class="container header_container">
 
-    <div class="wrapper"></div>
+            <div class="logo">
+                <div class="logo__icon"></div>
+                <p class="logo__text>">LOUVRE</p>
+            </div>
+
+            <nav class="nav">
+                <ul>
+                    <li class="nav__item"><a href="#visiting">Visiting</a></li>
+                    <li class="nav__item"><a href="#explore">Explore</a></li>
+                    <li class="nav__item"><a href="#video">Video</a></li>
+                    <li class="nav__item"><a href="#gallery">Gallery</a></li>
+                    <li class="nav__item"><a href="#tickets">Tickets</a></li>
+                    <li class="nav__item"><a href="#contacts">Contacts</a></li>
+                </ul>
+            </nav>
+
+        </div>
+    </header>
+
+    <main class="content">
+
+        <section class="section section_welcome">
+            <div class="container section_welcome__container">
+                <h2 class="section-title section-title_dark-area">Welcome<br>
+                    to the Louvre</h2>
+                <p>From the castle to the museum</p>
+                <a href="https://www.google.com/maps/@48.8618159,2.3366818,3a,75y,81.55h,73.4t/data=!3m7!1e1!3m5!1sAF1QipOVxZQuSy3Bx9T_HpH_7FtBHDTXvI6SF-A10ocT!2e10!3e12!7i5472!8i2736" class="button section_welcome__button" target="_blank">Discover the Louvre</a>
+            </div>
+            <div class="container container_insert"></div>
+        </section>
+
+        <section class="section section_visiting" id="visiting">
+            <div class="container">
+                <h2 class="section-title section-title_underline">Virtual Tour</h2>
+                <div class="cards-container">
+                    <a href="" class="card">
+                        <img class="card__img" src="<%=require('./assets/img/visiting/royal-palace.jpg')%>" alt="Picture of Royal Palace">
+                        <h3>Royal Palace</h3>
+                        <p class="card__line-1">360° Virtual Tour</p>
+                        <p class="card__line-2">Google Street Panorama View</p>
+                    </a>
+                    <a href="" class="card">
+                        <img class="card__img" src="" alt="Picture of Denon Wing">
+                        <h3>Denon Wing</h3>
+                        <p class="card__line-1">360° Virtual Tour</p>
+                        <p class="card__line-2">Google Street Panorama View</p>
+                    </a>
+                    <a href="" class="card">
+                        <img class="card__img" src="" alt="Picture of Colonnade Perrault">
+                        <h3>Colonnade Perrault</h3>
+                        <p class="card__line-1">360° Virtual Tour</p>
+                        <p class="card__line-2">Google Street Panorama View</p>
+                    </a>
+                    <a href="" class="card">
+                        <img class="card__img" src="" alt="Picture of Greek Hall">
+                        <h3>Greek Hall</h3>
+                        <p class="card__line-1">360° Virtual Tour</p>
+                        <p class="card__line-2">Google Street Panorama View</p>
+                    </a>
+                    <a href="" class="card">
+                        <img class="card__img" src="" alt="Picture of Mona Lisa">
+                        <h3>Mona Lisa</h3>
+                        <p class="card__line-1">360° Virtual Tour</p>
+                        <p class="card__line-2">Google Street Panorama View</p>
+                    </a>
+                    <a href="" class="card">
+                        <img class="card__img" src="" alt="Picture of Night Palace">
+                        <h3>Night Palace</h3>
+                        <p class="card__line-1">360° Virtual Tour</p>
+                        <p class="card__line-2">Google Street Panorama View</p>
+                    </a>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="section section_explore" id="explore">
+            <div class="container">
+                <h2 class="section-title"></h2>
+            </div>
+        </section>
+        <section class="section section_video" id="video">
+            <div class="container">
+                <h2 class="section-title"></h2>
+            </div>
+        </section>
+        <section class="section section_gallery" id="gallery">
+            <div class="container">
+                <h2 class="section-title"></h2>
+            </div>
+        </section>
+        <section class="section section_tickets" id="tickets">
+            <div class="container">
+                <h2 class="section-title"></h2>
+            </div>
+        </section>
+        <section class="section section_contacts" id="contacts">
+            <div class="container">
+                <h2 class="section-title"></h2>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <div class="container"></div>
+    </footer>
+
+
 
 </body>
 

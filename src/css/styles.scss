@@ -1,5 +1,23 @@
-@import "variables";
-body {
-  background-color: $font-gold;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
-@import "./blocks/wrapper/wrapper.scss";
+html {
+  scroll-behavior: smooth;
+}
+@import "variables";
+
+@import "./blocks/page/page.scss";
+@import "./blocks/header/header.scss";
+@import "./blocks/container/container.scss";
+@import "./blocks/logo/logo.scss";
+@import "./blocks/nav/nav.scss";
+@import "./blocks/section/section.scss";
+@import "./blocks/section-title/section-title.scss";
+@import "./blocks/cards-container/cards-container.scss";
+@import "./blocks/card/card.scss";
+
+
+
+

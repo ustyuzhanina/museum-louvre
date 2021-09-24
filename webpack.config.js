@@ -142,15 +142,58 @@ module.exports = {
 
       //images
       {
-        test: /\.(png|jpe?g|gif|ico|svg)$/i,
+        test: /\.(png|jpe?g|gif)$/i,
         use: [
           {
             loader: "file-loader",
             options: {
               esModule: false,
               name: "[name].[ext]",
-              outputPath: "images",
-              publicPath: "../images/",
+              outputPath: "assets/img",
+              publicPath: "../assets/img/",
+              emitFile: true,
+            },
+          },
+          {
+            loader: "image-webpack-loader",
+            options: {
+              esModule: false,
+              mozjpeg: {
+                progressive: true,
+                quality: 65,
+              },
+              optipng: {
+                enabled: false,
+              },
+              pngquant: {
+                quality: [0.65, 0.9],
+                speed: 4,
+              },
+              gifsicle: {
+                interlaced: false,
+              },
+              webp: {
+                quality: 85,
+              },
+              svgo: {
+                enabled: true,
+              },
+            },
+          },
+        ],
+      },
+
+      //icons
+      {
+        test: /\.(ico|svg)$/i,
+        use: [
+          {
+            loader: "file-loader",
+            options: {
+              esModule: false,
+              name: "[name].[ext]",
+              outputPath: "assets/svg",
+              publicPath: "../assets/svg/",
               emitFile: true,
             },
           },
@@ -190,7 +233,7 @@ module.exports = {
           {
             loader: "file-loader",
             options: {
-              name: "vendor/fonts/[name].[ext]",
+              name: "assets/fonts/[name].[ext]",
             },
           },
         ],
