@@ -1,15 +1,25 @@
 {
-  "editor.defaultFormatter": "dbaeumer.vscode-eslint",
   "editor.formatOnSave": true,
-  "editor.formatOnPaste": true,
   "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": true
+    "source.fixAll.eslint": true,
+    "source.fixAll.stylelint": true,
   },
   "eslint.alwaysShowStatus": true,
+  "eslint.format.enable": true,
+  "eslint.validate": [ "javascript", "typescript"],
+  "eslint.options": {
+    "extensions": [".js", ".ts"]
+  },
   "editor.formatOnType": false,
   "html.format.enable": false,
   "prettier.requireConfig": true,
   "prettier.useEditorConfig": false,
+  "prettier.eslintIntegration": true,
+  "prettier.stylelintIntegration": true,
+  "stylelint.autoFixOnSave": true,
+  "css.validate": false,
+  "less.validate": false,
+  "scss.validate": false,
   "[javascript]": {
     "editor.defaultFormatter": "dbaeumer.vscode-eslint",
     "editor.formatOnSave": true
@@ -18,9 +28,15 @@
     "editor.defaultFormatter": "HookyQR.beautify",
     "editor.formatOnSave": true
   },
-  "[css]": {
-    "editor.defaultFormatter": "HookyQR.beautify",
-    "editor.formatOnSave": true
-  },
-  "files.insertFinalNewline": true
+  "files.insertFinalNewline": true,
+  // "postcssSorting.config": {
+  //   "order": [
+  //     "custom-properties",
+  //     "dollar-variables",
+  //     "declarations",
+  //     "at-rules",
+  //     "rules"
+  //   ],
+  //   "properties-order": ["position", "display", "top", "right", "bottom", "left"]
+  // }
 }

@@ -111,14 +111,14 @@ module.exports = {
       ],
     }),
 
-    new ESLintPlugin({
-      context: path.resolve(__dirname, "src"),
-      extensions: ["js", "mjs", "jsx", "ts", "tsx"],
-      exclude: ["assets", "index.js"],
-      fix: true,
-      failOnError: false,
-      emitWarning: true,
-    }),
+    // new ESLintPlugin({
+    //   context: path.resolve(__dirname, "src"),
+    //   extensions: ["js", "mjs", "jsx", "ts", "tsx"],
+    //   exclude: ["assets", "index.js"],
+    //   fix: true,
+    //   failOnError: false,
+    //   emitWarning: true,
+    // }),
   ],
 
   module: {

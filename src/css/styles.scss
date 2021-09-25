@@ -1,11 +1,13 @@
 * {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
+
 html {
-  scroll-behavior: smooth;
+    scroll-behavior: smooth;
 }
+
 @import "variables";
 
 @import "./blocks/page/page.scss";
@@ -17,7 +19,3 @@ html {
 @import "./blocks/section-title/section-title.scss";
 @import "./blocks/cards-container/cards-container.scss";
 @import "./blocks/card/card.scss";
-
-
-
-

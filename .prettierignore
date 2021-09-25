@@ -16,6 +16,11 @@ logs
 .env
 
 *.js
+*.scss
+*.css
+*.less
+*.json
+*.ts
 
 webpack.config.js
 
