@@ -20,17 +20,7 @@
                 margin-top: 20px;
             }
 
-
-
         }
-
-        &_explore {
-
-            &__container {
-                display: flex;
-            }
-        }
-
 
 
         & .section-title {
@@ -58,6 +48,55 @@
                 background-color: $link-active;
             }
         }
+
+    }
+
+    &_explore {
+        background-color: $bg-dark;
+        color: $light;
+        padding: 90px 0 75px 0;
+
+        &__container {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: flex-start;
+
+            &>div {
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: flex-start;
+            }
+
+            & img {
+                display: block;
+                width: 50%;
+                max-width: 720px;
+                height: auto;
+            }
+
+            & p {
+                margin-bottom: 25px;
+                max-width: 660px;
+                font-family: $font-major;
+                font-weight: 300;
+                font-size: 22px;
+                line-height: 38px;
+            }
+
+            & p span {
+                color: $font-span-gold;
+            }
+        }
+
+        & .section-title {
+            margin-top: 0;
+            margin-bottom: 100px;
+            color: $light;
+            line-height: 65px;
+        }
+
 
     }
 }
