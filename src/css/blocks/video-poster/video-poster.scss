@@ -1,0 +1,55 @@
+.video-poster {
+    position: relative;
+    display: flex;
+    overflow: hidden;
+    width: 452px;
+    height: 254px;
+    background-color: $bg-temp;
+
+    &__overlay {
+        padding: 15px 10px;
+        flex-direction: column;
+        justify-content: flex-start;
+
+        & div {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: center;
+        }
+    }
+
+    &__icon {
+        display: block;
+        margin-right: 10px;
+        width: 40px;
+        height: 40px;
+    }
+
+    &__heading {
+        font-family: $font-major;
+        color: $light;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 18px;
+        margin-right: 10px;
+    }
+
+    &__options {
+        margin-right: 26px;
+        background-color: transparent;
+        outline: none;
+        border: none;
+        margin-left: auto;
+        cursor: pointer;
+    }
+
+    &__youtube-button {
+        background-color: transparent;
+        outline: none;
+        border: none;
+        margin: 0 auto;
+        margin-top: 10%;
+        cursor: pointer;
+    }
+}

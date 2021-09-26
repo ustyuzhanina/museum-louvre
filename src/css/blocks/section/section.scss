@@ -28,7 +28,7 @@
         }
 
         //button in section Welcome
-        &__button {
+        &__link-button {
             display: inline-block;
             background-color: $dark-red;
             color: $light;
@@ -98,5 +98,81 @@
         }
 
 
+    }
+
+    &_video {
+        background-color: $light;
+        color: $dark;
+        padding: 75px 0;
+
+        &__container {
+            display: flex;
+            flex-direction: column;
+        }
+
+        & .subcontainer {
+            width: 100%;
+
+            &__heading {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                margin-bottom: 75px;
+
+                & .section-title {
+                    max-width: 50%;
+                    margin-top: 0;
+                    line-height: 65px;
+                }
+
+                & p {
+                    max-width: 50%;
+                    font-family: $font-major;
+                    font-size: 22px;
+                    font-weight: 300;
+                    line-height: 32px;
+                }
+            }
+
+            &__large-video {
+                position: relative;
+                z-index: 0;
+
+                & img {
+                    width: 100%;
+                    height: 100%;
+                    position: relative;
+                    z-index: 1;
+                }
+            }
+
+            &__controls {
+                width: 100%;
+                margin-top: -4.39px;
+                display: flex;
+                padding: 20px 25px;
+                justify-content: space-between;
+                align-items: center;
+                background-color: $dark;
+            }
+
+            &__video-slider {
+                margin-top: 40px;
+                display: flex;
+                flex-direction: row;
+                gap: 40px;
+                width: 100%;
+                margin-bottom: 40px;
+            }
+
+            &__video-pagination {
+                display: block;
+
+                & img {
+                    display: block;
+                    margin: auto;
+                }
+            }
+        }
     }
 }

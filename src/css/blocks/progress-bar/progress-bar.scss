@@ -1,0 +1,23 @@
+.progress-bar {
+    border-color: transparent;
+    flex-basis: 929px;
+    flex-grow: 0;
+    flex-shrink: 1;
+    margin: 0 50px;
+    cursor: pointer;
+    height: 8px;
+    border-radius: 0;
+    outline: none;
+    background: linear-gradient(to right, $dark-red 0%, $dark-red 53%, $bg-grey 53%, $bg-grey 100%);
+    transition: background 450ms ease-in;
+    -webkit-appearance: none;
+}
+
+.progress-bar::-webkit-slider-thumb {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    -webkit-appearance: none;
+    cursor: pointer;
+    background: $light;
+}

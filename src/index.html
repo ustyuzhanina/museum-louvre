@@ -40,7 +40,7 @@
                 <h2 class="section-title section-title_dark-area">Welcome<br>
                     to the Louvre</h2>
                 <p>From the castle to the museum</p>
-                <a href="https://www.google.com/maps/@48.8618159,2.3366818,3a,75y,81.55h,73.4t/data=!3m7!1e1!3m5!1sAF1QipOVxZQuSy3Bx9T_HpH_7FtBHDTXvI6SF-A10ocT!2e10!3e12!7i5472!8i2736" class="button section_welcome__button" target="_blank">Discover the Louvre</a>
+                <a href="https://www.google.com/maps/@48.8618159,2.3366818,3a,75y,81.55h,73.4t/data=!3m7!1e1!3m5!1sAF1QipOVxZQuSy3Bx9T_HpH_7FtBHDTXvI6SF-A10ocT!2e10!3e12!7i5472!8i2736" class="link-button section_welcome__link-button" target="_blank">Discover the Louvre</a>
             </div>
             <div class="container container_insert"></div>
         </section>
@@ -101,9 +101,64 @@
                 <img src="./assets/img/explore/explore.jpg" alt="Picture of Las Merinas before and after cleaning">
             </div>
         </section>
+
         <section class="section section_video" id="video">
-            <div class="container">
-                <h2 class="section-title"></h2>
+            <div class="container section_video__container">
+                <div class="subcontainer subcontainer__heading">
+                    <h2 class="section-title">Video Journey</h2>
+                    <p>Enter and visit one of the most famous museums in the world and enjoy masterpieces such as Mona Lisa or Hammurabi's Code</p>
+                </div>
+                <div class="subcontainer subcontainer__large-video">
+                    <img src="./assets/img/video/video-large.jpg" alt="Picture of the Louvre">
+                    <div class="overlay">
+                        <button class="button button_play_large"><img src="./assets/img/video/icon-play-large.svg" alt="Play"></button>
+                    </div>
+                </div>
+                <div class="subcontainer subcontainer__controls">
+                    <button class="button button_play_small"><img src="./assets/img/video/icon-play-small.svg" alt="Play button"></button>
+                    <input class="progress-bar" type="range" value="53" min="0" max="100" step="1">
+                    <button class="button button_volume"><img src="./assets/img/video/icon-volume.svg" alt="Volume button"></button>
+                    <input class="volume-bar" type="range" value="43" min="0" max="100" step="1">
+                    <button class="button button_fullscreen"><img src="./assets/img/video/icon-fullscreen.svg" alt="Go fullscreen button"></button>
+                </div>
+                <div class="subcontainer subcontainer__video-slider">
+                    <div class="video-poster">
+                        <img src="./assets/img/video/poster3.jpg" alt="faces of 2 feminine sculptures standing close to each other" class="video-poster__img">
+                        <div class="overlay video-poster__overlay">
+                            <div>
+                                <img src="./assets/img/video/icon-louvre.png" alt="Louvre icon" class="video-poster__icon">
+                                <h3 class="video-poster__heading">Exposition - Le Corps et l’Ame. De Dona...</h3>
+                                <button class="video-poster__options"><img src="./assets/img/video/icon-options.svg" alt="Options button"></button>
+                            </div>
+                            <button class="video-poster__youtube-button"><img src="./assets/img/video/icon-youtube.svg" alt="Play YouTube video"></button>
+                        </div>
+                    </div>
+                    <div class="video-poster">
+                        <img src="./assets/img/video/poster1.jpg" alt="torso of a feminine sculpture" class="video-poster__img">
+                        <div class="overlay video-poster__overlay">
+                            <div>
+                                <img src="./assets/img/video/icon-louvre.png" alt="Louvre icon" class="video-poster__icon">
+                                <h3 class="video-poster__heading">Au Louvre ! La Venus de Milo</h3>
+                                <button class="video-poster__options"><img src="./assets/img/video/icon-options.svg" alt="Options button"></button>
+                            </div>
+                            <button class="video-poster__youtube-button"><img src="./assets/img/video/icon-youtube.svg" alt="Play YouTube video"></button>
+                        </div>
+                    </div>
+                    <div class="video-poster">
+                        <img src="./assets/img/video/poster2.jpg" alt="2 sphynxes standing in front of the entrance" class="video-poster__img">
+                        <div class="overlay video-poster__overlay">
+                            <div>
+                                <img src="./assets/img/video/icon-louvre.png" alt="Louvre icon" class="video-poster__icon">
+                                <h3 class="video-poster__heading">Promenade dans les collections mesop...</h3>
+                                <button class="video-poster__options"><img src="./assets/img/video/icon-options.svg" alt="Options button"></button>
+                            </div>
+                            <button class="video-poster__youtube-button"><img src="./assets/img/video/icon-youtube.svg" alt="Play YouTube video"></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="subcontainer subcontainer__video-pagination">
+                    <img src="./assets/img/video/video-slider-pagination.svg" alt="Pagination controls">
+                </div>
             </div>
         </section>
         <section class="section section_gallery" id="gallery">
