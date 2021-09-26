@@ -137,10 +137,15 @@
             &__large-video {
                 position: relative;
                 z-index: 0;
+                width: 100%;
+                max-width: 1440px;
+                height: 650px;
+                overflow: hidden;
 
                 & img {
                     width: 100%;
                     height: 100%;
+                    object-fit: cover;
                     position: relative;
                     z-index: 1;
                 }
@@ -173,6 +178,34 @@
                     margin: auto;
                 }
             }
+        }
+    }
+
+    &_gallery {
+        background-color: $bg-dark;
+        color: $dark;
+        padding-top: 75px;
+
+
+        &__container {
+            display: flex;
+            flex-direction: column;
+            height: 2125px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        & .section-title {
+            color: $light;
+            margin-top: 0;
+            margin-bottom: 75px;
+        }
+
+        &__overlay.overlay {
+            background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 100%);
+            height: 360px;
+            top: auto;
+            bottom: 0;
         }
     }
 }
