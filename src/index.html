@@ -166,31 +166,87 @@
             <div class="container section_gallery__container">
                 <h2 class="section-title">Art Gallery</h2>
                 <div class="gallery-container">
-                    <img src="./assets/img/gallery/galery2.jpg" alt="" class="gallery-container__item">
-                    <img src="./assets/img/gallery/galery9.jpg" alt="" class="gallery-container__item">
-                    <img src="./assets/img/gallery/galery4.jpg" alt="" class="gallery-container__item">
-                    <img src="./assets/img/gallery/galery6.jpg" alt="" class="gallery-container__item">
-                    <img src="./assets/img/gallery/galery1.jpg" alt="" class="gallery-container__item">
-                    <img src="./assets/img/gallery/galery8.jpg" alt="" class="gallery-container__item">
-                    <img src="./assets/img/gallery/galery3.jpg" alt="" class="gallery-container__item">
-                    <img src="./assets/img/gallery/galery5.jpg" alt="" class="gallery-container__item">
-                    <img src="./assets/img/gallery/galery7.jpg" alt="" class="gallery-container__item">
-                    <img src="./assets/img/gallery/galery10.jpg" alt="" class="gallery-container__item">
-                    <img src="./assets/img/gallery/galery15.jpg" alt="" class="gallery-container__item">
-                    <img src="./assets/img/gallery/galery12.jpg" alt="" class="gallery-container__item">
+                    <div class="gallery-container__column gallery-container__column_1"></div>
+                    <div class="gallery-container__column gallery-container__column_2"></div>
+                    <div class="gallery-container__column gallery-container__column_3"></div>
                 </div>
                 <div class="overlay section_gallery__overlay"></div>
             </div>
         </section>
+
         <section class="section section_tickets" id="tickets">
-            <div class="container">
-                <h2 class="section-title"></h2>
+            <div class="container section_tickets__container">
+                <h2 class="section-title section-title_underline __section-title">Buy Tickets</h2>
+                <div class="section_tickets__subcontainer">
+                    <div class="section_tickets__img"></div>
+
+                    <form class="section_tickets__short-form">
+
+                        <fieldset class="section_tickets__type">
+                            <legend class="section_tickets__label">Ticket Type</legend>
+
+                            <label class="label">Permanent exhibition
+                                <input class="section_tickets__input" type="radio" checked="checked" name="radio">
+                                <span class="checkmark"></span>
+                            </label>
+
+                            <label class="label">Temporary exhibition
+                                <input class="section_tickets__input" type="radio" name="radio">
+                                <span class="checkmark"></span>
+                            </label>
+
+                            <label class="label">Combined Admission
+                                <input class="section_tickets__input" type="radio" name="radio">
+                                <span class="checkmark"></span>
+                            </label>
+                        </fieldset>
+
+                        <fieldset class="section_tickets__amount">
+                            <legend class="section_tickets__label">Amount</legend>
+
+                            <label class="label">Basic 18+
+                                <div class="number-container">
+                                    <button class="button" type="button" onclick="this.nextElementSibling.stepDown()">&ndash;</button>
+                                    <input type="number" min="0" max="20" value="1" readonly class="number">
+                                    <button class="button" type="button" onclick="this.previousElementSibling.stepUp()">+</button>
+                                </div>
+
+                            </label>
+
+                            <label class="label">Senior 65+
+                                <div class="number-container">
+                                    <button class="button" type="button" onclick="this.nextElementSibling.stepDown()">&ndash;</button>
+                                    <input type="number" min="0" max="20" value="1" readonly class="number">
+                                    <button class="button" type="button" onclick="this.previousElementSibling.stepUp()">+</button>
+                                </div>
+                            </label>
+
+                            <p class="section_tickets__total">Total € 220</p>
+                            <button class="button section_tickets__button">Buy Now</button>
+                        </fieldset>
+
+                    </form>
+                </div>
             </div>
             <div class="parallax"></div>
         </section>
+
         <section class="section section_contacts" id="contacts">
             <div class="container">
-                <h2 class="section-title"></h2>
+                <h2 class="section-title section-title_underline  section_contacts__section-title">Contacts</h2>
+                <div class="section_contacts__subcontainer">
+                    <div class="section_contacts__address">
+                        <h3 class="section_contacts__name">Palais Royal<br>
+                            Musee du Louvre</h3>
+                        <p class="section_contacts__details">address: 75001 Paris, France</p>
+                        <p class="section_contacts__details">phone: +33(0) 1 40 20 50 50</p>
+                        <p class="section_contacts__details">mail: info@louvre.fr</p>
+                    </div>
+                    <div class="section_contacts__map">
+                        <img src="./assets/img/contacts/map.jpg" alt="">
+                    </div>
+                </div>
+
             </div>
         </section>
 

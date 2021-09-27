@@ -192,7 +192,7 @@
             flex-direction: column;
             height: 2125px;
             position: relative;
-            overflow: hidden;
+            overflow-y: hidden;
         }
 
         & .section-title {
@@ -208,4 +208,242 @@
             bottom: 0;
         }
     }
+
+    &_tickets {
+        background-color: $light;
+        color: $dark;
+        padding-top: 75px;
+
+        & .section-title {
+            margin-top: 0;
+            margin-bottom: 103px;
+        }
+
+        &__container {
+            margin-bottom: 75px;
+        }
+
+        &__subcontainer {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+        }
+
+        &__img {
+            width: 720px;
+            height: 550px;
+            background-image: url('../assets/img/tickets/picture.jpg');
+        }
+
+        &__short-form {
+            width: 50%;
+            padding-left: 60px;
+            display: flex;
+            flex-direction: row;
+            align-items: stretch;
+        }
+
+        & fieldset {
+            border: none;
+            width: 300px;
+        }
+
+        &__type {
+            display: block;
+            text-align: left;
+
+            // заголовок fieldset
+            & legend {
+                margin-bottom: 50px;
+            }
+
+            & .label {
+                display: block;
+                position: relative;
+                padding-left: 35px;
+                cursor: pointer;
+                user-select: none;
+                font-family: $font-major;
+                font-weight: 300;
+                font-size: 22px;
+                line-height: 24px;
+                margin-bottom: 25px;
+            }
+
+            & input {
+                position: absolute;
+                opacity: 0;
+                cursor: pointer;
+            }
+
+            /* Create a custom radio button */
+            & .checkmark {
+                position: absolute;
+                top: 4px;
+                left: 0;
+                height: 17px;
+                width: 17px;
+                background-color: #eee;
+                border: 2px solid black;
+                border-radius: 50%;
+            }
+
+            /* When the radio button is checked, add a blue background */
+            & .label:hover .checkmark {
+                background-color: $font-gold;
+            }
+
+            /* Create the indicator (the dot/circle - hidden when not checked) */
+            & .checkmark:after {
+                content: "";
+                position: absolute;
+                display: none;
+            }
+
+            /* Show the indicator (dot/circle) when checked */
+            & input:checked~.checkmark:after {
+                display: block;
+            }
+
+            /* Style the indicator (dot/circle) */
+            & .checkmark:after {
+                top: 3px;
+                left: 3px;
+                width: 7px;
+                height: 7px;
+                border-radius: 50%;
+                background: black;
+            }
+        }
+
+        &__amount {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-end;
+
+            & legend {
+                margin-bottom: 25px;
+                margin-left: auto;
+            }
+
+            & .label {
+                display: block;
+                text-align: end;
+                font-family: $font-major;
+                font-weight: 300;
+                font-size: 22px;
+                line-height: 24px;
+                margin-bottom: 10px;
+            }
+
+            & .number-container {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                margin-top: 15px;
+                padding: 6px 14px;
+                border: 3px solid black;
+                width: 150px;
+                height: 50px;
+                background-color: transparent;
+
+                & input {
+                    all: unset;
+                    //display: block;
+                    border: none;
+                    width: 40px;
+                    font-family: $font-major;
+                    font-weight: 300;
+                    font-size: 22px;
+                    line-height: 25px;
+                }
+
+                & .button {
+                    font-size: 32px;
+                    font-weight: 400;
+                }
+            }
+
+        }
+
+        &__label {
+            font-family: $font-major;
+            font-weight: 700;
+            font-size: 28px;
+            line-height: 32px;
+        }
+
+
+        &__total {
+            font-family: $font-major;
+            font-weight: 700;
+            font-size: 28px;
+            line-height: 32px;
+            letter-spacing: 1.65px;
+            margin-top: 50px;
+        }
+
+        &__button.button {
+            background-color: black;
+            color: $light;
+            padding: 12px 38px;
+            margin-top: 52px;
+            font-family: $font-major;
+            font-weight: 300;
+            font-size: 22px;
+            line-height: 24px;
+            letter-spacing: 2px;
+            border-radius: 2px;
+
+            &:hover {
+                background-color: $font-gold;
+                color: $dark;
+            }
+
+            &:active {
+                background-color: $link-active;
+            }
+        }
+
+
+
+
+    }
+
+    &_contacts {
+        background-color: $light;
+        color: $dark;
+        padding: 75px 0;
+
+        & .section-title {
+            margin-top: 0;
+            margin-bottom: 75px;
+        }
+
+        &__subcontainer {
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+            justify-content: space-between;
+        }
+
+        &__name {
+            margin-bottom: 50px;
+            font-family: $font-major;
+            font-weight: 500;
+            font-size: 28px;
+            line-height: 32px;
+        }
+
+        &__details {
+            margin-bottom: 25px;
+            font-family: $font-major;
+            font-weight: 300;
+            font-size: 22px;
+            line-height: 24px;
+        }
+    }
+
 }
