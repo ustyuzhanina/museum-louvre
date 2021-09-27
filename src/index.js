@@ -5,6 +5,7 @@ import './css/styles.scss';
 // connect with js files
 import { PROGRESS_BAR,
            VOLUME_BAR,
+           SECTION_TICKETS_BUTTON,
 } from './js/constants/MARKUP_SELECTORS';
 import GalleryList from './js/components/GalleryList';
 

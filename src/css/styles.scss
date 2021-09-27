@@ -11,6 +11,7 @@ html {
 @import "variables";
 
 @import "./blocks/page/page.scss";
+@import "./blocks/content/content.scss";
 @import "./blocks/header/header.scss";
 @import "./blocks/container/container.scss";
 @import "./blocks/logo/logo.scss";
@@ -26,3 +27,6 @@ html {
 @import "./blocks/video-poster/video-poster.scss";
 @import "./blocks/gallery-container/gallery-container.scss";
 @import "./blocks/parallax/parallax.scss";
+@import "./blocks/footer/footer.scss";
+@import "./blocks/socials-list/socials-list.scss";
+@import "./blocks/social-icon/social-icon.scss";

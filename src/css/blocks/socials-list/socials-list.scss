@@ -1,0 +1,22 @@
+.socials-list {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+
+    & li {
+        margin-right: 25px;
+        height: min-content;
+    }
+
+    & li:last-of-type {
+        margin-right: 0;
+    }
+
+    & li:hover .social-icon {
+        border-color: $link-hover;
+    }
+
+    & a:active .social-icon {
+        border-color: $link-active;
+    }
+}

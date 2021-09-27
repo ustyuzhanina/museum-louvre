@@ -1,0 +1,29 @@
+.social-icon {
+    width: 48px;
+    height: 48px;
+    border: 1px solid $grey-line;
+    border-radius: 50px;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-position: center center;
+
+    &_youtube {
+        background-image: url('../assets/svg/icon-youtube.svg');
+    }
+
+    &_instagram {
+        background-image: url('../assets/svg/icon-instagram.svg');
+    }
+
+    &_facebook {
+        background-image: url('../assets/svg/icon-facebook.svg');
+    }
+
+    &_tweeter {
+        background-image: url('../assets/svg/icon-tweeter.svg');
+    }
+
+    &_unknown {
+        background-image: url('../assets/svg/icon-unknown.svg');
+    }
+}
