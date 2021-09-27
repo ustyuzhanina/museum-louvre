@@ -67,6 +67,13 @@ module.exports = {
 
   entry: {
     index: "./index.js",
+    welcome: "./pages/welcome.js",
+    colonnade: "./pages/colonnade-perrault.js",
+    denonWing: "./pages/denon-wing.js",
+    greekHall: "./pages/greek-hall.js",
+    monaLisa: "./pages/mona-lisa.js",
+    nightPalace: "./pages/night-palace.js",
+    royalPalace: "./pages/royal-palace.js",
   },
 
   output: {
@@ -89,6 +96,70 @@ module.exports = {
     new HtmlWebpackPlugin({
       title: "museum",
       template: "./index.html",
+      filename: 'index.html',
+      minify: {
+        collapseWhitespace: isProd,
+      },
+    }),
+
+    new HtmlWebpackPlugin({
+      title: "museum",
+      template: "./pages/welcome.html",
+      filename: 'pages/welcome.html',
+      minify: {
+        collapseWhitespace: isProd,
+      },
+    }),
+
+    new HtmlWebpackPlugin({
+      title: "museum",
+      template: "./pages/colonnade-perrault.html",
+      filename: 'pages/colonnade-perrault.html',
+      minify: {
+        collapseWhitespace: isProd,
+      },
+    }),
+
+    new HtmlWebpackPlugin({
+      title: "museum",
+      template: "./pages/denon-wing.html",
+      filename: 'pages/denon-wing.html',
+      minify: {
+        collapseWhitespace: isProd,
+      },
+    }),
+
+    new HtmlWebpackPlugin({
+      title: "museum",
+      template: "./pages/greek-hall.html",
+      filename: 'pages/greek-hall.html',
+      minify: {
+        collapseWhitespace: isProd,
+      },
+    }),
+
+    new HtmlWebpackPlugin({
+      title: "museum",
+      template: "./pages/mona-lisa.html",
+      filename: 'pages/mona-lisa.html',
+      minify: {
+        collapseWhitespace: isProd,
+      },
+    }),
+
+    new HtmlWebpackPlugin({
+      title: "museum",
+      template: "./pages/night-palace.html",
+      filename: 'pages/night-palace.html',
+      minify: {
+        collapseWhitespace: isProd,
+      },
+    }),
+
+    new HtmlWebpackPlugin({
+      title: "museum",
+      template: "./pages/royal-palace.html",
+      filename: 'pages/royal-palace.html',
       minify: {
         collapseWhitespace: isProd,
       },

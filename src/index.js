@@ -7,6 +7,8 @@ import { PROGRESS_BAR,
            VOLUME_BAR,
            SECTION_TICKETS_BUTTON,
 } from './js/constants/MARKUP_SELECTORS';
+import { API_KEY,
+} from './js/constants/MAPBOX';
 import GalleryList from './js/components/GalleryList';
 
 

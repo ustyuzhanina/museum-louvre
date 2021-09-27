@@ -442,6 +442,27 @@
             font-weight: 300;
             font-size: 22px;
             line-height: 24px;
+
+            & a {
+                text-decoration: none;
+                color: $dark;
+            }
+
+            & a:hover {
+                color: $link-hover;
+            }
+
+            & a:active {
+                color: $link-active;
+            }
+        }
+
+
+
+        &__map {
+            width: 960px;
+            height: 620px;
+            background-color: $bg-temp;
         }
     }
 
