@@ -258,8 +258,13 @@
 
         & fieldset {
             border: none;
-            width: 300px;
             padding: 0;
+        }
+
+        & legend {
+            font-family: $font-major;
+            font-size: 28px;
+            font-weight: bold;
         }
 
         &__type {
@@ -294,7 +299,7 @@
             /* Create a custom radio button */
             & .checkmark {
                 position: absolute;
-                top: 6px;
+                top: 3px;
                 left: 12px;
                 height: 17px;
                 width: 17px;
@@ -342,14 +347,13 @@
                 margin-left: auto;
             }
 
-            & .label {
-                display: block;
-                text-align: end;
+            & label {
                 font-family: $font-major;
                 font-weight: 300;
                 font-size: 22px;
                 line-height: 24px;
-                margin-bottom: 10px;
+                align-self: flex-start;
+                margin-left: 25px;
             }
 
             & .number-container {
@@ -358,7 +362,8 @@
                 justify-content: space-between;
                 align-items: center;
                 margin-top: 15px;
-                padding: 6px 14px;
+                margin-bottom: 12px;
+                padding: 6px 10px;
                 border: 3px solid black;
                 width: 150px;
                 height: 50px;
@@ -366,7 +371,7 @@
 
                 & input {
                     all: unset;
-                    //display: block;
+                    text-align: right;
                     border: none;
                     width: 40px;
                     font-family: $font-major;
@@ -376,6 +381,7 @@
                 }
 
                 & .button {
+                    font-family: $font-major;
                     font-size: 32px;
                     font-weight: 400;
                 }
@@ -383,12 +389,12 @@
 
         }
 
-        &__label {
-            font-family: $font-major;
-            font-weight: 700;
-            font-size: 28px;
-            line-height: 32px;
-        }
+        // &__label {
+        //     font-family: $font-major;
+        //     font-weight: 700;
+        //     font-size: 28px;
+        //     line-height: 32px;
+        // }
 
 
         &__total {
@@ -404,7 +410,7 @@
             background-color: black;
             color: $light;
             padding: 13px 38px;
-            margin-top: 61px;
+            margin-top: 57px;
             font-family: $font-major;
             font-weight: 300;
             font-size: 22px;

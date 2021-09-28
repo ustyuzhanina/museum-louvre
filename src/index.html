@@ -185,7 +185,7 @@
                     <form class="section_tickets__short-form">
 
                         <fieldset class="section_tickets__type">
-                            <legend class="section_tickets__label">Ticket Type</legend>
+                            <legend class="section_tickets__legend">Ticket Type</legend>
 
                             <label class="label">Permanent exhibition
                                 <input class="section_tickets__input" type="radio" checked="checked" name="radio">
@@ -204,24 +204,23 @@
                         </fieldset>
 
                         <fieldset class="section_tickets__amount">
-                            <legend class="section_tickets__label">Amount</legend>
+                            <legend class="section_tickets__legend">Amount</legend>
 
-                            <label class="label">Basic 18+
-                                <div class="number-container">
-                                    <button class="button" type="button" onclick="this.nextElementSibling.stepDown()">&ndash;</button>
-                                    <input type="number" min="0" max="20" value="1" readonly class="number">
-                                    <button class="button" type="button" onclick="this.previousElementSibling.stepUp()">+</button>
-                                </div>
+                            <label for="basicNumber">Basic 18+</label>
+                            <div class="number-container">
+                                <button class="button" type="button" onclick="this.nextElementSibling.stepDown()">&ndash;</button>
+                                <input type="number" min="0" max="20" value="1" readonly class="number" name="basicNumber" id="basicNumber">
+                                <button class="button" type="button" onclick="this.previousElementSibling.stepUp()">+</button>
+                            </div>
 
-                            </label>
 
-                            <label class="label">Senior 65+
-                                <div class="number-container">
-                                    <button class="button" type="button" onclick="this.nextElementSibling.stepDown()">&ndash;</button>
-                                    <input type="number" min="0" max="20" value="1" readonly class="number">
-                                    <button class="button" type="button" onclick="this.previousElementSibling.stepUp()">+</button>
-                                </div>
-                            </label>
+                            <label for="seniorNumber">Senior 65+</label>
+                            <div class="number-container">
+                                <button class="button" type="button" onclick="this.nextElementSibling.stepDown()">&ndash;</button>
+                                <input type="number" min="0" max="20" value="1" readonly class="number" name="seniorNumber" id="seniorNumber">
+                                <button class="button" type="button" onclick="this.previousElementSibling.stepUp()">+</button>
+                            </div>
+
 
                             <p class="section_tickets__total">Total € 220</p>
                             <button class="button section_tickets__button">Buy Now</button>
