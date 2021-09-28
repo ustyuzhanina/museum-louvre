@@ -4,13 +4,15 @@
         color: $light;
 
         &__container {
+            position: relative;
             height: 750px;
-            background-image: url("../assets/img/welcome-slider/welcome-to-the-louvre.png");
+            background-image: url("../assets/img/welcome-slider/1.jpg");
             background-position: right;
             background-size: contain;
             background-repeat: no-repeat;
             padding-top: 8%;
-            //background-position: calc(100% - 20px) calc(100% - 10px);
+
+
 
             & p {
                 font-family: $font-major;
@@ -20,6 +22,17 @@
                 margin-top: 20px;
             }
 
+        }
+
+        &__overlay.overlay {
+            background: linear-gradient(90deg, #000000 30%, rgba(0, 0, 0, 0.5) 45.19%, rgba(0, 0, 0, 0.3) 50.19%, rgba(0, 0, 0, 0) 56.73%);
+            height: 100%;
+            bottom: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+            padding-top: 150px;
         }
 
 
@@ -388,14 +401,6 @@
             }
 
         }
-
-        // &__label {
-        //     font-family: $font-major;
-        //     font-weight: 700;
-        //     font-size: 28px;
-        //     line-height: 32px;
-        // }
-
 
         &__total {
             font-family: $font-major;
