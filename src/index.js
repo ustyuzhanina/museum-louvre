@@ -1,5 +1,5 @@
 import 'normalize.css';
-import './assets/fonts/fonts.css';
+import './assets/fonts/fonts.scss';
 import './css/styles.scss';
 
 // connect with js files

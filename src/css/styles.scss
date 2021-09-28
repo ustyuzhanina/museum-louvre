@@ -13,6 +13,7 @@ html {
 @import "./blocks/page/page.scss";
 @import "./blocks/content/content.scss";
 @import "./blocks/header/header.scss";
+@import "./blocks/visually-hidden/visually-hidden.scss";
 @import "./blocks/container/container.scss";
 @import "./blocks/logo/logo.scss";
 @import "./blocks/nav/nav.scss";
@@ -30,6 +31,3 @@ html {
 @import "./blocks/footer/footer.scss";
 @import "./blocks/socials-list/socials-list.scss";
 @import "./blocks/social-icon/social-icon.scss";
-
-
-@import "./blocks/view-fullscreen/view-fullscreen.scss";

@@ -1,28 +1,28 @@
 .section-title {
-  font-family: $font-secondary;
-  font-weight: 400;
-  color: $font-gold;
-  font-size: 80px;
-  line-height: 90px;
-  letter-spacing: 5px;
-  text-transform: uppercase;
-  margin-top: 50px;
+    font-family: $font-secondary;
+    font-weight: 400;
+    color: $font-gold;
+    font-size: 80px;
+    line-height: 90px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    //margin-top: 50px;
 
-  &_dark-area {
-    color: white;
-  }
-
-  &_underline {
-    position: relative;
-
-    &::after {
-     content: "";
-     position: absolute;
-     bottom: -25px;
-     left: 0;
-     right: 0;
-     height: 3px;
-     background-color: $dark-red;
+    &_dark-area {
+        color: white;
     }
-  }
+
+    &_underline {
+        position: relative;
+
+        &::after {
+            content: "";
+            position: absolute;
+            bottom: -36px;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background-color: $dark-red;
+        }
+    }
 }

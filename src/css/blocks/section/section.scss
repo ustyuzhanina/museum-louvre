@@ -33,7 +33,7 @@
             background-color: $dark-red;
             color: $light;
             border-radius: 10px;
-            padding: 25px 43px;
+            padding: 25px 66px;
             font-family: $font-major;
             font-size: 22px;
             letter-spacing: 2px;
@@ -49,6 +49,14 @@
             }
         }
 
+    }
+
+    &_visiting {
+        padding-top: 75px;
+
+        & .section-title_underline::after {
+            bottom: -25px;
+        }
     }
 
     &_explore {
@@ -83,6 +91,7 @@
                 font-weight: 300;
                 font-size: 22px;
                 line-height: 38px;
+                padding-right: 5px;
             }
 
             & p span {
@@ -92,7 +101,7 @@
 
         & .section-title {
             margin-top: 0;
-            margin-bottom: 100px;
+            margin-bottom: 112px;
             color: $light;
             line-height: 65px;
         }
@@ -103,7 +112,7 @@
     &_video {
         background-color: $light;
         color: $dark;
-        padding: 75px 0;
+        padding: 86px 0 75px;
 
         &__container {
             display: flex;
@@ -117,10 +126,10 @@
                 display: flex;
                 flex-direction: row;
                 justify-content: space-between;
-                margin-bottom: 75px;
+                margin-bottom: 87px;
 
                 & .section-title {
-                    max-width: 50%;
+                    //max-width: 50%;
                     margin-top: 0;
                     line-height: 65px;
                 }
@@ -155,14 +164,14 @@
                 width: 100%;
                 margin-top: -4.39px;
                 display: flex;
-                padding: 20px 25px;
+                padding: 28px 29px;
                 justify-content: space-between;
                 align-items: center;
                 background-color: $dark;
             }
 
             &__video-slider {
-                margin-top: 40px;
+                margin-top: 34px;
                 display: flex;
                 flex-direction: row;
                 gap: 40px;
@@ -216,6 +225,10 @@
         & .section-title {
             margin-top: 0;
             margin-bottom: 103px;
+
+            &_underline::after {
+                bottom: -28px;
+            }
         }
 
         &__container {
@@ -236,15 +249,17 @@
 
         &__short-form {
             width: 50%;
-            padding-left: 60px;
+            padding-left: 48px;
             display: flex;
             flex-direction: row;
+            justify-content: space-between;
             align-items: stretch;
         }
 
         & fieldset {
             border: none;
             width: 300px;
+            padding: 0;
         }
 
         &__type {
@@ -254,19 +269,20 @@
             // заголовок fieldset
             & legend {
                 margin-bottom: 50px;
+                padding-left: 12px;
             }
 
             & .label {
                 display: block;
                 position: relative;
-                padding-left: 35px;
+                padding-left: 52px;
                 cursor: pointer;
                 user-select: none;
                 font-family: $font-major;
                 font-weight: 300;
                 font-size: 22px;
                 line-height: 24px;
-                margin-bottom: 25px;
+                margin-bottom: 29px;
             }
 
             & input {
@@ -278,8 +294,8 @@
             /* Create a custom radio button */
             & .checkmark {
                 position: absolute;
-                top: 4px;
-                left: 0;
+                top: 6px;
+                left: 12px;
                 height: 17px;
                 width: 17px;
                 background-color: #eee;
@@ -322,7 +338,7 @@
             align-items: flex-end;
 
             & legend {
-                margin-bottom: 25px;
+                margin-bottom: 28px;
                 margin-left: auto;
             }
 
@@ -380,15 +396,15 @@
             font-weight: 700;
             font-size: 28px;
             line-height: 32px;
-            letter-spacing: 1.65px;
-            margin-top: 50px;
+            letter-spacing: .5px;
+            margin-top: 42px;
         }
 
         &__button.button {
             background-color: black;
             color: $light;
-            padding: 12px 38px;
-            margin-top: 52px;
+            padding: 13px 38px;
+            margin-top: 61px;
             font-family: $font-major;
             font-weight: 300;
             font-size: 22px;
@@ -414,11 +430,15 @@
     &_contacts {
         background-color: $light;
         color: $dark;
-        padding: 75px 0;
+        padding: 75px 0 74px;
 
         & .section-title {
             margin-top: 0;
-            margin-bottom: 75px;
+            margin-bottom: 103px;
+
+            &_underline::after {
+                bottom: -28px;
+            }
         }
 
         &__subcontainer {
@@ -433,7 +453,7 @@
             font-family: $font-major;
             font-weight: 500;
             font-size: 28px;
-            line-height: 32px;
+            line-height: 33px;
         }
 
         &__details {
@@ -441,7 +461,7 @@
             font-family: $font-major;
             font-weight: 300;
             font-size: 22px;
-            line-height: 24px;
+            line-height: 26px;
 
             & a {
                 text-decoration: none;

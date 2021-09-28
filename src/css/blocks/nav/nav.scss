@@ -1,38 +1,38 @@
 .nav {
-  max-width: 720px;
+    max-width: 720px;
 
-  & ul {
-    list-style: none;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    align-items: baseline;
+    & ul {
+        list-style: none;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: baseline;
 
-    & li {
-      margin-right: 50px;
-      height: 25.3px;
+        & li {
+            margin-right: 56px;
+            height: 25.3px;
 
-      &:last-of-type {
-        margin-right: 0;
-      }
+            &:last-of-type {
+                margin-right: 0;
+            }
 
-      & a {
-        text-decoration: none;
-        color: $light;
-        font-family: $font-major;
-        font-weight: 100;
-        font-size: 22px;
-        letter-spacing: 2px;
-        line-height: 25.3px;
-      }
+            & a {
+                text-decoration: none;
+                color: $light;
+                font-family: $font-major;
+                font-weight: 100;
+                font-size: 22px;
+                letter-spacing: 2px;
+                line-height: 25.3px;
+            }
 
-      &:hover a {
-        color: $link-hover;
-      }
+            &:hover a {
+                color: $link-hover;
+            }
 
-      &:active a {
-        color: $link-active;
-      }
+            &:active a {
+                color: $link-active;
+            }
+        }
     }
-  }
 }
