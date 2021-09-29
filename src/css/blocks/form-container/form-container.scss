@@ -1,0 +1,23 @@
+.form-container {
+    position: fixed;
+    display: flex;
+    top: 0;
+    height: 100vh;
+    width: 100%;
+    left: -100vw;
+    z-index: 4;
+    border: 2px solid blue;
+    background-color: transparent;
+
+    &_visible {
+        left: 0;
+    }
+
+    &__container {
+        background-color: $light;
+        border: 2px solid purple;
+        position: relative;
+        height: 845px;
+        margin: auto;
+    }
+}

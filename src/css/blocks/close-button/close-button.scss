@@ -1,0 +1,26 @@
+.close-button {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    right: 0;
+    width: 55px;
+    height: 55px;
+
+    & .line {
+        height: 1px;
+        width: 25px;
+        display: block;
+        background-color: $bg-dark;
+    }
+
+    & .line-1 {
+        transform: rotate(45deg);
+    }
+
+    & .line-2 {
+        transform: rotate(135deg) translateY(1px);
+    }
+}

@@ -6,6 +6,7 @@ const TerserWebpackPlugin = require("terser-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const CopyPlugin = require("copy-webpack-plugin");
+//const WebpackMd5Hash = require('webpack-md5-hash');
 const ESLintPlugin = require("eslint-webpack-plugin");
 // const WebpackDevServer = require('webpack-dev-server');
 // const MinifyPlugin = require('babel-minify-webpack-plugin');
@@ -17,6 +18,10 @@ const isOptimization = () => {
   const config = {
     splitChunks: {
       chunks: "all",
+      //minSize: 0,
+      //maxAsyncRequests: 9,
+      //maxInitialRequests: 9,
+      name: false,
     },
   };
 
@@ -35,7 +40,8 @@ const cssLoaders = (extra) => {
   const loaders = [
     // style-loader adds stylesheet to HEAD in HTML, and mini-css extracts data to a sep file
     {
-      loader: isProd ? MiniCssExtractPlugin.loader : "style-loader",
+      loader: MiniCssExtractPlugin.loader,
+      //29.09.2021: loader: isProd ? MiniCssExtractPlugin.loader : "style-loader",
       options: isProd
         ? {
             // we can change objects without reloading a page
@@ -67,19 +73,20 @@ module.exports = {
 
   entry: {
     index: "./index.js",
-    welcome: "./pages/welcome.js",
-    colonnade: "./pages/colonnade-perrault.js",
-    denonWing: "./pages/denon-wing.js",
-    greekHall: "./pages/greek-hall.js",
-    monaLisa: "./pages/mona-lisa.js",
-    nightPalace: "./pages/night-palace.js",
-    royalPalace: "./pages/royal-palace.js",
+    welcome: "./tours/welcome/index.js",
+    colonnade: "./tours/colonnade/index.js",
+    denonWing: "./tours/denonWing/index.js",
+    greekHall: "./tours/greekHall/index.js",
+    monaLisa: "./tours/monaLisa/index.js",
+    nightPalace: "./tours/nightPalace/index.js",
+    royalPalace: "./tours/royalPalace/index.js",
   },
 
   output: {
-    filename: "script/[name].[hash].js",
     path: path.resolve(__dirname, "dist"),
-    // publicPath: '/dist' ,
+    //filename: 'js/[name].[hash].js',
+    filename: 'js/[name][hash].js',
+    publicPath: '' ,
   },
 
   devServer: {
@@ -93,10 +100,28 @@ module.exports = {
   plugins: [
     new CleanWebpackPlugin(),
 
+    //new WebpackMd5Hash(),
+
     new HtmlWebpackPlugin({
       title: "museum",
       template: "./index.html",
       filename: 'index.html',
+      inject: true,
+      hash: true,
+      chunks: ['index'],
+      minify: {
+        collapseWhitespace: isProd,
+        removeComments: true,
+      },
+    }),
+
+    new HtmlWebpackPlugin({
+      title: "museum",
+      template: "./tours/welcome/index.html",
+      filename: 'tours/welcome/index.html',
+      inject: true,
+      hash: true,
+      chunks: ['welcome'],
       minify: {
         collapseWhitespace: isProd,
       },
@@ -104,8 +129,11 @@ module.exports = {
 
     new HtmlWebpackPlugin({
       title: "museum",
-      template: "./pages/welcome.html",
-      filename: 'pages/welcome.html',
+      template: "./tours/colonnade/index.html",
+      filename: 'tours/colonnade/index.html',
+      hash: true,
+      chunks: ['colonnade'],
+      inject: true,
       minify: {
         collapseWhitespace: isProd,
       },
@@ -113,8 +141,11 @@ module.exports = {
 
     new HtmlWebpackPlugin({
       title: "museum",
-      template: "./pages/colonnade-perrault.html",
-      filename: 'pages/colonnade-perrault.html',
+      template: "./tours/denonWing/index.html",
+      filename: 'tours/denonWing/index.html',
+      hash: true,
+      chunks: ['denonWing'],
+      inject: true,
       minify: {
         collapseWhitespace: isProd,
       },
@@ -122,8 +153,11 @@ module.exports = {
 
     new HtmlWebpackPlugin({
       title: "museum",
-      template: "./pages/denon-wing.html",
-      filename: 'pages/denon-wing.html',
+      template: "./tours/greekHall/index.html",
+      filename: 'tours/greekHall/index.html',
+      hash: true,
+      chunks: ['greekHall'],
+      inject: true,
       minify: {
         collapseWhitespace: isProd,
       },
@@ -131,8 +165,11 @@ module.exports = {
 
     new HtmlWebpackPlugin({
       title: "museum",
-      template: "./pages/greek-hall.html",
-      filename: 'pages/greek-hall.html',
+      template: "./tours/monaLisa/index.html",
+      filename: 'tours/monaLisa/index.html',
+      hash: true,
+      chunks: ['monaLisa'],
+      inject: true,
       minify: {
         collapseWhitespace: isProd,
       },
@@ -140,8 +177,11 @@ module.exports = {
 
     new HtmlWebpackPlugin({
       title: "museum",
-      template: "./pages/mona-lisa.html",
-      filename: 'pages/mona-lisa.html',
+      template: "./tours/nightPalace/index.html",
+      filename: 'tours/nightPalace/index.html',
+      hash: true,
+      chunks: ['nightPalace'],
+      inject: true,
       minify: {
         collapseWhitespace: isProd,
       },
@@ -149,17 +189,11 @@ module.exports = {
 
     new HtmlWebpackPlugin({
       title: "museum",
-      template: "./pages/night-palace.html",
-      filename: 'pages/night-palace.html',
-      minify: {
-        collapseWhitespace: isProd,
-      },
-    }),
-
-    new HtmlWebpackPlugin({
-      title: "museum",
-      template: "./pages/royal-palace.html",
-      filename: 'pages/royal-palace.html',
+      template: "./tours/royalPalace/index.html",
+      filename: 'tours/royalPalace/index.html',
+      hash: true,
+      chunks: ['royalPalace'],
+      inject: true,
       minify: {
         collapseWhitespace: isProd,
       },

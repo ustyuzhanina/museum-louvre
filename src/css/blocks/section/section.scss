@@ -202,6 +202,7 @@
     }
 
     &_tickets {
+        position: relative;
         background-color: $light;
         color: $dark;
         padding-top: 75px;
@@ -228,7 +229,7 @@
         &__img {
             width: 720px;
             height: 550px;
-            background-image: url('../assets/img/tickets/picture.jpg');
+            background-image: url('./assets/img/tickets/picture.jpg');
         }
 
         &__short-form {

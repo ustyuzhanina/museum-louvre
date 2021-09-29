@@ -1,28 +1,28 @@
 .logo {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: baseline;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: baseline;
 
-  &__icon {
-    height: 26px;
-    width: 49px;
-    background-image: url("../assets/svg/logo.svg");
-    margin-right: 25px;
-  }
+    &__icon {
+        height: 26px;
+        width: 49px;
+        background-image: url("./assets/svg/logo.svg");
+        margin-right: 25px;
+    }
 
-  & p {
-    text-transform: uppercase;
-    letter-spacing: 5px;
-    font-family: $font-secondary;
-    font-size: 28px;
-  }
+    & p {
+        text-transform: uppercase;
+        letter-spacing: 5px;
+        font-family: $font-secondary;
+        font-size: 28px;
+    }
 
 }
 
 
 
 .header .logo {
-  margin-top: 60px;
-  margin-bottom: 60px;
+    margin-top: 60px;
+    margin-bottom: 60px;
 }

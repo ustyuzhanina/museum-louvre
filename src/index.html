@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="./assets/svg/favicon.ico">
+    <!-- <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.css%>"> -->
     <title><%=
       htmlWebpackPlugin.options.title %></title>
 </head>
@@ -43,7 +44,7 @@
                     <h2 class="section-title section-title_dark-area">Welcome<br>
                         to the Louvre</h2>
                     <p>From the castle to the museum</p>
-                    <a href="./pages/welcome.html" class="link-button section_welcome__link-button" target="_blank">Discover the Louvre</a>
+                    <a href="./tours/welcome/index.html" class="link-button section_welcome__link-button" target="_blank">Discover the Louvre</a>
                 </div>
                 <div class="carousel">
                     <div class="carousel__container">
@@ -80,37 +81,37 @@
             <div class="container">
                 <h2 class="section-title section-title_underline">Virtual Tour</h2>
                 <div class="cards-container">
-                    <a href="./pages/royal-palace.html" class="card" target="_blank">
+                    <a href="./tours/royalPalace/index.html" class="card" target="_blank">
                         <img class="card__img" src="./assets/img/visiting/royal-palace.jpg" alt="Picture of Royal Palace">
                         <h3>Royal Palace</h3>
                         <p class="card__line-1">360° Virtual Tour</p>
                         <p class="card__line-2">Google Street Panorama View</p>
                     </a>
-                    <a href="./pages/denon-wing.html" class="card" target="_blank">
+                    <a href="./tours/denonWing/index.html" class="card" target="_blank">
                         <img class="card__img" src="./assets/img/visiting/denon-wing.jpg" alt="Picture of Denon Wing">
                         <h3>Denon Wing</h3>
                         <p class="card__line-1">360° Virtual Tour</p>
                         <p class="card__line-2">Google Street Panorama View</p>
                     </a>
-                    <a href="./pages/colonnade-perrault.html" class="card" target="_blank">
+                    <a href="./tours/colonnade/index.html" class="card" target="_blank">
                         <img class="card__img" src="./assets/img/visiting/colonnade-perrault.jpg" alt="Picture of Colonnade Perrault">
                         <h3>Colonnade Perrault</h3>
                         <p class="card__line-1">360° Virtual Tour</p>
                         <p class="card__line-2">Google Street Panorama View</p>
                     </a>
-                    <a href="./pages/greek-hall.html" class="card" target="_blank">
+                    <a href="./tours/greekHall/index.html" class="card" target="_blank">
                         <img class="card__img" src="./assets/img/visiting/greek-hall.jpg" alt="Picture of Greek Hall">
                         <h3>Greek Hall</h3>
                         <p class="card__line-1">360° Virtual Tour</p>
                         <p class="card__line-2">Google Street Panorama View</p>
                     </a>
-                    <a href="./pages/mona-lisa.html" class="card" target="_blank">
+                    <a href="./tours/monaLisa/index.html" class="card" target="_blank">
                         <img class="card__img" src="./assets/img/visiting/mona-lisa.jpg" alt="Picture of Mona Lisa">
                         <h3>Mona Lisa</h3>
                         <p class="card__line-1">360° Virtual Tour</p>
                         <p class="card__line-2">Google Street Panorama View</p>
                     </a>
-                    <a href="./pages/night-palace.html" class="card" target="_blank">
+                    <a href="./tours/nightPalace/index.html" class="card" target="_blank">
                         <img class="card__img" src="./assets/img/visiting/night-palace.jpg" alt="Picture of Night Palace">
                         <h3>Night Palace</h3>
                         <p class="card__line-1">360° Virtual Tour</p>
@@ -258,8 +259,22 @@
                     </form>
                 </div>
             </div>
+
             <div class="parallax"></div>
         </section>
+
+        <div class="form-container">
+            <div class="container form-container__container">
+                <button class="button close-button">
+                    <span class="line line-1"></span>
+                    <span class="line line-2"></span>
+                </button>
+                <form class="large-form" action="submit">
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequuntur ratione dolor consequatur perferendis animi, beatae mollitia sint ipsa natus sit distinctio cumque tempora totam maiores quisquam. Expedita doloremque officia officiis!</p>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Neque, optio ducimus magni temporibus ullam praesentium similique illo obcaecati natus maxime eaque vitae excepturi consequatur reprehenderit commodi voluptatibus explicabo velit nam.</p>
+                </form>
+            </div>
+        </div>
 
         <section class="section section_contacts" id="contacts">
             <div class="container">
@@ -280,10 +295,6 @@
 
             </div>
         </section>
-
-        <form action="submit" class="large-form">
-
-        </form>
 
     </main>
 
@@ -339,7 +350,7 @@
         </div>
     </footer>
 
-
+    <!-- <script defer src="<%= htmlWebpackPlugin.files.js%>"></script> -->
 
 </body>
 

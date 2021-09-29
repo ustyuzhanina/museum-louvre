@@ -1,6 +1,6 @@
 import 'normalize.css';
 import './assets/fonts/fonts.scss';
-import './css/styles.scss';
+import './index.scss';
 
 // connect with js files
 import { PROGRESS_BAR,

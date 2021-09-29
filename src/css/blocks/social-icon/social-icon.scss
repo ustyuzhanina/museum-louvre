@@ -10,22 +10,22 @@
     transition: border-color $speed-fast;
 
     &_youtube {
-        background-image: url('../assets/svg/icon-youtube.svg');
+        background-image: url('./assets/svg/icon-youtube.svg');
     }
 
     &_instagram {
-        background-image: url('../assets/svg/icon-instagram.svg');
+        background-image: url('./assets/svg/icon-instagram.svg');
     }
 
     &_facebook {
-        background-image: url('../assets/svg/icon-facebook.svg');
+        background-image: url('./assets/svg/icon-facebook.svg');
     }
 
     &_tweeter {
-        background-image: url('../assets/svg/icon-tweeter.svg');
+        background-image: url('./assets/svg/icon-tweeter.svg');
     }
 
     &_unknown {
-        background-image: url('../assets/svg/icon-unknown.svg');
+        background-image: url('./assets/svg/icon-unknown.svg');
     }
 }

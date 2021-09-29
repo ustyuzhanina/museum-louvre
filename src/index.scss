@@ -1,0 +1,37 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+@import "./css/variables";
+
+@import "./css/blocks/page/page.scss";
+@import "./css/blocks/content/content.scss";
+@import "./css/blocks/header/header.scss";
+@import "./css/blocks/visually-hidden/visually-hidden.scss";
+@import "./css/blocks/container/container.scss";
+@import "./css/blocks/logo/logo.scss";
+@import "./css/blocks/nav/nav.scss";
+@import "./css/blocks/section/section.scss";
+@import "./css/blocks/carousel/carousel.scss";
+@import "./css/blocks/section-title/section-title.scss";
+@import "./css/blocks/cards-container/cards-container.scss";
+@import "./css/blocks/card/card.scss";
+@import "./css/blocks/button/button.scss";
+@import "./css/blocks/overlay/overlay.scss";
+@import "./css/blocks/progress-bar/progress-bar.scss";
+@import "./css/blocks/volume-bar/volume-bar.scss";
+@import "./css/blocks/video-poster/video-poster.scss";
+@import "./css/blocks/gallery-container/gallery-container.scss";
+@import "./css/blocks/parallax/parallax.scss";
+@import "./css/blocks/form-container/form-container.scss";
+@import "./css/blocks/large-form/large-form.scss";
+@import "./css/blocks/close-button/close-button.scss";
+@import "./css/blocks/footer/footer.scss";
+@import "./css/blocks/socials-list/socials-list.scss";
+@import "./css/blocks/social-icon/social-icon.scss";

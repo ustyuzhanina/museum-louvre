@@ -76,8 +76,7 @@
         "terser-webpack-plugin": "^4.2.3",
         "webpack": "^4.41.2",
         "webpack-cli": "^3.3.9",
-        "webpack-dev-server": "^3.11.0",
-        "webpack-md5-hash": "0.0.6"
+        "webpack-dev-server": "^3.11.0"
     },
     "dependencies": {
         "babel-polyfill": "^6.26.0",
