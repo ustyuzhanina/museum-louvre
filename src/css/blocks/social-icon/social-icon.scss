@@ -7,6 +7,7 @@
     background-color: transparent;
     background-repeat: no-repeat;
     background-position: center center;
+    transition: border-color $speed-fast;
 
     &_youtube {
         background-image: url('../assets/svg/icon-youtube.svg');

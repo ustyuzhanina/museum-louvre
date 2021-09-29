@@ -52,6 +52,7 @@
             letter-spacing: 2px;
             margin-top: 75px;
             text-decoration: none;
+            transition: background-color $speed-fast;
 
             &:hover {
                 background-color: $link-hover;
@@ -422,6 +423,7 @@
             line-height: 24px;
             letter-spacing: 2px;
             border-radius: 2px;
+            transition: background-color $speed-fast;
 
             &:hover {
                 background-color: $font-gold;
@@ -477,6 +479,7 @@
             & a {
                 text-decoration: none;
                 color: $dark;
+                transition: color $speed-fast;
             }
 
             & a:hover {

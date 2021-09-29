@@ -14,6 +14,7 @@
 
     & li:hover .social-icon {
         border-color: $link-hover;
+        transition: border-color $speed-fast;
     }
 
     & a:active .social-icon {

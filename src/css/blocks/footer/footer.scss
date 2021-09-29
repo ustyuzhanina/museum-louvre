@@ -68,8 +68,13 @@
                 line-height: 26px;
                 letter-spacing: 2px;
 
+                & li {
+                    transition: color $speed-fast;
+                }
+
                 & li:hover a {
                     color: $link-hover;
+                    transition: color $speed-fast;
                 }
 
                 & li:active a {

@@ -24,10 +24,12 @@
                 font-size: 22px;
                 letter-spacing: 2px;
                 line-height: 25.3px;
+                transition: color $speed-fast;
             }
 
             &:hover a {
                 color: $link-hover;
+                transition: color $speed-fast;
             }
 
             &:active a {
