@@ -26,7 +26,13 @@
             width: 300px;
             height: 2px;
             background-color: $dark-red;
+            transition: width 1s ease-in-out 5ms;
         }
+    }
+
+    &:hover h3::after {
+        width: 100%;
+        transition: width 1s ease-in-out 5ms;
     }
 
     &__line-1 {
