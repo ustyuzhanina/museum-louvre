@@ -39,14 +39,45 @@
 
         <section class="section section_welcome">
             <div class="container section_welcome__container">
-                <div class="overlay section_welcome__overlay">
+                <div class="carousel__intro">
                     <h2 class="section-title section-title_dark-area">Welcome<br>
                         to the Louvre</h2>
                     <p>From the castle to the museum</p>
                     <a href="./pages/welcome.html" class="link-button section_welcome__link-button" target="_blank">Discover the Louvre</a>
                 </div>
+                <div class="carousel">
+                    <div class="carousel__container">
+                        <img class="carousel__image carousel__image_active" src="./assets/img/welcome-slider/1.jpg" alt="welcome image 1">
+                        <img class="carousel__image carousel__image_next" src="./assets/img/welcome-slider/2.jpg" alt="welcome image 2">
+                        <img class="carousel__image carousel__image_previous" src="./assets/img/welcome-slider/3.jpg" alt="welcome image 3">
+                        <img class="carousel__image" src="./assets/img/welcome-slider/4.jpg" alt="welcome image 4">
+                        <img class="carousel__image" src="./assets/img/welcome-slider/5.jpg" alt="welcome image 5">
+                        <div class="overlay carousel__overlay"></div>
+                    </div>
+                    <div class="carousel__controls">
+                        <div class="carousel__range">
+                            <p>01</p>
+                            <p>|</p>
+                            <p>05</p>
+                        </div>
+                        <div class="carousel__button-container">
+                            <button class="button carousel__button carousel__button_active"></button>
+                            <button class="button carousel__button"></button>
+                            <button class="button carousel__button"></button>
+                            <button class="button carousel__button"></button>
+                            <button class="button carousel__button"></button>
+                        </div>
+                        <div class="carousel__arrow-container">
+                            <button class="button carousel__arrow-left"></button>
+                            <button class="button carousel__arrow-right"></button>
+                        </div>
+                    </div>
+                </div>
+
+
+
             </div>
-            <div class="container container_insert"></div>
+            </div>
         </section>
 
         <section class="section section_visiting" id="visiting">
