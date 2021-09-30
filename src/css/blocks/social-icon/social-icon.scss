@@ -4,28 +4,39 @@
     border: 1px solid $grey-line;
     border-radius: 50px;
     margin-bottom: 5px;
+    filter: $social-icon-common-filter;
     background-color: transparent;
     background-repeat: no-repeat;
     background-position: center center;
     transition: border-color $speed-fast;
 
+    &:hover {
+        filter: $social-icon-hover-filter;
+    }
+
+    &:active {
+        filter: $social-icon-active-filter;
+    }
+
     &_youtube {
-        background-image: url('./assets/svg/icon-youtube.svg');
+        background-image: url('./assets/svg/socials/icon-youtube.svg');
     }
 
     &_instagram {
-        background-image: url('./assets/svg/icon-instagram.svg');
+        background-image: url('./assets/svg/socials/icon-instagram.svg');
     }
 
     &_facebook {
-        background-image: url('./assets/svg/icon-facebook.svg');
+        background-image: url('./assets/svg/socials/icon-facebook.svg');
     }
 
     &_tweeter {
-        background-image: url('./assets/svg/icon-tweeter.svg');
+        background-image: url('./assets/svg/socials/icon-tweeter.svg');
     }
 
     &_unknown {
-        background-image: url('./assets/svg/icon-unknown.svg');
+        background-image: url('./assets/svg/socials/icon-pinterest.svg');
     }
+
+
 }

@@ -5,6 +5,11 @@
     width: 452px;
     height: 254px;
     background-color: $bg-temp;
+    margin-right: 20px;
+
+    &:last-of-type {
+        margin-right: 0;
+    }
 
     &__overlay {
         padding: 15px 10px;
@@ -36,20 +41,30 @@
     }
 
     &__options {
-        margin-right: 26px;
+        margin-right: 19px;
+        height: 20px;
+        width: 18px;
+        background-position: center center;
+        background-repeat: no-repeat;
         background-color: transparent;
-        outline: none;
-        border: none;
         margin-left: auto;
-        cursor: pointer;
+        background-image: url('./assets/svg/video/icon-options.svg');
     }
 
     &__youtube-button {
         background-color: transparent;
-        outline: none;
-        border: none;
+        height: 60px;
+        width: 80px;
         margin: 0 auto;
         margin-top: 10%;
-        cursor: pointer;
+        background-image: url('./assets/svg/icon-youtube-play.svg');
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-color: transparent;
+        transition: all $speed-fast;
+    }
+
+    &__youtube-button:hover {
+        transform: scale(1.3);
     }
 }

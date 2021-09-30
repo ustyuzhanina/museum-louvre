@@ -21,9 +21,39 @@ $light: white;
 $link-hover: $font-gold;
 $link-active: #7E6C51;
 
-//slider button common
+//slider button
 $carousel-button: white;
 $carousel-button-active: #D2B183;
+$carousel-button-hover: #9d8665;
+
+//pagination buttons
+$dot-common: #999999;
+$dot-common-filter: invert(67%) sepia(13%) saturate(15%) hue-rotate(35deg) brightness(90%) contrast(86%);
+$dot-active: #333333;
+$dot-active-filter: invert(6%) sepia(0%) saturate(5212%) hue-rotate(162deg) brightness(110%) contrast(69%);
+$dot-hover: $dark-red;
+$dot-hover-filter: invert(11%) sepia(34%) saturate(7091%) hue-rotate(352deg) brightness(92%) contrast(102%);
+
+
+//video-icon
+$video-play-large: #FFFFFF;
+$video-play-large-filter: invert(100%) sepia(0%) saturate(7495%) hue-rotate(173deg) brightness(112%) contrast(99%);
+$video-play-large-hover: $dark-red;
+$video-play-large-hover-filter: invert(11%) sepia(34%) saturate(7091%) hue-rotate(352deg) brightness(92%) contrast(102%);
+
+$video-icon: #B3B3B3;
+$video-icon-filter: invert(77%) sepia(14%) saturate(0%) hue-rotate(210deg) brightness(97%) contrast(76%);
+$video-icon-hover: #989898;
+$video-icon-hover-filter: invert(66%) sepia(0%) saturate(725%) hue-rotate(145deg) brightness(92%) contrast(94%);
+
+//footer social-icons
+$social-icon-common: #FFFFFF;
+$social-icon-common-filter: invert(100%) sepia(0%) saturate(7495%) hue-rotate(173deg) brightness(112%) contrast(99%);
+$social-icon-hover: $link-hover;
+$social-icon-hover-filter: invert(60%) sepia(12%) saturate(871%) hue-rotate(356deg) brightness(88%) contrast(94%);
+$social-icon-active: $link-active;
+$social-icon-active-filter: invert(42%) sepia(40%) saturate(314%) hue-rotate(357deg) brightness(93%) contrast(87%);
+
 
 
 $screen1: 420px;

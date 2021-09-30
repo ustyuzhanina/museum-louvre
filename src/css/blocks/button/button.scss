@@ -2,22 +2,52 @@
     outline: none;
     border: none;
     background-color: transparent;
+    background-repeat: no-repeat;
+    background-position: center center;
     cursor: pointer;
 
     &_play_large {
         display: block;
+        filter: $video-play-large-filter;
+        background-image: url('./assets/svg/video/icon-play-large.svg');
         width: 220px;
         height: 220px;
         margin: auto;
         z-index: 2;
     }
 
-    &_play_large {
-        display: block;
-        width: 220px;
-        height: 220px;
-        z-index: 2;
+    &_play_large:hover {
+        filter: $video-play-large-hover-filter;
     }
+
+    &_play_small {
+        background-image: url('./assets/svg/video/icon-play-small.svg');
+        filter: $video-icon-filter;
+
+        &:hover {
+            filter: $video-icon-hover-filter;
+        }
+    }
+
+    &_volume {
+        background-image: url('./assets/svg/video/icon-volume.svg');
+        filter: $video-icon-filter;
+
+        &:hover {
+            filter: $video-icon-hover-filter;
+        }
+    }
+
+    &_fullscreen {
+        background-image: url('./assets/svg/video/icon-fullscreen.svg');
+        filter: $video-icon-filter;
+
+        &:hover {
+            filter: $video-icon-hover-filter;
+        }
+    }
+
+
 
 
 }

@@ -84,6 +84,10 @@
         margin-right: 25px;
     }
 
+    &__button:hover.button {
+        background-color: $carousel-button-hover;
+    }
+
     &__button.button:last-of-type {
         margin-right: 0;
     }
@@ -105,15 +109,19 @@
         background-repeat: no-repeat;
         background-image: url('./assets/svg/carousel-arrow.svg');
         background-position: center;
+        filter: invert(100%) sepia(0%) saturate(7495%) hue-rotate(173deg) brightness(112%) contrast(99%);
+
+        &:hover {
+            filter: invert(62%) sepia(24%) saturate(491%) hue-rotate(356deg) brightness(82%) contrast(87%);
+        }
     }
 
     & .carousel__arrow-left {
         margin-right: 20px;
-        transform: rotate(180deg);
 
     }
 
     & .carousel__arrow-right {
-        //background-repeat: no-repeat;
+        transform: rotate(180deg);
     }
 }

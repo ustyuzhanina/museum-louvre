@@ -1,0 +1,49 @@
+.video-pagination {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    width: 211px;
+
+    &__dot {
+        width: 12px;
+        height: 12px;
+        margin: 5px;
+        filter: $dot-common-filter;
+        background-image: url('./assets/svg/dot.svg');
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
+
+    &__dot_active {
+        filter: $dot-active-filter;
+    }
+
+
+    &__dot:hover {
+        filter: $dot-hover-filter;
+    }
+
+    &__arrow {
+        width: 10px;
+        height: 12px;
+        margin: 5px;
+        background-repeat: no-repeat;
+        background-position: center center;
+        filter: $dot-common-filter;
+    }
+
+    &__arrow_left {
+        background-image: url('./assets/svg/arrow-left.svg');
+    }
+
+    &__arrow_right {
+        background-image: url('./assets/svg/arrow-right.svg');
+    }
+
+
+    &__arrow:hover {
+        filter: $dot-hover-filter;
+    }
+}

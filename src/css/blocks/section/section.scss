@@ -96,7 +96,7 @@
     &_video {
         background-color: $light;
         color: $dark;
-        padding: 86px 0 75px;
+        padding: 86px 0 70px;
 
         &__container {
             display: flex;
@@ -146,30 +146,30 @@
 
             &__controls {
                 width: 100%;
-                margin-top: -4.39px;
+                margin-top: -0.39px;
                 display: flex;
-                padding: 28px 29px;
+                padding: 23px 22px;
                 justify-content: space-between;
                 align-items: center;
                 background-color: $dark;
             }
 
+            &__controls .button {
+                width: 40px;
+                height: 40px;
+            }
+
             &__video-slider {
-                margin-top: 34px;
+                margin-top: 40px;
                 display: flex;
                 flex-direction: row;
-                gap: 40px;
+                justify-content: space-between;
                 width: 100%;
-                margin-bottom: 40px;
+                margin-bottom: 35px;
             }
 
             &__video-pagination {
-                display: block;
-
-                & img {
-                    display: block;
-                    margin: auto;
-                }
+                margin-top: 40px;
             }
         }
     }
