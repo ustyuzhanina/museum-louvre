@@ -1,0 +1,13 @@
+.page-overlay {
+    display: block;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    bottom: 0;
+    background-color: rgba($color: #030303, $alpha: .5);
+    z-index: 4;
+
+    &_hidden {
+        display: none;
+    }
+}

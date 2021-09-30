@@ -6,6 +6,10 @@ import './index.scss';
 import { PROGRESS_BAR,
            VOLUME_BAR,
            SECTION_TICKETS_BUTTON,
+           FORM_CONTAINER,
+           CLOSE_BUTTON,
+           PAGE,
+           PAGE_OVERLAY,
 } from './js/constants/MARKUP_SELECTORS';
 import { API_KEY,
 } from './js/constants/MAPBOX';
@@ -32,6 +36,14 @@ import GalleryList from './js/components/GalleryList';
   SECTION_TICKETS_BUTTON.addEventListener('click', function(e) {
     e.preventDefault();
     // прописать код для выезда большой формы
+    FORM_CONTAINER.classList.add('form-container_visible');
+    PAGE_OVERLAY.classList.remove('page-overlay_hidden');
+})
+
+  CLOSE_BUTTON.addEventListener('click', function(e) {
+    // прописать код для закрытия большой формы
+    FORM_CONTAINER.classList.remove('form-container_visible');
+    PAGE_OVERLAY.classList.add('page-overlay_hidden');
 })
 
 
