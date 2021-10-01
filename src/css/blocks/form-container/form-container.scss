@@ -27,22 +27,26 @@
     left: -100vw;
     z-index: 5;
     background-color: transparent;
-    animation-duration: 3s;
-    animation-name: slideout;
 
     &_visible {
         left: 0;
-        animation-duration: 3s;
+        animation-duration: 1.5s;
         animation-name: slidein;
 
     }
 
+    &_invisible {
+        left: -100vw;
+        animation-duration: 1.5s;
+        animation-name: slideout;
 
+    }
 
     &__container {
         background-color: $light;
         position: relative;
-        height: 845px;
+        min-height: 845px;
+        padding: 91px 0;
         margin: auto;
     }
 }

@@ -283,8 +283,102 @@
                     <span class="line line-2"></span>
                 </button>
                 <form class="large-form" action="submit">
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequuntur ratione dolor consequatur perferendis animi, beatae mollitia sint ipsa natus sit distinctio cumque tempora totam maiores quisquam. Expedita doloremque officia officiis!</p>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Neque, optio ducimus magni temporibus ullam praesentium similique illo obcaecati natus maxime eaque vitae excepturi consequatur reprehenderit commodi voluptatibus explicabo velit nam.</p>
+                    <fieldset class="fieldset-details">
+
+                        <legend class="visually-hidden">Booking details</legend>
+                        <div class="logo__icon logo__icon_gold"></div>
+                        <h2 class="section-title section-title_underline">Booking Tickets</h2>
+                        <h3>Tour to Louvre</h3>
+
+                        <div class="fieldset-details__line">
+                            <label class="label-date" for="input-date">
+                                <input type="date" class="date" id="#input-date">
+                                <span class="svg-arrow svg-arrow_down"></span>
+                                <span class="date-overlay">Date</span>
+                                <span class="picker-overlay"></span>
+                            </label>
+                            <label class="label-time" for="input-time">
+                                <input type="time" class="time" id="#input-time">
+                                <span class="svg-arrow svg-arrow_down"></span>
+                                <span class="time-overlay">Time</span>
+                                <span class="picker-overlay"></span>
+                            </label>
+                        </div>
+
+                        <div class="fieldset-details__line">
+                            <label for="input-name" class="label-name">
+                                <input type="text" class="name" id="#input-name" placeholder="Name">
+                                <span></span>
+                            </label>
+                        </div>
+
+                        <div class="fieldset-details__line">
+                            <label for="input-email" class="label-email">
+                                <input type="email" class="email" id="#input-email" placeholder="E-mail">
+                                <span></span>
+                            </label>
+                        </div>
+
+                        <div class="fieldset-details__line">
+                            <label for="input-phone" class="label-phone">
+                                <input type="tel" class="phone" id="#input-phone" placeholder="Phone">
+                                <span></span>
+                            </label>
+                        </div>
+
+                        <div class="fieldset-details__line fieldset-details__line_ticket-type">
+
+                            <label class="label-ticket-type">
+                                <input type="text" class="input_ticket-type" placeholder="Ticket Type">
+                                <span class="svg-ballot"></span>
+                                <span class="svg-arrow svg-arrow_down"></span>
+                                <span class="chosen-value"></span>
+                            </label>
+
+                            <div class="options">
+                                <div class="option-container">
+                                    <p class="option" id="tpe">Permanent Exhibition</p>
+                                </div>
+                                <div class="option-container">
+                                    <p class="option" id="tte">Temporary Exhibition</p>
+                                </div>
+                                <div class="option-container">
+                                    <p class="option" id="tca">Combined Admission</p>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="type-box">
+                            <h4 class="section-title section-title_underline">Entry Ticket</h4>
+
+                            <div class="fieldset-details__line">
+                                <label for="formBasicNumber">Basic 18+ (20 €)</label>
+
+                                <div class="number-container">
+                                    <button class="button button_minus" type="button" onclick="this.nextElementSibling.stepDown()"></button>
+                                    <input type="number" min="0" max="20" value="1" readonly class="number" name="basicNumber" id="formBasicNumber">
+                                    <button class="button button_plus" type="button" onclick="this.previousElementSibling.stepUp()"></button>
+                                </div>
+
+                            </div>
+
+                            <div class="fieldset-details__line">
+                                <label for="formSeniorNumber">Senior 65+ (10 €)</label>
+
+                                <div class="number-container">
+                                    <button class="button button_minus" type="button" onclick="this.nextElementSibling.stepDown()"></button>
+                                    <input type="number" min="0" max="20" value="1" readonly class="number" name="basicNumber" id="formSeniorNumber">
+                                    <button class="button button_plus" type="button" onclick="this.previousElementSibling.stepUp()"></button>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </fieldset>
+                    <fieldset class="fieldset-overview">
+
+                    </fieldset>
                 </form>
             </div>
         </div>

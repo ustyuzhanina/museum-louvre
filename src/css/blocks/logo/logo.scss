@@ -11,6 +11,12 @@
         margin-right: 25px;
     }
 
+    &__icon_gold {
+        background-image: url("./assets/svg/booking/logo_gold.svg");
+        height: 41px;
+        width: 85px;
+    }
+
     & p {
         text-transform: uppercase;
         letter-spacing: 5px;
