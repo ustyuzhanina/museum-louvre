@@ -8,14 +8,17 @@
     background-color: transparent;
     background-repeat: no-repeat;
     background-position: center center;
-    transition: border-color $speed-fast;
+    transition: all $speed-fast;
 
     &:hover {
+        border: 1px solid $font-gold;
         filter: $social-icon-hover-filter;
+        transition: all $speed-fast;
     }
 
     &:active {
         filter: $social-icon-active-filter;
+        transition: all $speed-fast;
     }
 
     &_youtube {

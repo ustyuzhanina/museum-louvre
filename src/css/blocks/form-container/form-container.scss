@@ -8,6 +8,16 @@
     }
 }
 
+@keyframes slideout {
+    from {
+        left: 0%;
+    }
+
+    to {
+        left: -100vw;
+    }
+}
+
 .form-container {
     position: fixed;
     display: flex;
@@ -17,6 +27,8 @@
     left: -100vw;
     z-index: 5;
     background-color: transparent;
+    animation-duration: 3s;
+    animation-name: slideout;
 
     &_visible {
         left: 0;
