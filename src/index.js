@@ -15,6 +15,7 @@ import { PROGRESS_BAR,
            TICKET_TYPE_ARROW,
            FORM_OPTIONS,
            TICKET_TYPE_TEXTOVERLAY,
+           BOOK_BUTTON,
 } from './js/constants/MARKUP_SELECTORS';
 import { API_KEY,
 } from './js/constants/MAPBOX';
@@ -89,7 +90,34 @@ function handleInput(e) {
 
 TICKET_TYPE_INPUT.addEventListener('click', handleInputClick);
 
+BOOK_BUTTON.addEventListener('click', function(e) {
+  e.preventDefault();
 
+      // Create span element
+      let ripple = document.createElement("span");
+
+      // Add ripple class to span
+      ripple.classList.add("button", "button__ripple-effect");
+
+      // Add span to the button
+      this.appendChild(ripple);
+
+      // Get position of X
+      let x = e.clientX - e.target.offsetLeft;
+
+      // Get position of Y
+      let y = e.clientY - e.target.offsetTop;
+
+      // Position the span element
+      ripple.style.left = `${x}px`;
+      ripple.style.top = `${y}px`;
+
+      // Remove span after 0.3s
+      setTimeout(() => {
+          ripple.remove();
+      }, 300);
+
+})
 
 
 

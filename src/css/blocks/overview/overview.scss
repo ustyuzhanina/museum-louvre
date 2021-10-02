@@ -1,0 +1,195 @@
+.overview {
+    width: 530px;
+    border: 1px solid $bg-dark;
+    padding: 25px 30px;
+
+    &__line {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: baseline;
+    }
+
+    &__line_header {
+        margin-bottom: 22px;
+    }
+
+    &__title {
+        color: #272727;
+        font-family: $font-major;
+        font-weight: 500;
+        font-size: 32px;
+        line-height: 30px;
+    }
+
+    &__subtitle {
+        color: #740C11;
+        font-family: $font-major;
+        font-weight: 500;
+        font-size: 22px;
+        line-height: 25px;
+        margin-bottom: 10px;
+    }
+
+    &__picture {
+        background-image: url(./assets/img/booking/img.jpg);
+        background-position: top;
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: 150px;
+        align-self: stretch;
+
+    }
+
+    &__result {
+        position: relative;
+        padding-left: 30px;
+        color: $bg-dark;
+        font-family: $font-major;
+        font-weight: 300;
+        font-size: 18px;
+        line-height: 18px;
+        margin-bottom: 5px;
+    }
+
+    &__result:last-of-type {
+        margin-bottom: 0;
+    }
+
+    &__result::before {
+        position: absolute;
+        content: '';
+        width: 15px;
+        height: 15px;
+        top: 0;
+        left: 0;
+    }
+
+    &__result_date::before {
+        background-image: url('./assets/svg/booking/date.svg');
+    }
+
+    &__result_time::before {
+        background-image: url('./assets/svg/booking/time.svg');
+    }
+
+    &__result_ticket-type::before {
+        background-image: url('./assets/svg/booking/check.svg');
+    }
+
+    & .overview__line_calculation {
+        margin-bottom: 5px;
+    }
+
+    & .overview__line_calculation:last-of-type {
+        margin-bottom: 0;
+    }
+
+    & .overview__line_calculation>div {
+        display: flex;
+        align-items: center;
+    }
+
+    &__ticket-count {
+        width: 32px;
+        height: 20px;
+        color: #A4A4A3;
+        background-color: $bg-dark;
+        text-align: center;
+        padding-top: 1px;
+        border-radius: 5px;
+        font-family: $font-major;
+        font-size: 18px;
+        line-height: 18px;
+    }
+
+    &__ticket-type {
+        color: $bg-dark;
+        font-family: $font-major;
+        font-size: 22px;
+        line-height: 22px;
+        margin-left: 10px;
+        font-weight: 400;
+    }
+
+    &__cost {
+        color: $bg-dark;
+        font-family: $font-major;
+        font-size: 22px;
+        line-height: 22px;
+        margin-left: 10px;
+        font-weight: 400;
+    }
+
+    &__currency {
+        color: $bg-dark;
+        font-family: $font-major;
+        font-size: 22px;
+        line-height: 22px;
+        margin-left: 10px;
+        font-weight: 400;
+        margin-left: 7px;
+    }
+
+    &__hr {
+        margin: 10px 0;
+        background-color: #740C11;
+        height: 2px;
+        border: none;
+    }
+
+    &__line_total {
+        align-items: center;
+        margin-bottom: 10px;
+    }
+
+    &__line_total>div {
+        display: flex;
+        align-items: baseline;
+    }
+
+    &__total-title {
+        color: $bg-dark;
+        font-family: $font-major;
+        font-size: 32px;
+        line-height: 36px;
+        font-weight: 400;
+    }
+
+    &__total-cost,
+    &__total-currency {
+        color: $bg-dark;
+        font-family: $font-major;
+        font-size: 32px;
+        line-height: 36px;
+        font-weight: 500;
+    }
+
+    &__line_book {
+        margin-top: 26px;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    &__book-button {
+        position: relative;
+        overflow: hidden;
+        color: white;
+        background-color: $dark-red;
+        padding: 10px;
+        min-width: 220px;
+        font-family: $font-major;
+        font-size: 22px;
+        line-height: 22px;
+        font-weight: 400;
+        transition: background-color $speed-fast;
+    }
+
+    &__book-button:hover {
+        background-color: $font-gold;
+    }
+
+
+
+}

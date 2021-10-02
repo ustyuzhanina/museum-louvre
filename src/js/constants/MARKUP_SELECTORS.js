@@ -16,6 +16,7 @@ const TICKET_TYPE_INPUT = TICKET_TYPE_LABEL.querySelector('.input_ticket-type');
 const TICKET_TYPE_ARROW = TICKET_TYPE_LABEL.querySelector('.svg-arrow');
 const TICKET_TYPE_TEXTOVERLAY = TICKET_TYPE_LABEL.querySelector('.chosen-value');
 const FORM_OPTIONS = document.querySelector('.options');
+const BOOK_BUTTON = document.querySelector('.overview__book-button');
 
 
 const INITIAL_PAINTINGS_ARRAY = [2, 9, 4, 6, 11, 1, 8, 3, 5, 13, 7, 10, 15, 12, 14];
@@ -38,4 +39,5 @@ export {
   TICKET_TYPE_ARROW,
   FORM_OPTIONS,
   TICKET_TYPE_TEXTOVERLAY,
+  BOOK_BUTTON,
 }
