@@ -166,10 +166,34 @@
         font-weight: 500;
     }
 
+    &__line_bank-details {
+        height: 241px;
+        position: relative;
+    }
+
     &__line_book {
         margin-top: 26px;
         display: flex;
         justify-content: flex-end;
+    }
+
+    &__bank-card {
+        position: absolute;
+        width: 360px;
+        height: 211px;
+        border-radius: 4px;
+    }
+
+    &__bank-card_face {
+        top: 0;
+        left: 0;
+        background-color: #BCBCBC;
+    }
+
+    &__bank-card_reverse {
+        right: 0;
+        bottom: 0;
+        background-color: #939393;
     }
 
     &__book-button {
