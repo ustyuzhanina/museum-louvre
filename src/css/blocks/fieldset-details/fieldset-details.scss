@@ -69,6 +69,7 @@
         padding: 0 0 0 45px;
         margin-right: 16px;
         position: relative;
+        cursor: auto;
 
         &::before {
             position: absolute;
@@ -81,6 +82,10 @@
         }
     }
 
+    & .date::-webkit-calendar-picker-indicator {
+        cursor: pointer;
+    }
+
     & .label-date,
     .label-time {
         position: relative;
@@ -90,7 +95,8 @@
         position: absolute;
         display: block;
         content: '';
-        top: 2px;
+        padding-top: 8px;
+        top: -6px;
         left: 45px;
         width: 110px;
         height: 25px;
@@ -99,7 +105,6 @@
         font-family: $font-major;
         font-size: 18px;
         font-weight: 400;
-        cursor: pointer;
     }
 
     & .label-date .picker-overlay {
@@ -116,6 +121,7 @@
         right: 0;
         width: 30px;
         height: 30px;
+        pointer-events: none;
     }
 
     & .label-date span.svg-arrow {
@@ -128,6 +134,7 @@
         right: 34px;
         width: 17px;
         height: 17px;
+        pointer-events: none;
         z-index: 7;
     }
 
@@ -137,6 +144,7 @@
         border: 1px solid #030303;
         padding: 0 0 0 45px;
         position: relative;
+        cursor: auto;
 
 
 
@@ -151,11 +159,15 @@
         }
     }
 
+    & .time::-webkit-calendar-picker-indicator {
+        cursor: pointer;
+    }
+
     & .label-time .time-overlay {
         position: absolute;
         display: block;
         content: '';
-        top: 1px;
+        top: -7px;
         left: 45px;
         width: 110px;
         height: 25px;
@@ -164,7 +176,7 @@
         font-family: $font-major;
         font-size: 18px;
         font-weight: 400;
-        cursor: pointer;
+        padding-top: 8px;
     }
 
     & .label-time .picker-overlay {
@@ -182,6 +194,7 @@
         right: 15px;
         width: 17px;
         height: 17px;
+        pointer-events: none;
         z-index: 7;
     }
 
