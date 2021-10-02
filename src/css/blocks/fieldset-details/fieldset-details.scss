@@ -102,13 +102,18 @@
         cursor: pointer;
     }
 
+    & .label-date .picker-overlay {
+        top: -3px;
+        right: 23px;
+    }
+
     & .picker-overlay {
         position: absolute;
         display: block;
         content: '';
         background-color: white;
-        top: -3px;
-        right: 23px;
+        top: 0;
+        right: 0;
         width: 30px;
         height: 30px;
     }
@@ -120,7 +125,7 @@
         background-position: center center;
         background-repeat: no-repeat;
         top: 3px;
-        right: 28px;
+        right: 34px;
         width: 17px;
         height: 17px;
         z-index: 7;
@@ -160,6 +165,24 @@
         font-size: 18px;
         font-weight: 400;
         cursor: pointer;
+    }
+
+    & .label-time .picker-overlay {
+        top: -4px;
+        right: 4px;
+    }
+
+    & .label-time span.svg-arrow {
+        position: absolute;
+        display: block;
+        content: '';
+        background-position: center center;
+        background-repeat: no-repeat;
+        top: 2px;
+        right: 15px;
+        width: 17px;
+        height: 17px;
+        z-index: 7;
     }
 
     & .name {
