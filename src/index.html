@@ -438,25 +438,37 @@
 
                                     <div class="overview__card-numbers">
 
-                                        <label>
+                                        <label class="overview__card-number-label">
                                             <input class="overview__card-number" type="tel">
+                                            <span class="overview__field-title">Card number</span>
                                         </label>
 
                                         <div class="overview__exp-date">
-                                            <label for="">
+
+                                            <label class="overview__exp-month-label">
                                                 <input class="overview__exp-month" type="number">
+                                                <span class="overview__field-title">Expiration date</span>
                                             </label>
-                                            <label for="">
+
+                                            <label class="overview__exp-year-label">
                                                 <input class="overview__exp-year" type="number">
                                             </label>
+
                                         </div>
 
                                     </div>
 
-                                    <div class="overview__payment-system"></div>
+                                    <div class="overview__payment-system">
+                                        <div class="overview__img overview__img_visa"></div>
+                                        <div class="overview__img overview__img_mastercard"></div>
+                                    </div>
 
                                 </div>
-                                <div class="overview__cardholder-name"></div>
+
+                                <label class="overview__cardholder-name-label">
+                                    <input class="overview__cardholder-name" type="text">
+                                    <span class="overview__field-title">Cardholder name</span>
+                                </label>
                             </div>
                         </div>
 
