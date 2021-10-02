@@ -1,12 +1,14 @@
 @keyframes ripple {
-    from {
-        opacity: 1;
-        transform: scale(0);
+    0% {
+        width: 0;
+        height: 0;
+        opacity: .5;
     }
 
-    to {
+    100% {
+        width: 500px;
+        height: 500px;
         opacity: 0;
-        transform: scale(10);
     }
 }
 
@@ -65,15 +67,10 @@
         border-radius: 50%;
         /* To make it round */
         background-color: rgba(219, 190, 110, 0.3);
+        transform: translate(-80%, -30%);
+        pointer-events: none;
 
-        width: 50px;
-        height: 50px;
-        margin-top: -60px;
-        /* for positioning */
-        margin-left: -120px;
-
-        animation: ripple 1s ease 1ms;
-        opacity: 0;
+        animation: ripple 1s linear infinite;
         z-index: 10;
     }
 

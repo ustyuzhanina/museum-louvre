@@ -423,17 +423,23 @@
                         </div>
 
                         <div class="overview__line overview__line_bank-details">
+
                             <div class="overview__bank-card overview__bank-card_reverse">
                                 <div class="overview__black-line"></div>
-                                <div class="overview__code-window"></div>
+                                <label class="overview__cvv-label">
+                                    <input type="tel" class="overview__cvv">
+                                    <span class="overview__cvv-title">CVC/CVV</span>
+                                    <span class="overview__cvv-explanation">The last 3 or 4 digits on back of the card</span>
+                                </label>
                             </div>
+
                             <div class="overview__bank-card overview__bank-card_face">
                                 <div class="overview__card-details">
 
                                     <div class="overview__card-numbers">
 
                                         <label>
-                                            <input class="overview__card-number" type="number">
+                                            <input class="overview__card-number" type="tel">
                                         </label>
 
                                         <div class="overview__exp-date">

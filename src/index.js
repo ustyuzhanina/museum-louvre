@@ -103,10 +103,10 @@ BOOK_BUTTON.addEventListener('click', function(e) {
       this.appendChild(ripple);
 
       // Get position of X
-      let x = e.clientX - e.target.offsetLeft;
+      let x = (e.clientX - e.target.offsetLeft)/2;
 
       // Get position of Y
-      let y = e.clientY - e.target.offsetTop;
+      let y = (e.clientY - e.target.offsetTop)/2;
 
       // Position the span element
       ripple.style.left = `${x}px`;
@@ -115,7 +115,7 @@ BOOK_BUTTON.addEventListener('click', function(e) {
       // Remove span after 0.3s
       setTimeout(() => {
           ripple.remove();
-      }, 300);
+      }, 1000);
 
 })
 
