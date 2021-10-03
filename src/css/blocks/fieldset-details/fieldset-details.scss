@@ -13,7 +13,7 @@
     border: none;
     max-width: 400px;
     width: 100%;
-    min-height: 663px;
+    // min-height: 663px;
 
     & .section-title {
         font-size: 50px;
@@ -137,8 +137,8 @@
         content: '';
         background-position: center center;
         background-repeat: no-repeat;
-        top: 15px;
-        right: 12px;
+        top: 12px;
+        right: 16px;
         width: 17px;
         height: 17px;
         pointer-events: none;
@@ -197,8 +197,8 @@
         content: '';
         background-position: center center;
         background-repeat: no-repeat;
-        top: 15px;
-        right: 12px;
+        top: 12px;
+        right: 16px;
         width: 17px;
         height: 17px;
         pointer-events: none;
@@ -438,7 +438,7 @@
                     box-sizing: border-box;
                     text-align: center;
                     border: none;
-                    width: 48px;
+                    width: 50px;
                     font-family: $font-major;
                     font-weight: 400;
                     font-size: 18px;
@@ -480,6 +480,50 @@
         width: 100%;
         max-width: 530px;
 
+        & h5 {
+            margin-bottom: 52px;
+        }
+
+        & .label-time,
+        & .label-date {
+            width: calc((100% - 28px)/2);
+        }
+
+    }
+}
+
+@media (max-width: 600px) {
+    .fieldset-details {
+        max-width: none;
+
+        & .section-title {
+            font-size: 7.35vw;
+            margin-top: -10px;
+            margin-bottom: 7px;
+        }
+
+        & .section-title_underline::after {
+            bottom: -39px;
+        }
+
+        &__line_date-time {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+        }
+
+        & .label-date {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
+        & .label-time {
+            width: 100%;
+        }
+
+        & .type-box {
+            padding-top: 20px;
+        }
 
     }
 }

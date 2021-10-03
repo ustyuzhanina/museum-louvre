@@ -49,14 +49,25 @@ import GalleryList from './js/components/GalleryList';
     FORM_CONTAINER.classList.add('form-container_visible');
     FORM_CONTAINER.classList.remove('form-container_invisible');
     PAGE_OVERLAY.classList.remove('page-overlay_hidden');
-})
+
+    setTimeout(() => {
+      FORM_CONTAINER.style.overflowY = 'scroll';
+    }, 1000);
+
+
+  })
 
 //make form follow the document scroll
 document.addEventListener('scroll', function (e) {
   FORM_CONTAINER.style.top = `${window.scrollY}px`;
+
 })
 
   CLOSE_BUTTON.addEventListener('click', function(e) {
+    e.preventDefault();
+
+    FORM_CONTAINER.style.overflowY = 'hidden';
+
     // прописать код для закрытия большой формы
     FORM_CONTAINER.classList.remove('form-container_visible');
     FORM_CONTAINER.classList.add('form-container_invisible');

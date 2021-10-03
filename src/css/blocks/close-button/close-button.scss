@@ -34,3 +34,11 @@
         transform: rotate(135deg) translateY(1px);
     }
 }
+
+@media (max-width: 600px) {
+    .close-button {
+        right: 5px;
+    }
+
+
+}

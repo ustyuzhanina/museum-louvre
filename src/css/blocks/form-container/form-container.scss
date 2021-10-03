@@ -30,31 +30,22 @@
 
     &_visible {
         left: 0;
-        animation-duration: 1.5s;
+        animation-duration: 1s;
         animation-name: slidein;
 
     }
 
     &_invisible {
         left: -100vw;
-        animation-duration: 1.5s;
+        animation-duration: 1s;
         animation-name: slideout;
 
     }
 
-    &__container {
-        background-color: $light;
-        position: relative;
-        width: 100%;
-        max-width: 1440px;
-        padding: 0;
-        margin: auto;
-
-    }
 }
 
 @media (max-width: 1023px) {
     .form-container {
-        overflow-y: scroll;
+        overflow-y: hidden;
     }
 }

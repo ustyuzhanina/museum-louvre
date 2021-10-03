@@ -437,5 +437,78 @@
         width: 100%;
         max-width: 530px;
         margin-top: 50px;
+        padding: 30px 14px 23px;
+
+        &__line_total {
+            margin-bottom: 15px;
+        }
+
+        &__line_book {
+            margin-top: 24px;
+        }
+
+
+    }
+}
+
+@media (max-width: 600px) {
+    .overview {
+        max-width: none;
+
+        &__line_bank-details {
+            position: static;
+            min-height: 443px;
+            display: flex;
+            flex-direction: column-reverse;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        &__bank-card {
+            position: relative;
+            width: 330px;
+            height: 209px;
+        }
+
+        &__line_book {
+            margin-top: 40px;
+        }
+
+        &__picture {
+            width: 120px;
+        }
+
+        &__line_total {
+            margin-bottom: 18px;
+        }
+
+        &__cvv-title {
+            top: -18px;
+            left: 10px;
+        }
+
+        &__cvv-explanation {
+            bottom: -27px;
+            left: 14px;
+        }
+
+        &__book-button {
+            padding: 13px 12px 11px;
+        }
+
+    }
+}
+
+@media (max-width: 420px) {
+    .overview {
+
+        &__bank-card {
+            position: relative;
+            width: calc(100vw - 90px);
+            height: calc((100vw - 90px) * .6333);
+        }
+
+
+
     }
 }
