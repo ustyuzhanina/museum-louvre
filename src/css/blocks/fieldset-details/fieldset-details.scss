@@ -50,6 +50,13 @@
     &__line:first-of-type {
         display: flex;
         flex-direction: row;
+
+    }
+
+    &__line_date-time {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
     }
 
     & input {
@@ -65,12 +72,11 @@
     }
 
     & .date {
-        width: 190px;
+        width: 100%;
         height: 45px;
         border: 1px solid #030303;
         padding: 0 0 0 45px;
         margin-right: 16px;
-        position: relative;
         cursor: auto;
 
         &::before {
@@ -93,12 +99,16 @@
         position: relative;
     }
 
+    & .label-date {
+        width: calc((100% - 16px)/2);
+    }
+
     & .label-date .date-overlay {
         position: absolute;
         display: block;
         content: '';
         padding-top: 8px;
-        top: -6px;
+        top: 6px;
         left: 45px;
         width: 110px;
         height: 25px;
@@ -109,18 +119,13 @@
         font-weight: 400;
     }
 
-    & .label-date .picker-overlay {
-        top: -3px;
-        right: 23px;
-    }
-
     & .picker-overlay {
         position: absolute;
         display: block;
         content: '';
         background-color: white;
-        top: 0;
-        right: 0;
+        top: 6px;
+        right: 1px;
         width: 30px;
         height: 30px;
         pointer-events: none;
@@ -132,8 +137,8 @@
         content: '';
         background-position: center center;
         background-repeat: no-repeat;
-        top: 3px;
-        right: 34px;
+        top: 15px;
+        right: 12px;
         width: 17px;
         height: 17px;
         pointer-events: none;
@@ -141,11 +146,10 @@
     }
 
     & .time {
-        width: 190px;
+        width: 100%;
         height: 45px;
         border: 1px solid #030303;
         padding: 0 0 0 45px;
-        position: relative;
         cursor: auto;
 
 
@@ -165,11 +169,15 @@
         cursor: pointer;
     }
 
+    & .label-time {
+        width: calc((100% - 16px)/2);
+    }
+
     & .label-time .time-overlay {
         position: absolute;
         display: block;
         content: '';
-        top: -7px;
+        top: 6px;
         left: 45px;
         width: 110px;
         height: 25px;
@@ -181,10 +189,7 @@
         padding-top: 8px;
     }
 
-    & .label-time .picker-overlay {
-        top: -4px;
-        right: 4px;
-    }
+
 
     & .label-time span.svg-arrow {
         position: absolute;
@@ -192,8 +197,8 @@
         content: '';
         background-position: center center;
         background-repeat: no-repeat;
-        top: 2px;
-        right: 15px;
+        top: 15px;
+        right: 12px;
         width: 17px;
         height: 17px;
         pointer-events: none;
@@ -467,5 +472,14 @@
         & .fieldset-details__line:last-of-type {
             margin-bottom: 0;
         }
+    }
+}
+
+@media (max-width: 1023px) {
+    .fieldset-details {
+        width: 100%;
+        max-width: 530px;
+
+
     }
 }

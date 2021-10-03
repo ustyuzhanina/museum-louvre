@@ -44,10 +44,16 @@ import GalleryList from './js/components/GalleryList';
 
   SECTION_TICKETS_BUTTON.addEventListener('click', function(e) {
     e.preventDefault();
+
     // прописать код для выезда большой формы
     FORM_CONTAINER.classList.add('form-container_visible');
     FORM_CONTAINER.classList.remove('form-container_invisible');
     PAGE_OVERLAY.classList.remove('page-overlay_hidden');
+})
+
+//make form follow the document scroll
+document.addEventListener('scroll', function (e) {
+  FORM_CONTAINER.style.top = `${window.scrollY}px`;
 })
 
   CLOSE_BUTTON.addEventListener('click', function(e) {

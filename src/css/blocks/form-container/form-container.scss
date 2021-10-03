@@ -19,14 +19,14 @@
 }
 
 .form-container {
-    position: fixed;
+    position: absolute;
     display: flex;
-    top: 0;
     height: 100vh;
     width: 100%;
     left: -100vw;
     z-index: 5;
     background-color: transparent;
+
 
     &_visible {
         left: 0;
@@ -45,8 +45,16 @@
     &__container {
         background-color: $light;
         position: relative;
-        min-height: 845px;
-        padding: 91px 0;
+        width: 100%;
+        max-width: 1440px;
+        padding: 0;
         margin: auto;
+
+    }
+}
+
+@media (max-width: 1023px) {
+    .form-container {
+        overflow-y: scroll;
     }
 }

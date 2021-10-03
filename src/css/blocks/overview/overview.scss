@@ -431,3 +431,11 @@
 
 
 }
+
+@media (max-width: 1023px) {
+    .overview {
+        width: 100%;
+        max-width: 530px;
+        margin-top: 50px;
+    }
+}

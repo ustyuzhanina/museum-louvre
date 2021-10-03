@@ -1,10 +1,27 @@
 .large-form {
     display: flex;
     height: 100%;
-    width: 970px;
+    width: 100%;
     flex-direction: row;
+    justify-content: center;
     column-gap: 40px;
     margin: auto;
+    padding: 91px 27px;
     align-items: flex-start;
     background-color: inherit;
+}
+
+@media (max-width: $screen3) {
+    .large-form {
+        padding: 75px 27px 30px;
+
+    }
+}
+
+@media (max-width: 1023px) {
+    .large-form {
+        flex-direction: column;
+        align-items: center;
+
+    }
 }
