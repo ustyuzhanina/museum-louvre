@@ -1,7 +1,8 @@
 .overview {
     width: 530px;
     border: 1px solid $bg-dark;
-    padding: 25px 30px;
+    padding: 28px 30px 25px;
+    min-height: 663px;
 
     & input {
         padding: 10px;
@@ -21,7 +22,7 @@
     }
 
     &__line_header {
-        margin-bottom: 22px;
+        margin-bottom: 25px;
     }
 
     &__title {
@@ -38,6 +39,7 @@
         font-weight: 500;
         font-size: 22px;
         line-height: 25px;
+        margin-top: 7px;
         margin-bottom: 10px;
     }
 
@@ -48,6 +50,7 @@
         background-size: contain;
         width: 150px;
         align-self: stretch;
+        margin-top: -4px;
 
     }
 
@@ -59,7 +62,7 @@
         font-weight: 300;
         font-size: 18px;
         line-height: 18px;
-        margin-bottom: 5px;
+        margin-bottom: 10px;
     }
 
     &__result:last-of-type {
@@ -88,7 +91,7 @@
     }
 
     & .overview__line_calculation {
-        margin-bottom: 5px;
+        margin-bottom: 9px;
     }
 
     & .overview__line_calculation:last-of-type {
@@ -175,13 +178,17 @@
         font-weight: 500;
     }
 
+    &__total-cost {
+        margin-right: 7px;
+    }
+
     &__line_bank-details {
         height: 241px;
         position: relative;
     }
 
     &__line_book {
-        margin-top: 26px;
+        margin-top: 27px;
         display: flex;
         justify-content: flex-end;
     }
@@ -408,7 +415,7 @@
         overflow: hidden;
         color: white;
         background-color: $dark-red;
-        padding: 10px;
+        padding: 15px 12px 9px;
         min-width: 220px;
         font-family: $font-major;
         font-size: 22px;
