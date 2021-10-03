@@ -64,3 +64,21 @@ $screen4: 1920px;
 //animation
 $speed-long: 1s ease-in-out 5ms;
 $speed-fast: .3s ease 3ms;
+
+//font-sizes
+$font-h2: 80px;
+$font-tour-h3: 32px;
+$font-1: 32px;
+$font-2: 28px;
+$font-3: 22px;
+//$font-4: 16px;
+
+//doesn't work ((
+@media (max-width: 1280px) {
+    $font-2: 24px;
+    $font-3: 20px;
+}
+
+@media (max-width: 1024px) {
+    $font-h2: 50px;
+}

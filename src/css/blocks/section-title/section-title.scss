@@ -2,11 +2,10 @@
     font-family: $font-secondary;
     font-weight: 400;
     color: $font-gold;
-    font-size: 80px;
+    font-size: $font-h2;
     line-height: 90px;
     letter-spacing: 5px;
     text-transform: uppercase;
-    //margin-top: 50px;
 
     &_dark-area {
         color: white;
@@ -24,5 +23,12 @@
             height: 3px;
             background-color: $dark-red;
         }
+    }
+}
+
+@media (max-width: 1350px) {
+    .section-title {
+        font-size: 4.89vw;
+        line-height: 4.89vw;
     }
 }
