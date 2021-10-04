@@ -3,6 +3,7 @@
     flex-direction: row;
     list-style: none;
 
+
     & li {
         margin-right: 25px;
         height: min-content;
@@ -19,5 +20,14 @@
 
     & a:active .social-icon {
         border-color: $link-active;
+    }
+}
+
+@media (max-width: 740px) {
+    .socials-list {
+
+        & li {
+            margin-right: calc(5 / 420 * 100vw);
+        }
     }
 }
