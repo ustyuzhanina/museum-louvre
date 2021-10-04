@@ -224,12 +224,15 @@
             width: 100%;
             display: flex;
             flex-direction: row;
+            justify-content: space-between;
         }
 
         &__img {
             width: 720px;
             height: 550px;
             background-image: url('./assets/img/tickets/picture.jpg');
+            background-position: center center;
+            background-size: cover;
         }
 
         &__short-form {
@@ -386,7 +389,8 @@
         &__button.button {
             background-color: black;
             color: $light;
-            padding: 13px 38px;
+            padding: 13px 0;
+            width: 175px;
             margin-top: 57px;
             font-family: $font-major;
             font-weight: 300;
@@ -495,6 +499,40 @@
 @media (max-width: 1280px) {
     .section {
 
+        &_tickets {
+
+            &__type {
+                display: none;
+            }
+
+            &__short-form {
+                justify-content: flex-end;
+                padding-left: 40px;
+            }
+
+            &__img {
+                width: calc((100vw - 40px) * .71138);
+                height: auto;
+                flex-shrink: 0;
+            }
+
+            &__amount {
+                align-items: flex-start;
+
+                & .number-container {
+                    width: 175px;
+                }
+
+                & label {
+                    margin-left: 0;
+                }
+
+                & legend {
+                    margin-left: 0;
+                }
+            }
+        }
+
         &_contacts {
             &__name {
                 font-size: 24px;
@@ -508,8 +546,23 @@
     }
 }
 
+
 @media (max-width: 950px) {
     .section {
+
+        &_tickets {
+
+            &__img {
+                width: calc((100vw - 40px) * (444 / 728));
+                height: calc(((100vw - 40px) * (444 / 728)) * (340 / 444));
+            }
+
+            &__short-form {
+                padding-left: 60px;
+                padding-right: 49px;
+            }
+
+        }
 
         &_contacts {
 
@@ -528,6 +581,53 @@
                 height: auto;
             }
 
+
+        }
+    }
+}
+
+@media (max-width: 670px) {
+    .section {
+
+        &_tickets {
+            &__subcontainer {
+                flex-direction: column;
+            }
+
+            &__img {
+                width: 100%;
+                height: calc((100vw - 40px) * (160 / 380));
+            }
+
+            &__short-form {
+                padding-left: 0;
+                padding-right: 0;
+                margin: 40px auto 0;
+                justify-content: center;
+                font-size: 1rem;
+            }
+
+            &__amount {
+                align-items: center;
+                font-size: inherit;
+            }
+
+            & legend {
+                margin: 0 auto 20px;
+                font-size: inherit;
+            }
+
+            & label {
+                font-size: inherit;
+            }
+
+            &__total {
+                font-size: inherit;
+            }
+
+            &__button.button {
+                font-size: inherit;
+            }
 
         }
     }

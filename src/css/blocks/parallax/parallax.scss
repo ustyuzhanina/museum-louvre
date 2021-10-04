@@ -5,5 +5,23 @@
     background-image: url('./assets/img/parallax.jpg');
     background-attachment: fixed;
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: center center;
+}
+
+@media (max-width: 1024px) {
+    .parallax {
+        height: calc(100vw * 400 / 1024);
+    }
+}
+
+@media (max-width: 768px) {
+    .parallax {
+        height: calc(100vw * 300 / 768);
+    }
+}
+
+@media (max-width: 670px) {
+    .parallax {
+        height: calc(100vw * 300 / 420);
+    }
 }

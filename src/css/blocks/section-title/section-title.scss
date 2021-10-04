@@ -26,9 +26,37 @@
     }
 }
 
-@media (max-width: 1350px) {
+
+@media (max-width: 1280px) {
     .section-title {
-        font-size: 4.89vw;
-        line-height: 4.89vw;
+        font-size: 6.25vw;
+        line-height: 6.25vw;
+        //80px
+    }
+}
+
+
+@media (max-width: 1024px) {
+    .section-title {
+        font-size: 4.845vw;
+        line-height: 4.845vw;
+        //50px
+    }
+}
+
+
+@media (max-width: 768px) {
+    .section-title {
+        font-size: 5.208vw;
+        line-height: 5.208vw;
+        //40px
+    }
+}
+
+@media (max-width: 420px) {
+    .section-title {
+        font-size: 28px;
+        line-height: 28px;
+        //28px
     }
 }
