@@ -1,11 +1,13 @@
 .card {
     text-decoration: none;
     color: $dark;
+    width: calc((100vw - 40px - 2 * 60px) /3);
+    max-width: 440px;
 
     &__img {
         display: block;
-        width: 440px;
-        height: 285px;
+        width: 100%;
+        height: auto;
         background-color: $bg-temp;
     }
 
@@ -23,7 +25,7 @@
             position: absolute;
             bottom: -10px;
             left: 0;
-            width: 300px;
+            width: 68.182%;
             height: 2px;
             background-color: $dark-red;
             transition: width $speed-long;
@@ -47,5 +49,134 @@
         margin-top: 10px;
         font-weight: 200;
         font-size: 18px;
+    }
+}
+
+@media (max-width: 1380px) {
+    .card {
+        width: calc((100vw - 40px - 2 * 108px) /2);
+
+        & h3 {
+            font-size: 28px;
+            letter-spacing: 3px;
+            margin-top: 25px;
+
+            //TODO
+            // &::after {
+            //     content: "";
+            //     position: absolute;
+            //     bottom: -10px;
+            //     left: 0;
+            //     width: 68.182%;
+            //     height: 2px;
+            //     background-color: $dark-red;
+            //     transition: width $speed-long;
+            // }
+        }
+
+        &__line-1 {
+            margin-top: 22px;
+            font-size: 20px;
+        }
+
+        &__line-2 {
+            margin-top: 10px;
+            font-size: 1rem;
+        }
+
+    }
+}
+
+@media (max-width: 1024px) {
+    .card {
+        max-width: 330px;
+    }
+}
+
+@media (max-width: 768px) {
+    .card {
+        width: calc((100vw - 40px - 2 * 56px) /2);
+        max-width: 280px;
+
+        & h3 {
+            font-size: 22px;
+            letter-spacing: 3px;
+            margin-top: 25px;
+
+            //TODO
+            // &::after {
+            //     content: "";
+            //     position: absolute;
+            //     bottom: -10px;
+            //     left: 0;
+            //     width: 68.182%;
+            //     height: 2px;
+            //     background-color: $dark-red;
+            //     transition: width $speed-long;
+            // }
+        }
+
+        &__line-1 {
+            margin-top: 22px;
+            font-size: 18px;
+        }
+
+        &__line-2 {
+            margin-top: 10px;
+        }
+    }
+}
+
+@media (max-width: 700px) {
+    .card {
+        width: calc(100vw - 40px * 3);
+        max-width: 380px;
+
+        & h3 {
+            font-size: 22px;
+            letter-spacing: 3px;
+            margin-top: 25px;
+
+            //TODO
+            // &::after {
+            //     bottom: -10px;
+            // }
+        }
+
+        &__line-1 {
+            margin-top: 22px;
+            font-size: 18px;
+        }
+
+        &__line-2 {
+            margin-top: 10px;
+        }
+    }
+}
+
+@media (max-width: 420px) {
+    .card {
+        width: calc(100vw - 40px * 2);
+        max-width: 280px;
+
+        & h3 {
+            font-size: 18px;
+            letter-spacing: 5px;
+            margin-top: 25px;
+
+            //TODO
+            // &::after {
+            //     bottom: -10px;
+            // }
+        }
+
+        &__line-1 {
+            margin-top: 22px;
+            font-size: 1rem;
+        }
+
+        // &__line-2 {
+        //     margin-top: 10px;
+        // }
     }
 }

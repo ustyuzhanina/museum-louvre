@@ -1,11 +1,32 @@
 .cards-container {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  column-gap: 50px;
-  row-gap: 75px;
-  width: 100%;
-  margin-top: 100px;
-  margin-bottom: 75px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    column-gap: 50px;
+    row-gap: 75px;
+    width: 100%;
+    margin-top: 100px;
+    margin-bottom: 75px;
+}
+
+@media (max-width: 1380px) {
+    .cards-container {
+        column-gap: 108px;
+        row-gap: 60px;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .cards-container {
+        column-gap: 56px;
+        row-gap: 40px;
+    }
+}
+
+@media (max-width: 700px) {
+    .cards-container {
+        column-gap: 40px;
+    }
 }
