@@ -1,0 +1,19 @@
+.mobile-menu {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    z-index: 10;
+    left: -100vw;
+    background-color: transparent;
+    top: 130px;
+    width: 100vw;
+
+    &_open {
+        left: 0;
+        transition: .5s;
+    }
+
+    &__grid-container {}
+
+    &__hr {}
+}

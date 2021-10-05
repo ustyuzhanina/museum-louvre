@@ -1,7 +1,8 @@
 .carousel {
     position: relative;
     width: 100%;
-    height: 100%;
+    height: calc((700 / 1024 * 100vw) * 525 / 700);
+    max-height: 750px;
 
     &__intro {
         position: absolute;
@@ -24,26 +25,31 @@
         position: absolute;
         flex-direction: row;
         top: 0;
-        height: 100%;
         right: 0;
-        width: 1000px;
+        width: calc(700 / 1024 * 100vw);
+        max-width: 1000px;
+        height: calc((700 / 1024 * 100vw) * 525 / 700);
+        max-height: 750px;
         overflow: hidden;
         z-index: 0;
     }
 
     &__image {
         display: none;
+        width: calc(700 / 1024 * 100vw);
+        max-width: 1000px;
+        height: calc((700 / 1024 * 100vw) * 525 / 700);
+        max-height: 750px;
     }
 
-    &__image_active,
-    &__image_next,
-    &__image_previous {
+    &__image_active {
         display: block;
     }
 
     &__overlay.overlay {
         background: linear-gradient(90deg, #000000 0%, rgba(0, 0, 0, 0.5) 16.19%, rgba(0, 0, 0, 0) 30.73%);
-        height: 100%;
+        height: calc((700 / 1024 * 100vw) * 525 / 700);
+        max-height: 750px;
         bottom: 0;
     }
 
@@ -58,7 +64,8 @@
         right: 0;
         align-content: center;
         align-items: center;
-        width: 41.67%;
+        width: calc(100vw * (600 / 1440));
+        max-width: 600px;
     }
 
     &__range {
@@ -123,5 +130,39 @@
 
     & .carousel__arrow-right {
         transform: rotate(180deg);
+    }
+}
+
+@media (max-width: 1480px) {
+    .carousel {
+
+        &__intro {
+            top: calc(150 / 1440 * 100vw);
+
+            // & p {
+            //     font-family: $font-major;
+            //     color: $light;
+            //     font-size: 28px;
+            //     letter-spacing: 2px;
+            //     margin-top: 20px;
+            // }
+
+        }
+
+        &__controls {
+            width: 600px;
+            max-width: none;
+        }
+
+    }
+}
+
+@media (max-width: 1024px) {
+    .carousel {
+
+        &__controls {
+            width: calc(100vw - 40px);
+        }
+
     }
 }

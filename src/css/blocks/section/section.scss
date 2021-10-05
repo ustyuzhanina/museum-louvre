@@ -7,7 +7,6 @@
         &__container {
             position: relative;
             display: flex;
-            height: 750px;
         }
 
         //button in section Welcome
@@ -489,6 +488,17 @@
 @media (max-width: 1440px) {
     .section {
 
+        &_welcome {
+
+            &__link-button {
+                padding: 25px 65px;
+                font-family: $font-major;
+                font-size: 22px;
+                letter-spacing: 2px;
+                margin-top: calc(77 / 1480 * 100vw);
+            }
+        }
+
         &_explore {
 
             & .section-title {
@@ -582,6 +592,13 @@
 
 @media (max-width: 1024px) {
     .section {
+        &_welcome {
+
+            &__link-button {
+                margin-top: calc(50 / 1024 * 100vw);
+            }
+        }
+
         &_video {
             & .subcontainer {
                 &__heading {

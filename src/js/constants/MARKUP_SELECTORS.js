@@ -1,6 +1,12 @@
 const PAGE = document.querySelector('.page');
 const PAGE_OVERLAY = document.querySelector('.page-overlay');
 
+//mobile menu
+const MOBILE_MENU = document.querySelector('.mobile-menu');
+
+// hamburger button
+const HMBG_BUTTON = document.querySelector('.hamburger-button');
+
 //section_video
 const PROGRESS_BAR = document.querySelector('.progress-bar');
 const VOLUME_BAR = document.querySelector('.volume-bar');
@@ -46,4 +52,6 @@ export {
   FORM_OPTIONS,
   TICKET_TYPE_TEXTOVERLAY,
   BOOK_BUTTON,
+  MOBILE_MENU,
+  HMBG_BUTTON,
 }

@@ -38,3 +38,19 @@
         }
     }
 }
+
+@media (max-width: 1480px) {
+    .nav {
+        & ul {
+            & li {
+                margin-right: calc(56 / 1440 * (100vw - 40px));
+            }
+        }
+    }
+}
+
+@media (max-width: 1024px) {
+    .nav {
+        display: none;
+    }
+}
