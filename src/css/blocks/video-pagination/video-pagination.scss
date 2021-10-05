@@ -14,6 +14,7 @@
         background-image: url('./assets/svg/dot.svg');
         background-repeat: no-repeat;
         background-position: center center;
+        background-size: contain;
     }
 
     &__dot_active {
@@ -32,6 +33,7 @@
         background-repeat: no-repeat;
         background-position: center center;
         filter: $dot-common-filter;
+        background-size: contain;
     }
 
     &__arrow_left {
@@ -45,5 +47,41 @@
 
     &__arrow:hover {
         filter: $dot-hover-filter;
+    }
+}
+
+@media (max-width: 768px) {
+    .video-pagination {
+        width: 255px;
+
+        &__dot {
+            width: 10px;
+            height: 10px;
+            margin: 10px;
+        }
+
+        &__arrow {
+            width: 10px;
+            height: 12px;
+            margin: 20px;
+        }
+    }
+
+}
+
+@media (max-width: 420px) {
+    .video-pagination {
+
+        &__dot {
+            width: 8px;
+            height: 8px;
+            margin: 10px;
+        }
+
+        &__arrow {
+            width: 7px;
+            height: 8px;
+        }
+
     }
 }

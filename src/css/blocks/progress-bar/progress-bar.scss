@@ -30,3 +30,34 @@
         margin-right: calc(31 / 1024 * 100vw);
     }
 }
+
+@media (max-width: 768px) {
+    .progress-bar {
+        margin-left: 0;
+        margin-right: 0;
+        position: absolute;
+        top: -5px;
+        height: 5px;
+        left: 0;
+        right: 0;
+        max-width: none;
+        width: calc(100vw - 40px);
+    }
+
+    .progress-bar::-webkit-slider-thumb {
+        width: 13px;
+        height: 13px;
+    }
+}
+
+@media (max-width: 420px) {
+    .progress-bar {
+        top: -4px;
+        height: 4px;
+    }
+
+    .progress-bar::-webkit-slider-thumb {
+        width: 10px;
+        height: 10px;
+    }
+}

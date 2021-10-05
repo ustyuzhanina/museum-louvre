@@ -30,3 +30,35 @@
         margin-right: calc(31 / 1024 * 100vw);
     }
 }
+
+@media (max-width: 768px) {
+    .volume-bar {
+        margin-left: calc(35 / 768 * 100vw);
+        margin-right: calc(35 / 768 * 100vw);
+        max-width: none;
+        flex-basis: calc(287 / 768 * 100vw);
+        height: 5px;
+        flex-grow: 1;
+    }
+
+    .volume-bar::-webkit-slider-thumb {
+        width: 13px;
+        height: 13px;
+    }
+}
+
+@media (max-width: 420px) {
+    .volume-bar {
+        margin-left: calc(30 / 420 * 100vw);
+        margin-right: calc(30 / 420 * 100vw);
+        flex-basis: calc(200 / 420 * 100vw);
+        height: 4px;
+        flex-shrink: 1;
+        flex-grow: 0;
+    }
+
+    .volume-bar::-webkit-slider-thumb {
+        width: 10px;
+        height: 10px;
+    }
+}

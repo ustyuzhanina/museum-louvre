@@ -142,10 +142,15 @@
             }
 
             &__controls {
-                width: 100%;
+                position: relative;
+                width: calc(100vw - 40px);
+                max-width: 1440px;
+                padding-right: 25px;
+                padding-left: 25px;
                 margin-top: -0.39px;
                 display: flex;
-                padding: 23px 22px;
+                max-height: 85px;
+                height: calc(60/1024 * 100vw);
                 justify-content: space-between;
                 align-items: center;
                 background-color: $dark;
@@ -614,6 +619,14 @@
 @media (max-width: 950px) {
     .section {
 
+        &_video {
+
+            & .subcontainer__video-pagination {
+                margin-top: 21px;
+            }
+
+        }
+
         &_tickets {
 
             &__img {
@@ -652,6 +665,17 @@
 
 @media (max-width: 768px) {
     .section {
+
+        &_video {
+
+            & .subcontainer__controls {
+                padding-right: calc(30 / 768 * 100vw);
+                padding-left: calc(30 / 768 * 100vw);
+            }
+        }
+
+
+
         &_explore {
             &__description p {
                 display: none;
@@ -687,6 +711,20 @@
 
 @media (max-width: 670px) {
     .section {
+
+        &_video {
+
+            & .subcontainer__controls {
+                padding-right: calc(20 / 420 * 100vw);
+                padding-left: calc(20 / 420 * 100vw);
+                height: 50px;
+                max-height: none;
+            }
+
+            & .subcontainer__video-pagination {
+                margin-top: 40px;
+            }
+        }
 
         &_tickets {
             &__subcontainer {
@@ -734,6 +772,20 @@
 
 @media (max-width: 420px) {
     .section {
+
+        &_video {
+
+            & .subcontainer__controls {
+                padding-right: calc(20 / 420 * 100vw);
+                padding-left: calc(20 / 420 * 100vw);
+            }
+
+            & .subcontainer__controls .button {
+                width: 18px;
+                height: 18px;
+            }
+        }
+
         &_gallery {
             &__container {
                 height: calc((100vw - 40px) * 637 / (420 - 40));

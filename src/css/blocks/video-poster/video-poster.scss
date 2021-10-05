@@ -7,11 +7,6 @@
     max-width: 452px;
     max-height: 254px;
     background-color: $bg-temp;
-    margin-right: 20px;
-
-    &:last-of-type {
-        margin-right: 0;
-    }
 
     &__iframe {
         position: absolute;
@@ -23,19 +18,30 @@
     }
 
     &__overlay {
-        padding: 15px 10px;
-        flex-direction: column;
-        justify-content: flex-start;
+        display: flex;
         background-position: center center;
         background-size: cover;
         background-repeat: no-repeat;
+    }
 
-        & div {
-            display: flex;
-            flex-direction: row;
-            justify-content: flex-start;
-            align-items: center;
-        }
+    &__top-line {
+        padding: 15px 28px 0 10px;
+        z-index: 10;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 25%;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__overlay__button-line {
+        z-index: 9;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
     }
 
     &__overlay_1 {
@@ -63,11 +69,16 @@
         font-weight: 400;
         font-size: 18px;
         line-height: 18px;
-        margin-right: 10px;
+        //margin-right: 10px;
+        width: calc(188 / 1024 * 100vw);
+        max-width: 342px;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        // max-height: 18px;
+        overflow: hidden;
     }
 
     &__options {
-        margin-right: 19px;
         height: 20px;
         width: 18px;
         background-position: center center;
@@ -79,18 +90,81 @@
 
     &__youtube-button {
         background-color: transparent;
-        height: 60px;
-        width: 80px;
-        margin: 0 auto;
-        margin-top: 10%;
+        width: calc(68 / 1024 * 100vw);
+        height: calc(48 / 1024 * 100vw);
+        max-height: 60px;
+        max-width: 80px;
+        margin: auto;
+        //margin-top: 10%;
         background-image: url('./assets/svg/icon-youtube-play.svg');
         background-position: center center;
         background-repeat: no-repeat;
         background-color: transparent;
+        background-size: contain;
         transition: all $speed-fast;
     }
 
     &__youtube-button:hover {
         transform: scale(1.3);
+    }
+}
+
+@media (max-width: 950px) {
+    .video-poster {
+        width: calc((100vw - 40px - 20px) / 2);
+        height: calc(((100vw - 40px - 20px) / 2) * 199 / 354);
+
+        &_3 {
+            display: none;
+        }
+
+        &__heading {
+            width: calc(183 / 768 * 100vw);
+            max-width: 183px;
+        }
+
+        &__youtube-button {
+            width: calc(68 / 768 * 100vw);
+            height: calc(48 / 768 * 100vw);
+            max-height: 48px;
+            max-width: 68px;
+        }
+    }
+}
+
+@media (max-width: 670px) {
+    .video-poster {
+
+        &__top-line {
+            margin-top: 10px;
+            padding: 0 10px 0 10px;
+        }
+
+        &__heading {
+            width: calc(108 / 420 * 100vw);
+            max-width: 342px;
+        }
+
+        &__youtube-button {
+            width: calc(68 / 420 * 100vw);
+            height: calc(48 / 420 * 100vw);
+            max-height: 48px;
+            max-width: 68px;
+        }
+    }
+}
+
+@media (max-width: 420px) {
+    .video-poster {
+
+        &__top-line {
+            justify-content: flex-start;
+            height: 39px;
+        }
+
+        &__options {
+            display: none;
+        }
+
     }
 }
