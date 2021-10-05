@@ -24,8 +24,11 @@
         display: block;
         filter: $video-play-large-filter;
         background-image: url('./assets/svg/video/icon-play-large.svg');
-        width: 220px;
-        height: 220px;
+        background-size: contain;
+        width: calc(152 / 1024 * 100vw);
+        height: calc(152 / 1024 * 100vw);
+        max-width: 220px;
+        max-height: 220px;
         margin: auto;
         z-index: 2;
     }
@@ -36,7 +39,9 @@
 
     &_play_small {
         background-image: url('./assets/svg/video/icon-play-small.svg');
+        background-size: contain;
         filter: $video-icon-filter;
+        flex-shrink: 0;
 
         &:hover {
             filter: $video-icon-hover-filter;
@@ -45,7 +50,9 @@
 
     &_volume {
         background-image: url('./assets/svg/video/icon-volume.svg');
+        background-size: contain;
         filter: $video-icon-filter;
+        flex-shrink: 0;
 
         &:hover {
             filter: $video-icon-hover-filter;
@@ -54,7 +61,9 @@
 
     &_fullscreen {
         background-image: url('./assets/svg/video/icon-fullscreen.svg');
+        background-size: contain;
         filter: $video-icon-filter;
+        flex-shrink: 0;
 
         &:hover {
             filter: $video-icon-hover-filter;

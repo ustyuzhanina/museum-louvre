@@ -1,11 +1,13 @@
 .volume-bar {
     border-color: transparent;
-    flex-basis: 155px;
+    flex-basis: calc(143 / 1024 * 100vw);
+    max-width: 155px;
+    height: calc(5 / 1024 * 100vw);
+    max-height: 8px;
     flex-grow: 0;
     flex-shrink: 0;
     margin: 0 50px;
     cursor: pointer;
-    height: 8px;
     border-radius: 0;
     outline: none;
     background: linear-gradient(to right, $dark-red 0%, $dark-red 43%, $bg-grey 43%, $bg-grey 100%);
@@ -20,4 +22,11 @@
     -webkit-appearance: none;
     cursor: pointer;
     background: $light;
+}
+
+@media (max-width: 1024px) {
+    .volume-bar {
+        margin-left: calc(31 / 1024 * 100vw);
+        margin-right: calc(31 / 1024 * 100vw);
+    }
 }

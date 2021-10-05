@@ -73,13 +73,13 @@ module.exports = {
 
   entry: {
     index: "./index.js",
-    // welcome: "./tours/welcome/index.js",
-    // colonnade: "./tours/colonnade/index.js",
-    // denonWing: "./tours/denonWing/index.js",
-    // greekHall: "./tours/greekHall/index.js",
-    // monaLisa: "./tours/monaLisa/index.js",
-    // nightPalace: "./tours/nightPalace/index.js",
-    // royalPalace: "./tours/royalPalace/index.js",
+    welcome: "./tours/welcome/index.js",
+    colonnade: "./tours/colonnade/index.js",
+    denonWing: "./tours/denonWing/index.js",
+    greekHall: "./tours/greekHall/index.js",
+    monaLisa: "./tours/monaLisa/index.js",
+    nightPalace: "./tours/nightPalace/index.js",
+    royalPalace: "./tours/royalPalace/index.js",
   },
 
   output: {
@@ -127,77 +127,77 @@ module.exports = {
       },
     }),
 
-    // new HtmlWebpackPlugin({
-    //   title: "museum",
-    //   template: "./tours/colonnade/index.html",
-    //   filename: 'tours/colonnade/index.html',
-    //   hash: true,
-    //   chunks: ['colonnade'],
-    //   inject: true,
-    //   minify: {
-    //     collapseWhitespace: isProd,
-    //   },
-    // }),
+    new HtmlWebpackPlugin({
+      title: "museum",
+      template: "./tours/colonnade/index.html",
+      filename: 'tours/colonnade/index.html',
+      hash: true,
+      chunks: ['colonnade'],
+      inject: true,
+      minify: {
+        collapseWhitespace: isProd,
+      },
+    }),
 
-    // new HtmlWebpackPlugin({
-    //   title: "museum",
-    //   template: "./tours/denonWing/index.html",
-    //   filename: 'tours/denonWing/index.html',
-    //   hash: true,
-    //   chunks: ['denonWing'],
-    //   inject: true,
-    //   minify: {
-    //     collapseWhitespace: isProd,
-    //   },
-    // }),
+    new HtmlWebpackPlugin({
+      title: "museum",
+      template: "./tours/denonWing/index.html",
+      filename: 'tours/denonWing/index.html',
+      hash: true,
+      chunks: ['denonWing'],
+      inject: true,
+      minify: {
+        collapseWhitespace: isProd,
+      },
+    }),
 
-    // new HtmlWebpackPlugin({
-    //   title: "museum",
-    //   template: "./tours/greekHall/index.html",
-    //   filename: 'tours/greekHall/index.html',
-    //   hash: true,
-    //   chunks: ['greekHall'],
-    //   inject: true,
-    //   minify: {
-    //     collapseWhitespace: isProd,
-    //   },
-    // }),
+    new HtmlWebpackPlugin({
+      title: "museum",
+      template: "./tours/greekHall/index.html",
+      filename: 'tours/greekHall/index.html',
+      hash: true,
+      chunks: ['greekHall'],
+      inject: true,
+      minify: {
+        collapseWhitespace: isProd,
+      },
+    }),
 
-    // new HtmlWebpackPlugin({
-    //   title: "museum",
-    //   template: "./tours/monaLisa/index.html",
-    //   filename: 'tours/monaLisa/index.html',
-    //   hash: true,
-    //   chunks: ['monaLisa'],
-    //   inject: true,
-    //   minify: {
-    //     collapseWhitespace: isProd,
-    //   },
-    // }),
+    new HtmlWebpackPlugin({
+      title: "museum",
+      template: "./tours/monaLisa/index.html",
+      filename: 'tours/monaLisa/index.html',
+      hash: true,
+      chunks: ['monaLisa'],
+      inject: true,
+      minify: {
+        collapseWhitespace: isProd,
+      },
+    }),
 
-    // new HtmlWebpackPlugin({
-    //   title: "museum",
-    //   template: "./tours/nightPalace/index.html",
-    //   filename: 'tours/nightPalace/index.html',
-    //   hash: true,
-    //   chunks: ['nightPalace'],
-    //   inject: true,
-    //   minify: {
-    //     collapseWhitespace: isProd,
-    //   },
-    // }),
+    new HtmlWebpackPlugin({
+      title: "museum",
+      template: "./tours/nightPalace/index.html",
+      filename: 'tours/nightPalace/index.html',
+      hash: true,
+      chunks: ['nightPalace'],
+      inject: true,
+      minify: {
+        collapseWhitespace: isProd,
+      },
+    }),
 
-    // new HtmlWebpackPlugin({
-    //   title: "museum",
-    //   template: "./tours/royalPalace/index.html",
-    //   filename: 'tours/royalPalace/index.html',
-    //   hash: true,
-    //   chunks: ['royalPalace'],
-    //   inject: true,
-    //   minify: {
-    //     collapseWhitespace: isProd,
-    //   },
-    // }),
+    new HtmlWebpackPlugin({
+      title: "museum",
+      template: "./tours/royalPalace/index.html",
+      filename: 'tours/royalPalace/index.html',
+      hash: true,
+      chunks: ['royalPalace'],
+      inject: true,
+      minify: {
+        collapseWhitespace: isProd,
+      },
+    }),
 
     new MiniCssExtractPlugin({
       filename: isProd ? "css/[name].[contenthash].css" : "css/[name].css",
