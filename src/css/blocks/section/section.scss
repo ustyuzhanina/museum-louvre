@@ -829,7 +829,34 @@
             }
         }
 
+        &_explore {
+            padding-top: 27px;
+            padding-bottom: 40px;
+
+            & .section-title {
+                margin-bottom: 28px;
+            }
+
+            & .section-title_underline::after {
+                bottom: -10px;
+            }
+        }
+
+        &_visiting {
+            padding-top: 48px;
+        }
+
         &_video {
+            padding-top: 23px;
+            padding-bottom: 20px;
+
+            & .subcontainer__heading {
+                margin-bottom: 12px;
+            }
+
+            & .subcontainer__video-slider {
+                margin-bottom: 21px;
+            }
 
             & .subcontainer__controls {
                 padding-right: calc(20 / 420 * 100vw);
@@ -843,8 +870,65 @@
         }
 
         &_gallery {
+            padding-top: 47px;
+
+            & .section-title {
+                margin-bottom: 46px;
+            }
+
             &__container {
                 height: calc((100vw - 40px) * 637 / (420 - 40));
+            }
+        }
+
+        &_tickets {
+            padding-top: 46px;
+
+            & .section-title {
+                margin-bottom: 68px;
+            }
+
+            &__container {
+                margin-bottom: 40px;
+            }
+
+            &__amount .number-container input {
+                text-align: center;
+            }
+
+            &__total {
+                margin-top: 21px;
+            }
+
+            &__button.button {
+                margin-top: 33px;
+            }
+
+
+        }
+
+        &_contacts {
+            padding-top: 47px;
+            padding-bottom: 41px;
+
+            & .section-title {
+                margin-bottom: 69px;
+            }
+
+            &__name {
+                font-size: 16px;
+                line-height: 18px;
+                margin-bottom: 42px;
+            }
+
+            &__details {
+                font-size: 16px;
+                line-height: 18px;
+                margin-bottom: 16px;
+            }
+
+            &__map {
+                margin-top: 25px;
             }
         }
     }

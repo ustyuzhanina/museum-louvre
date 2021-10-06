@@ -266,6 +266,47 @@
     }
 }
 
+@media (max-width: 420px) {
+    .footer {
+
+        &__logo {
+            margin-bottom: 36px;
+        }
+
+        &__container_top {
+            padding-top: 40px;
+        }
+
+        &__nav-list {
+            width: calc(100vw - 60px);
+            margin-right: 0;
+            max-width: none;
+            column-gap: 50px;
+            flex-wrap: wrap;
+        }
+
+        &__nav-item {
+            width: 77px;
+            max-width: none;
+            font-size: 16px;
+        }
+
+        & .subcontainer_extra-nav {
+            margin-bottom: 35px;
+        }
+
+        &__container_top {
+            padding-bottom: 34px;
+        }
+
+        &__container_bottom {
+            font-size: 16px;
+            padding: 40px 0;
+        }
+
+    }
+}
+
 @media (max-width: 340px) {
     .footer {
 

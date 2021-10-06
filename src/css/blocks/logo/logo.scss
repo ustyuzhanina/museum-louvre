@@ -55,10 +55,23 @@
 }
 
 @media (max-width: 420px) {
+    .footer .logo {
+        &__icon {
+            height: 16px;
+            width: 30px;
+            margin-right: 19px;
+        }
+
+        & p {
+            font-size: 1rem;
+        }
+    }
+
     .header .logo {
         &__icon {
             height: 16px;
             width: 30px;
+            margin-right: 19px;
         }
 
         & p {
