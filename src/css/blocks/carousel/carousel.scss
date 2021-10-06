@@ -56,16 +56,22 @@
     &__controls {
         position: absolute;
         background-color: $bg-dark;
-        padding: 41px 75px;
+        display: flex;
+        bottom: -58px;
+        right: 0;
+        width: calc(100vw * (600 / 1440));
+        max-width: 600px;
+    }
+
+    &__controls-wrapper {
+        margin: 41px auto;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        bottom: -58px;
-        right: 0;
         align-content: center;
         align-items: center;
-        width: calc(100vw * (600 / 1440));
-        max-width: 600px;
+        column-gap: 55px;
+
     }
 
     &__range {
@@ -138,15 +144,6 @@
 
         &__intro {
             top: calc(150 / 1440 * 100vw);
-
-            // & p {
-            //     font-family: $font-major;
-            //     color: $light;
-            //     font-size: 28px;
-            //     letter-spacing: 2px;
-            //     margin-top: 20px;
-            // }
-
         }
 
         &__controls {
@@ -162,7 +159,157 @@
 
         &__controls {
             width: calc(100vw - 40px);
+            justify-content: flex-end;
         }
+
+        &__controls-wrapper {
+            margin: 40px 75px;
+        }
+
+    }
+}
+
+@media (max-width: 768px) {
+    .carousel {
+        position: relative;
+        height: calc((100vw - 40px) * 546 / 728);
+
+        &__intro {
+            position: static;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            margin-bottom: 47px;
+        }
+
+        &__intro p {
+            font-weight: 300;
+            font-size: 20px;
+            line-height: 23px;
+            margin-top: 28px;
+        }
+
+        &__container {
+            width: calc(100vw - 40px);
+            height: calc((100vw - 40px) * 546 / 728);
+            z-index: 0;
+
+        }
+
+        &__image {
+            width: calc(100vw - 40px);
+            height: auto;
+            object-fit: contain;
+            object-position: center;
+        }
+
+        &__overlay.overlay {
+            display: none;
+        }
+
+        &__controls {
+            justify-content: center;
+            bottom: -100px;
+        }
+
+        &__controls-wrapper {
+            margin: 30px auto;
+        }
+
+        &__range {
+            font-size: 20px;
+            width: 71px;
+        }
+
+        &__button-container {
+            display: flex;
+            align-items: center;
+            width: 160px;
+        }
+
+        &__button.button {
+            width: 12px;
+            height: 12px;
+        }
+
+    }
+}
+
+@media (max-width: 600px) {
+    .carousel {
+
+        &__intro {
+            position: static;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            margin-bottom: 50px;
+            margin-top: 7px;
+        }
+
+        &__intro p {
+            font-weight: 300;
+            font-size: 18px;
+            line-height: 20px;
+        }
+
+        &__controls {
+            height: 80px;
+            bottom: -80px;
+        }
+
+        &__controls-wrapper {
+            margin: 30px auto;
+            width: calc(230 / 420 * 100vw);
+            max-width: 230px;
+            column-gap: 25px;
+        }
+
+        &__range {
+            font-size: 1rem;
+            width: 50px;
+        }
+
+        &__button-container {
+            display: flex;
+            align-items: center;
+            width: 75px;
+        }
+
+        &__button.button {
+            width: 7px;
+            height: 7px;
+            margin-right: 10px;
+        }
+
+        &__arrow-container {
+            width: 55px;
+        }
+
+        & .carousel__arrow-left,
+        .carousel__arrow-right {
+            width: 20px;
+            height: 40px;
+            background-size: contain;
+        }
+
+        & .carousel__arrow-left {
+            margin-right: 15px;
+        }
+    }
+}
+
+@media (max-width: 420px) {
+    .carousel {
+
+        &__intro p {
+            font-size: 16px;
+            line-height: 18px;
+            margin-top: 26px;
+        }
+
 
     }
 }

@@ -53,6 +53,14 @@
     }
 }
 
+@media (max-width: 600px) {
+    .section-title {
+        font-size: 6.208vw;
+        line-height: 6.208vw;
+        //28px
+    }
+}
+
 @media (max-width: 420px) {
     .section-title {
         font-size: 28px;

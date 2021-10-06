@@ -684,6 +684,24 @@
 @media (max-width: 768px) {
     .section {
 
+        &_welcome {
+            padding-bottom: 100px;
+            padding-top: 0;
+
+            & .section-title {
+                line-height: calc(5.208vw * 56 / 40);
+            }
+
+            &__link-button {
+                display: none;
+            }
+
+            &__container {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+
         &_video {
 
             & .subcontainer__controls {
@@ -788,8 +806,28 @@
     }
 }
 
+@media (max-width: 600px) {
+    .section {
+        &_welcome {
+            padding-bottom: 80px;
+
+            & .section-title {
+                font-size: 6.208vw;
+                line-height: calc(6.208vw * 28 / 40);
+            }
+        }
+    }
+}
+
 @media (max-width: 420px) {
     .section {
+
+        &_welcome {
+            & h2.section-title {
+                font-size: 28px;
+                line-height: 39px;
+            }
+        }
 
         &_video {
 
