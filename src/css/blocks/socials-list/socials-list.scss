@@ -23,6 +23,19 @@
     }
 }
 
+.mobile-menu .socials-list {
+    display: none;
+}
+
+@media (max-width: 768px) {
+
+    .mobile-menu .socials-list {
+        display: flex;
+        margin: auto;
+    }
+
+}
+
 @media (max-width: 740px) {
     .socials-list {
 

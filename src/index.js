@@ -47,7 +47,7 @@ import GalleryList from './js/components/GalleryList';
 
 //слушатель для открытия мобильного меню
 HMBG_BUTTON.addEventListener('click', function(e) {
-  MOBILE_MENU.classList.toggle('open');
+  MOBILE_MENU.classList.toggle('mobile-menu_open');
   HMBG_BUTTON.classList.toggle('hamburger-button_open');
 })
 
