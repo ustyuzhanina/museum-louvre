@@ -8,6 +8,8 @@
         height: 26px;
         width: 49px;
         background-image: url("./assets/svg/logo.svg");
+        background-size: contain;
+        background-repeat: no-repeat;
         margin-right: 25px;
     }
 
@@ -31,4 +33,36 @@
 .header .logo {
     margin-top: 60px;
     margin-bottom: 60px;
+}
+
+@media (max-width: 768px) {
+    .header .logo {
+        align-items: baseline;
+
+        &__icon {
+            height: calc(20 / 420 * 100vw);
+            max-height: 26px;
+            width: calc(49 / 420 * 100vw);
+            max-width: 49px;
+            background-image: url("./assets/svg/logo.svg");
+            margin-right: 25px;
+        }
+
+        & p {
+            font-size: calc(1rem + 12 / 348 * 46vw);
+        }
+    }
+}
+
+@media (max-width: 420px) {
+    .header .logo {
+        &__icon {
+            height: 20px;
+            width: 49px;
+        }
+
+        & p {
+            font-size: 1rem;
+        }
+    }
 }

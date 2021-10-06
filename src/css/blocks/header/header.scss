@@ -4,6 +4,7 @@
     flex-direction: row;
     background-color: $bg-dark;
     color: $light;
+    max-height: 150px;
 }
 
 
@@ -11,4 +12,25 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+@media (max-width: 1480px) {
+    .header {
+        height: calc(130 / 1024 * 100vw);
+        max-height: 130px;
+    }
+}
+
+@media (max-width: 768px) {
+    .header {
+        height: calc(110 / 768 * 100vw);
+        max-height: 110px;
+    }
+}
+
+@media (max-width: 420px) {
+    .header {
+        height: 90px;
+        max-height: none;
+    }
 }
