@@ -45,11 +45,14 @@ import GalleryList from './js/components/GalleryList';
   this.style.background = `linear-gradient(to right, #710707 0%, #710707 ${value}%, #C4C4C4 ${value}%, #C4C4C4 100%)`;
 })
 
-//слушатель для открытия мобильного меню
-HMBG_BUTTON.addEventListener('click', function(e) {
+function toggleMobileMenu () {
   MOBILE_MENU.classList.toggle('mobile-menu_open');
   HMBG_BUTTON.classList.toggle('hamburger-button_open');
-})
+}
+
+//слушатель для открытия мобильного меню
+HMBG_BUTTON.addEventListener('click', toggleMobileMenu);
+MOBILE_MENU.addEventListener('click', toggleMobileMenu);
 
   SECTION_TICKETS_BUTTON.addEventListener('click', function(e) {
     e.preventDefault();
