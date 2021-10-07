@@ -391,6 +391,10 @@
             line-height: 32px;
             letter-spacing: .5px;
             margin-top: 42px;
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            width: 100%;
         }
 
         &__button.button {
@@ -486,19 +490,36 @@
 
 }
 
-@media (max-width: 1440px) {
+@media (max-width: 1480px) {
     .section {
-
         &_welcome {
 
             &__link-button {
-                padding: 25px 65px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 0;
+                max-height: 75px;
+                max-width: 360px;
+                min-height: 60px;
+                min-width: 300px;
+                height: calc(60 / 1024 * 100vw);
+                width: calc(300 / 1024 * 100vw);
                 font-family: $font-major;
                 font-size: 22px;
                 letter-spacing: 2px;
                 margin-top: calc(77 / 1480 * 100vw);
             }
         }
+    }
+
+
+}
+
+@media (max-width: 1440px) {
+    .section {
+
+
 
         &_explore {
 
@@ -595,16 +616,42 @@
     .section {
         &_welcome {
 
+            & h2.section-title {
+                line-height: 1.8em;
+            }
+
             &__link-button {
                 margin-top: calc(50 / 1024 * 100vw);
+                font-size: 20px;
+            }
+        }
+
+        &_visiting {
+            & .section-title_underline::after {
+                bottom: -33px;
+            }
+        }
+
+        &_explore {
+            padding-bottom: 56px;
+
+            & .section-title {
+                margin-bottom: calc(86 / 1024 * 100vw);
+            }
+
+            &__description {
+                margin-bottom: 58px;
             }
         }
 
         &_video {
+            padding-top: 66px;
+            padding-bottom: 57px;
+
             & .subcontainer {
                 &__heading {
                     justify-content: flex-start;
-                    //margin-bottom: 87px;
+                    margin-bottom: 44px;
 
                     // & .section-title {
                     //     margin-top: 0;
@@ -616,9 +663,39 @@
                     }
                 }
             }
+
+            & .subcontainer__controls {
+                padding: 0 39px 0 37px;
+
+
+
+                & .button_volume {
+                    width: 26px;
+                    height: 20px;
+                }
+
+                & .button_fullscreen {
+                    width: 26px;
+                    height: 26px;
+                }
+            }
+
+
+        }
+
+        &_gallery {
+            & .section-title {
+                margin-bottom: 72px;
+            }
         }
 
         &_explore {
+            padding-top: 66px;
+
+            & .section-title_underline::after {
+                bottom: -27px;
+            }
+
             &__description {
                 & p {
                     font-size: 20px;
@@ -628,6 +705,60 @@
                 & p:last-of-type {
                     display: none;
                 }
+            }
+        }
+
+        &_tickets {
+
+            &__container {
+                margin-bottom: 60px;
+            }
+
+            & .section-title {
+                margin-bottom: 90px;
+            }
+
+            & fieldset {
+                padding: 0 29px 0 0;
+            }
+
+            &__amount legend {
+                margin-bottom: 30px;
+            }
+
+            &__amount .number-container {
+                margin-bottom: 26px;
+            }
+
+            &__amount .number-container input {
+                text-align: center;
+            }
+
+            &__total {
+                margin-top: 0;
+                padding-right: 14px;
+            }
+
+            &__button.button {
+                margin-top: 67px;
+            }
+        }
+
+        &_contacts {
+            padding-bottom: 58px;
+
+            & .section-title_underline::after {
+                bottom: -34px;
+            }
+
+            &__name {
+                line-height: 27px;
+                margin-top: -10px;
+                margin-bottom: 36px;
+            }
+
+            &__details {
+                margin-bottom: 12px;
             }
         }
     }

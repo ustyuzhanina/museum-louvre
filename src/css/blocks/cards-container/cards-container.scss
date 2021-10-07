@@ -18,6 +18,13 @@
     }
 }
 
+@media (max-width: 1024px) {
+    .cards-container {
+        margin-top: 93px;
+        margin-bottom: 62px;
+    }
+}
+
 @media (max-width: 768px) {
     .cards-container {
         column-gap: 56px;

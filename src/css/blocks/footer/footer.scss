@@ -5,7 +5,7 @@
 
     &__logo {
         flex-basis: 145px;
-        margin-right: 75px;
+        margin-right: 142px;
     }
 
     & hr {
@@ -64,8 +64,9 @@
         justify-content: space-between;
         align-items: flex-start;
         flex-wrap: wrap;
-        width: 363px;
+        width: 380px;
         row-gap: 25px;
+        column-gap: 116px;
         font-family: $font-major;
         font-weight: 200;
         font-size: 22px;
@@ -141,17 +142,25 @@
         }
 
         &__nav-list {
-            width: 313px;
+            width: 331px;
+            column-gap: 83px;
         }
 
         &__logo {
             width: 194px;
             margin-right: 20px;
+            align-items: center;
+            margin-top: -5px;
+            margin-right: 45px;
         }
 
         & .subcontainer_extra-nav {
             width: 100%;
             height: unset;
+        }
+
+        & .socials-list {
+            margin-bottom: -5px;
         }
 
     }

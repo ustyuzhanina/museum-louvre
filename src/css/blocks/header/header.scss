@@ -12,12 +12,26 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+
 }
 
 @media (max-width: 1480px) {
     .header {
         height: calc(130 / 1024 * 100vw);
         max-height: 130px;
+
+        &_container.container {
+            margin: -19px auto 0;
+        }
+    }
+}
+
+@media (max-width: 1024px) {
+    .header {
+
+        &_container.container {
+            margin: 0 auto;
+        }
     }
 }
 

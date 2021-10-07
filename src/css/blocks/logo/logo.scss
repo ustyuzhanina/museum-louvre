@@ -35,6 +35,15 @@
     margin-bottom: 60px;
 }
 
+@media (max-width: 1480px) {
+    .header .logo {
+        align-items: baseline;
+        margin-top: 0;
+        margin-bottom: 0;
+
+    }
+}
+
 @media (max-width: 768px) {
     .header .logo {
         align-items: baseline;

@@ -15,7 +15,7 @@
             color: $light;
             font-size: 28px;
             letter-spacing: 2px;
-            margin-top: 20px;
+            margin-top: 25px;
         }
 
     }
@@ -57,7 +57,7 @@
         position: absolute;
         background-color: $bg-dark;
         display: flex;
-        bottom: -58px;
+        bottom: -60px;
         right: 0;
         width: calc(100vw * (600 / 1440));
         max-width: 600px;
@@ -143,7 +143,9 @@
     .carousel {
 
         &__intro {
-            top: calc(150 / 1440 * 100vw);
+            top: calc(149 / 1480 * 100vw);
+
+
         }
 
         &__controls {
@@ -157,6 +159,15 @@
 @media (max-width: 1024px) {
     .carousel {
 
+        &__intro {
+            top: calc(51 / 1024 * 100vw);
+
+            & p {
+                font-size: 24px;
+            }
+
+        }
+
         &__controls {
             width: calc(100vw - 40px);
             justify-content: flex-end;
@@ -164,6 +175,23 @@
 
         &__controls-wrapper {
             margin: 40px 75px;
+            column-gap: 45px;
+        }
+
+        &__button-container {
+            display: flex;
+            align-items: center;
+            width: 160px;
+        }
+
+        &__button.button {
+            width: 12px;
+            height: 12px;
+        }
+
+        &__range {
+            font-size: 20px;
+            width: 71px;
         }
 
     }
@@ -217,21 +245,9 @@
             margin: 30px auto;
         }
 
-        &__range {
-            font-size: 20px;
-            width: 71px;
-        }
 
-        &__button-container {
-            display: flex;
-            align-items: center;
-            width: 160px;
-        }
 
-        &__button.button {
-            width: 12px;
-            height: 12px;
-        }
+
 
     }
 }
