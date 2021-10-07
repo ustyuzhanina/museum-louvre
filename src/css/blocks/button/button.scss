@@ -84,22 +84,6 @@
     }
 }
 
-@media (max-width: 1024px) {
-    .button {
-
-        &_volume {
-            width: 26px;
-            height: 20px;
-        }
-
-        &_fullscreen {
-            width: 26px;
-            height: 26px;
-        }
-
-    }
-}
-
 @media (max-width: 950px) {
     .button {
         &_play_large {

@@ -25,7 +25,7 @@
     }
 
     &__top-line {
-        padding: 15px 28px 0 10px;
+        padding: 7px 28px 0 10px;
         z-index: 10;
         top: 0;
         left: 0;
@@ -109,6 +109,14 @@
     }
 }
 
+@media (max-width: 1024px) {
+    .video-poster {
+        &__top-line {
+            padding-top: 18px;
+        }
+    }
+}
+
 @media (max-width: 950px) {
     .video-poster {
         width: calc((100vw - 40px - 20px) / 2);
@@ -164,6 +172,10 @@
 
         &__options {
             display: none;
+        }
+
+        &__button-line {
+            z-index: 10;
         }
 
     }

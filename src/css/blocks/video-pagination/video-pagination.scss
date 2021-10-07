@@ -6,10 +6,16 @@
     margin: 0 auto;
     width: 211px;
 
+    &__dots-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
     &__dot {
         width: 12px;
         height: 12px;
-        margin: 5px;
+        margin: 10px;
         filter: $dot-common-filter;
         background-image: url('./assets/svg/dot.svg');
         background-repeat: no-repeat;
@@ -52,7 +58,7 @@
 
 @media (max-width: 768px) {
     .video-pagination {
-        width: 255px;
+        width: 252px;
 
         &__dot {
             width: 10px;
@@ -71,7 +77,7 @@
 
 @media (max-width: 420px) {
     .video-pagination {
-        width: 216px;
+        width: 236px;
 
         &__dot {
             width: 8px;

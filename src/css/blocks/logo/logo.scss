@@ -47,6 +47,7 @@
 @media (max-width: 768px) {
     .header .logo {
         align-items: baseline;
+        margin-top: 10px;
 
         &__icon {
             height: calc(20 / 420 * 100vw);
@@ -60,6 +61,11 @@
         & p {
             font-size: calc(1rem + 12 / 348 * 46vw);
         }
+    }
+
+    .footer .logo {
+        margin-top: -9px;
+        align-items: baseline;
     }
 }
 
@@ -77,10 +83,12 @@
     }
 
     .header .logo {
+        margin-top: 0;
+
         &__icon {
             height: 16px;
             width: 30px;
-            margin-right: 19px;
+            margin-right: 24px;
         }
 
         & p {
