@@ -24,26 +24,21 @@ import {
 import { API_KEY } from './js/constants/MAPBOX';
 import GalleryList from './js/components/GalleryList';
 import User from './js/components/User';
+import Purchase from './js/components/Purchase';
+import FormSmall from './js/components/FormSmall';
+import FormLarge from './js/components/FormLarge';
+import CarouselVideo from './js/components/CarouselVideo';
+import CarouselWelcome from './js/components/CarouselWelcome';
+import LargeVideo from './js/components/LargeVideo';
 
 //IIFE
 (function () {
-  let userData;
-
-  if (localStorage.getItem('louvre')) {
-    userData = localStorage.getItem('louvre');
-  } else {
-    const newUserData = {
-      name: 'New User',
-      email: 'Unknown',
-    };
-    localStorage.setItem('louvre', JSON.stringify(newUserData));
-    userData = localStorage.getItem('louvre');
-  }
-
   const galleryList = new GalleryList();
-  const user = new User(userData);
+  const user = new User();
 
-  console.log(user.userData);
+  user.checkUser();
+
+  const purchase = new Purchase(input, user);
 
   function addGoBackBtn() {
     GO_BACK_BUTTON.classList.add('go-up-link_visible');
