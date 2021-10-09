@@ -19,12 +19,12 @@ export default class GalleryList {
     this.fillColumn(GALLERY_CONTAINER_COLUMN_1, array.slice(0, 5));
     this.fillColumn(GALLERY_CONTAINER_COLUMN_2, array.slice(5, 10));
     this.fillColumn(GALLERY_CONTAINER_COLUMN_3, array.slice(10));
-
   }
 
   fillColumn(column, arrayThird) {
-    for(let i = 0; i < arrayThird.length; i++) {
-      const template = `<img src="./assets/img/gallery/${arrayThird[i]}.jpg" class="gallery-container__item" alt="painting ${arrayThird[i]}">`.trim();
+    for (let i = 0; i < arrayThird.length; i++) {
+      const template =
+        `<img src="./assets/img/gallery/${arrayThird[i]}.jpg" class="gallery-container__item" alt="painting ${arrayThird[i]}">`.trim();
 
       const element = document.createElement('div');
 

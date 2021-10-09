@@ -143,7 +143,7 @@
 
             &__controls {
                 position: relative;
-                width: calc(100vw - 40px);
+                width: 100%;
                 max-width: 1440px;
                 padding-right: 25px;
                 padding-left: 25px;
@@ -551,7 +551,7 @@
 
         &_contacts {
             &__map {
-                max-width: 70.53%;
+                width: calc(960 / 1480 * 100vw);
                 ;
                 height: auto;
             }
@@ -763,6 +763,8 @@
 
 @media (max-width: 950px) {
     .section {
+
+
 
         &_video {
 

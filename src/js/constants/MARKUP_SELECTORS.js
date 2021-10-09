@@ -7,6 +7,9 @@ const MOBILE_MENU = document.querySelector('.mobile-menu');
 // hamburger button
 const HMBG_BUTTON = document.querySelector('.hamburger-button');
 
+//go back button
+const GO_BACK_BUTTON = document.querySelector('.go-up-link');
+
 //section_video
 const PROGRESS_BAR = document.querySelector('.progress-bar');
 const VOLUME_BAR = document.querySelector('.volume-bar');
@@ -29,7 +32,6 @@ const TICKET_TYPE_ARROW = TICKET_TYPE_LABEL.querySelector('.svg-arrow');
 const TICKET_TYPE_TEXTOVERLAY = TICKET_TYPE_LABEL.querySelector('.chosen-value');
 const FORM_OPTIONS = document.querySelector('.options');
 const BOOK_BUTTON = document.querySelector('.overview__book-button');
-
 
 const INITIAL_PAINTINGS_ARRAY = [2, 9, 4, 6, 11, 1, 8, 3, 5, 13, 7, 10, 15, 12, 14];
 
@@ -54,4 +56,5 @@ export {
   BOOK_BUTTON,
   MOBILE_MENU,
   HMBG_BUTTON,
-}
+  GO_BACK_BUTTON,
+};

@@ -1,0 +1,49 @@
+.go-up-link {
+    position: fixed;
+    display: none;
+    background-image: url('./assets/svg/go-up-icon.svg');
+    background-color: transparent;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 45px;
+    height: 45px;
+    bottom: 2%;
+    right: .5%;
+    z-index: 20;
+
+    &__text {
+        position: absolute;
+        display: none;
+        top: -70%;
+        right: 0;
+        width: 83px;
+        text-decoration: none;
+        color: $font-gold;
+        font-family: $font-major;
+        font-size: 1rem;
+        font-weight: 300;
+        pointer-events: none;
+        vertical-align: middle;
+        background-color: rgba($color: #fff, $alpha: .7);
+        border-radius: 2px;
+        padding: 4px 4px 2px;
+    }
+
+    &_visible {
+        display: block;
+    }
+
+    &_visible:hover {
+        transform: scale(1.05) $speed-fast;
+    }
+
+    &_visible:hover &__text {
+        display: inline-block;
+    }
+
+
+
+
+
+}
