@@ -15,7 +15,7 @@ logs
 # dotenv environment variables file
 .env
 
-*.js
+#*.js
 *.scss
 *.css
 *.less
