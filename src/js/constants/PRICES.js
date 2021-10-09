@@ -1,23 +1,21 @@
-const PRICE_LIST = new Object(),
-  tpe = {
+const PRICE_LIST = [
+  {
     id: 'tpe',
-    ticketType: 'Permanent Exhibition',
+    ticketType: 'Permanent exhibition',
     price: 20,
   },
-  tte = {
+  {
     id: 'tte',
-    ticketType: 'Temporary Exhibition',
+    ticketType: 'Temporary exhibition',
     price: 25,
   },
-  tca = {
+  {
     id: 'tca',
-    ticketType: 'Combined Admission',
+    ticketType: 'Combined admission',
     price: 40,
-  };
+  },
+];
 
 const SENIOR_DISCOUNT_KOEF = 0.5;
 
-export default {
-  PRICE_LIST,
-  SENIOR_DISCOUNT_KOEF,
-};
+export { PRICE_LIST, SENIOR_DISCOUNT_KOEF };

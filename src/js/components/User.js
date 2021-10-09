@@ -12,15 +12,11 @@ export default class User {
       for (const prop in this) {
         this[prop] = userData[prop];
       }
-    } else {
-      this.name = 'NewUser';
-      this.email = 'Unknown';
-      this.setNewUser({ name: this.name, email: this.email });
     }
   }
 
   setNewUser(data) {
-    localStorage.setItem(`louvre-${data.name}`, JSON.stringify(data));
+    localStorage.setItem(`louvre-for-${data.name}`, JSON.stringify(data));
   }
 
   get userData() {

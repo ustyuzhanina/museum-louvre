@@ -21,6 +21,8 @@ const GALLERY_CONTAINER_COLUMN_2 = document.querySelector('.gallery-container__c
 const GALLERY_CONTAINER_COLUMN_3 = document.querySelector('.gallery-container__column_3');
 
 //section_tickets
+const FORM_SMALL = document.querySelector('.section_tickets__short-form');
+const FORM_SMALL_COST = FORM_SMALL.querySelector('.section_tickets__total-cost');
 const SECTION_TICKETS_BUTTON = document.querySelector('.section_tickets__button');
 
 //large-form selectors
@@ -43,6 +45,8 @@ export {
   GALLERY_CONTAINER_COLUMN_1,
   GALLERY_CONTAINER_COLUMN_2,
   GALLERY_CONTAINER_COLUMN_3,
+  FORM_SMALL,
+  FORM_SMALL_COST,
   SECTION_TICKETS_BUTTON,
   FORM_CONTAINER,
   CLOSE_BUTTON,

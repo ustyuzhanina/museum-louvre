@@ -219,7 +219,7 @@
             </div>
         </section>
 
-        <section class="section section_video" id="video">
+        <!-- <section class="section section_video" id="video">
             <div class="container section_video__container">
                 <div class="subcontainer subcontainer__heading">
                     <h2 class="section-title">Video Journey</h2>
@@ -310,7 +310,7 @@
                     <button class="button video-pagination__arrow video-pagination__arrow_right"></button>
                 </div>
             </div>
-        </section>
+        </section> -->
 
         <section class="section section_gallery" id="gallery">
             <div class="container">
@@ -338,17 +338,17 @@
                             <legend class="section_tickets__legend">Ticket Type</legend>
 
                             <label class="label">Permanent exhibition
-                                <input class="section_tickets__input" type="radio" checked="checked" name="radio">
+                                <input class="section_tickets__input" type="radio" checked="checked" name="formSmall_ticketType">
                                 <span class="checkmark"></span>
                             </label>
 
                             <label class="label">Temporary exhibition
-                                <input class="section_tickets__input" type="radio" name="radio">
+                                <input class="section_tickets__input" type="radio" name="formSmall_ticketType">
                                 <span class="checkmark"></span>
                             </label>
 
-                            <label class="label">Combined Admission
-                                <input class="section_tickets__input" type="radio" name="radio">
+                            <label class="label">Combined admission
+                                <input class="section_tickets__input" type="radio" name="formSmall_ticketType">
                                 <span class="checkmark"></span>
                             </label>
                         </fieldset>
@@ -359,7 +359,7 @@
                             <label for="basicNumber">Basic 18+</label>
                             <div class="number-container">
                                 <button class="button" type="button" onclick="this.nextElementSibling.stepDown()">&ndash;</button>
-                                <input type="number" min="0" max="20" value="1" readonly class="number" name="basicNumber" id="basicNumber">
+                                <input type="number" min="0" max="20" value="0" readonly class="number" name="basicNumber" id="basicNumber">
                                 <button class="button" type="button" onclick="this.previousElementSibling.stepUp()">+</button>
                             </div>
 
@@ -367,13 +367,13 @@
                             <label for="seniorNumber">Senior 65+</label>
                             <div class="number-container">
                                 <button class="button" type="button" onclick="this.nextElementSibling.stepDown()">&ndash;</button>
-                                <input type="number" min="0" max="20" value="1" readonly class="number" name="seniorNumber" id="seniorNumber">
+                                <input type="number" min="0" max="20" value="0" readonly class="number" name="seniorNumber" id="seniorNumber">
                                 <button class="button" type="button" onclick="this.previousElementSibling.stepUp()">+</button>
                             </div>
 
                             <div class="section_tickets__total">
                                 <p class="section_tickets__total-title">Total €</p>
-                                <p class="section_tickets__total-cost">0</p>
+                                <p class="section_tickets__total-cost"></p>
                             </div>
 
                             <button class="button section_tickets__button">Buy Now</button>
