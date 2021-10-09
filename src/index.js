@@ -23,10 +23,27 @@ import {
 } from './js/constants/MARKUP_SELECTORS';
 import { API_KEY } from './js/constants/MAPBOX';
 import GalleryList from './js/components/GalleryList';
+import User from './js/components/User';
 
 //IIFE
 (function () {
+  let userData;
+
+  if (localStorage.getItem('louvre')) {
+    userData = localStorage.getItem('louvre');
+  } else {
+    const newUserData = {
+      name: 'New User',
+      email: 'Unknown',
+    };
+    localStorage.setItem('louvre', JSON.stringify(newUserData));
+    userData = localStorage.getItem('louvre');
+  }
+
   const galleryList = new GalleryList();
+  const user = new User(userData);
+
+  console.log(user.userData);
 
   function addGoBackBtn() {
     GO_BACK_BUTTON.classList.add('go-up-link_visible');
