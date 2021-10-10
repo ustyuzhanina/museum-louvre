@@ -359,7 +359,7 @@
                             <label for="basicNumber">Basic 18+</label>
                             <div class="number-container">
                                 <button class="button" type="button" onclick="this.nextElementSibling.stepDown()">&ndash;</button>
-                                <input type="number" min="0" max="20" value="0" readonly class="number" name="basicNumber" id="basicNumber">
+                                <input type="number" min="0" max="20" value="0" readonly class="number basicNumber" name="basicNumber" id="basicNumber">
                                 <button class="button" type="button" onclick="this.previousElementSibling.stepUp()">+</button>
                             </div>
 
@@ -367,12 +367,13 @@
                             <label for="seniorNumber">Senior 65+</label>
                             <div class="number-container">
                                 <button class="button" type="button" onclick="this.nextElementSibling.stepDown()">&ndash;</button>
-                                <input type="number" min="0" max="20" value="0" readonly class="number" name="seniorNumber" id="seniorNumber">
+                                <input type="number" min="0" max="20" value="0" readonly class="number seniorNumber" name="seniorNumber" id="seniorNumber">
                                 <button class="button" type="button" onclick="this.previousElementSibling.stepUp()">+</button>
                             </div>
 
                             <div class="section_tickets__total">
-                                <p class="section_tickets__total-title">Total €</p>
+                                <p class="section_tickets__total-title">Total</p>
+                                <p class="section_tickets__total-title">€</p>
                                 <p class="section_tickets__total-cost"></p>
                             </div>
 

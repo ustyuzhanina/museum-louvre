@@ -11,6 +11,9 @@ import {
   CLOSE_BUTTON,
   PAGE,
   PAGE_OVERLAY,
+  FORM_SMALL,
+  FORM_SMALL_BASIC_NUMBER,
+  FORM_SMALL_SENIOR_NUMBER,
   TICKET_TYPE_LABEL,
   TICKET_TYPE_INPUT,
   TICKET_TYPE_ARROW,
@@ -41,6 +44,11 @@ import LargeVideo from './js/components/LargeVideo';
   user.checkUser();
 
   formSmall.renderCost();
+
+  FORM_SMALL.querySelectorAll('input').forEach(input => {
+    //console.log('listener works');
+    formSmall.setEventListeners(input);
+  });
 
   function addGoBackBtn() {
     GO_BACK_BUTTON.classList.add('go-up-link_visible');
