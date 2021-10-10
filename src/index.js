@@ -27,7 +27,7 @@ import {
 import { API_KEY } from './js/constants/MAPBOX';
 import GalleryList from './js/components/GalleryList';
 import User from './js/components/User';
-import Purchase from './js/components/Purchase';
+//import Purchase from './js/components/Purchase';
 import FormSmall from './js/components/FormSmall';
 import FormLarge from './js/components/FormLarge';
 import CarouselVideo from './js/components/CarouselVideo';
@@ -38,10 +38,12 @@ import LargeVideo from './js/components/LargeVideo';
 (function () {
   const galleryList = new GalleryList();
   const user = new User();
-  const purchase = new Purchase(user);
-  const formSmall = new FormSmall(purchase);
+  const formSmall = new FormSmall(user);
 
   user.checkUser();
+  if (user.checkUser()) {
+    formSmall.loadInputs();
+  }
 
   formSmall.renderCost();
 

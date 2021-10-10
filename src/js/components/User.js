@@ -4,19 +4,25 @@ export default class User {
     this.email = null;
     this.purchase = {};
     this.checkUser = this.checkUser.bind(this);
-    this.saveData = this.saveData.bind(this);
+    this.save = this.save.bind(this);
+    this.storeData = this.storeData.bind(this);
   }
 
   checkUser() {
     if (localStorage.getItem('louvre')) {
-      const userData = localStorage.getItem('louvre');
-      for (const prop in this) {
+      const userData = JSON.parse(localStorage.getItem('louvre'));
+
+      for (const prop in userData) {
         this[prop] = userData[prop];
       }
+      return true;
     }
   }
 
-  saveData(data) {
+  save(data) {
+    if (localStorage.getItem('louvre')) {
+      localStorage.removeItem('louvre');
+    }
     localStorage.setItem('louvre', JSON.stringify(data));
   }
 
@@ -28,10 +34,10 @@ export default class User {
     };
   }
 
-  set userData(data) {
+  storeData(data) {
     this.name = data.name;
     this.email = data.email;
     this.purchase = data.purchase;
-    this.saveData(data);
+    this.save(data);
   }
 }
