@@ -38,15 +38,14 @@ import LargeVideo from './js/components/LargeVideo';
 (function () {
   const galleryList = new GalleryList();
   const user = new User();
-  const formSmall = new FormSmall();
-  //const purchase = new Purchase(user);
+  const purchase = new Purchase(user);
+  const formSmall = new FormSmall(purchase);
 
   user.checkUser();
 
   formSmall.renderCost();
 
   FORM_SMALL.querySelectorAll('input').forEach(input => {
-    //console.log('listener works');
     formSmall.setEventListeners(input);
   });
 

@@ -2,8 +2,9 @@ export default class User {
   constructor() {
     this.name = null;
     this.email = null;
+    this.purchase = {};
     this.checkUser = this.checkUser.bind(this);
-    this.setNewUser = this.setNewUser.bind(this);
+    this.saveData = this.saveData.bind(this);
   }
 
   checkUser() {
@@ -15,20 +16,22 @@ export default class User {
     }
   }
 
-  setNewUser(data) {
-    localStorage.setItem(`louvre-for-${data.name}`, JSON.stringify(data));
+  saveData(data) {
+    localStorage.setItem('louvre', JSON.stringify(data));
   }
 
   get userData() {
     return {
       name: this.name,
       email: this.email,
+      purchase: this.purchase,
     };
   }
 
   set userData(data) {
     this.name = data.name;
     this.email = data.email;
-    this.setNewUser(data);
+    this.purchase = data.purchase;
+    this.saveData(data);
   }
 }

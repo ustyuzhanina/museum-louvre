@@ -1,16 +1,13 @@
 import { PRICE_LIST, SENIOR_DISCOUNT_KOEF } from '../constants/PRICES';
-import {
-  FORM_SMALL_COST,
-  FORM_SMALL_BASIC_NUMBER,
-  FORM_SMALL_SENIOR_NUMBER,
-} from '../constants/MARKUP_SELECTORS';
+import { FORM_SMALL_COST } from '../constants/MARKUP_SELECTORS';
 
 export default class FormSmall {
-  constructor() {
-    this.ticketType = '';
-    this.basicNumber = 0;
-    this.seniorNumber = 0;
-    this.cost = 0;
+  constructor(purchaseClass) {
+    this.purchaseClass = purchaseClass;
+    this.ticketType = purchaseClass.ticketType || '';
+    this.basicNumber = purchaseClass.basicNumber || 0;
+    this.seniorNumber = purchaseClass.seniorNumber || 0;
+    this.cost = purchaseClass.cost || 0;
     this.calculateCost = this.calculateCost.bind(this);
     this.renderCost = this.renderCost.bind(this);
     this.setEventListeners = this.setEventListeners.bind(this);
@@ -31,22 +28,30 @@ export default class FormSmall {
     FORM_SMALL_COST.textContent = String(this.cost);
   }
 
-  setEventListeners(elem) {
-    if (elem.type === 'radio') {
-      elem.addEventListener('change', e => {
-        this.ticketType = e.target.closest('.label').textContent;
+  setEventListeners(input) {
+    if (input.type === 'radio') {
+      if (input.checked) {
+        this.ticketType = input.closest('.label').textContent.trim();
+      }
+      input.addEventListener('change', e => {
+        this.ticketType = e.target.closest('.label').textContent.trim();
         this.calculateCost();
         this.renderCost();
       });
     }
-    if (elem.type === 'number') {
-      //console.log('enters');
+    if (input.type === 'number') {
+      const container = input.closest('div');
+      const buttons = container.querySelectorAll('button');
 
-      elem.addEventListener('input', e => {
-        console.log(e.target);
-        this.basicNumber = Number(e.target.textContent);
-        this.calculateCost();
-        this.renderCost();
+      buttons.forEach(button => {
+        button.addEventListener('click', e => {
+          const container = e.target.closest('div');
+          const input = container.querySelector('input');
+          const inputId = input.id;
+          this[input.id] = Number(input.value);
+          this.calculateCost();
+          this.renderCost();
+        });
       });
     }
   }

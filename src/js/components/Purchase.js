@@ -1,17 +1,16 @@
 export default class Purchase {
-  constructor(purchaseData) {
-    this.id = purchaseData.id;
-    this.ticketType = purchaseData.ticketType;
-    this.date = purchaseData.date;
-    this.time = purchaseData.time;
-    this.date = purchaseData.date;
-    this.name = purchaseData.name;
-    this.email = purchaseData.email;
-    this.phone = purchaseData.phone;
-    this.phone = purchaseData.phone;
-    this.phone = purchaseData.phone;
-    this.qtyBasic = purchaseData.qtyBasic;
-    this.qtySenior = purchaseData.qtySenior;
+  constructor(userClass) {
+    this.name = userClass.name || null;
+    this.email = userClass.email || null;
+    this.purchase = userClass.purchase || null;
+    this.id = this.purchase.id || null;
+    this.ticketType = this.purchase.ticketType || null;
+    this.date = this.purchase.date || null;
+    this.time = this.purchase.time || null;
+    this.date = this.purchase.date || null;
+    this.cost = this.purchase.cost || null;
+    this.basicNumber = this.purchase.basicNumber || null;
+    this.seniorNumber = this.purchase.seniorNumber || null;
   }
 
   get purchaseData() {
