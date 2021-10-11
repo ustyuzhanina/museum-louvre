@@ -12,9 +12,6 @@ import {
   PAGE,
   PAGE_OVERLAY,
   FORM_SMALL,
-  FORM_SMALL_BASIC_NUMBER,
-  FORM_SMALL_SENIOR_NUMBER,
-  TICKET_TYPE_LABEL,
   TICKET_TYPE_INPUT,
   TICKET_TYPE_ARROW,
   FORM_OPTIONS,
@@ -27,7 +24,6 @@ import {
 import { API_KEY } from './js/constants/MAPBOX';
 import GalleryList from './js/components/GalleryList';
 import User from './js/components/User';
-//import Purchase from './js/components/Purchase';
 import FormSmall from './js/components/FormSmall';
 import FormLarge from './js/components/FormLarge';
 import CarouselVideo from './js/components/CarouselVideo';
@@ -109,8 +105,8 @@ import LargeVideo from './js/components/LargeVideo';
   }
 
   function toggleArrow() {
-    TICKET_TYPE_ARROW.classList.toggle('svg-arrow_down');
-    TICKET_TYPE_ARROW.classList.toggle('svg-arrow_up');
+    TICKET_TYPE_ARROW.classList.toggle('input-cover__arrow-icon_down');
+    TICKET_TYPE_ARROW.classList.toggle('input-cover__arrow-icon_up');
   }
 
   function handleInputClick() {
@@ -127,9 +123,8 @@ import LargeVideo from './js/components/LargeVideo';
   function handleInput(e) {
     const chosenOption = e.target.closest('.option').textContent;
     console.log(e.target);
-    TICKET_TYPE_INPUT.value = chosenOption;
+    TICKET_TYPE_INPUT.value = chosenOption.trim();
     TICKET_TYPE_TEXTOVERLAY.textContent = chosenOption;
-    TICKET_TYPE_TEXTOVERLAY.classList.add('chosen-value_visible');
     toggleArrow();
     toggleOptionsDropdown();
     FORM_OPTIONS.removeEventListener('click', handleInput);

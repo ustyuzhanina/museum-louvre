@@ -387,7 +387,7 @@
             <div class="parallax"></div>
         </section>
 
-        <div class="form-container">
+        <div class="form-container form-container_visible">
 
 
             <form class="large-form" action="submit">
@@ -407,36 +407,51 @@
                     <div class="fieldset-details__line fieldset-details__line_date-time">
                         <label class="label-date" for="input-date">
                             <input type="date" class="date" id="input-date">
-                            <span class="svg-arrow svg-arrow_down"></span>
-                            <span class="date-overlay">Date</span>
-                            <span class="picker-overlay"></span>
+                            <span class="error-message">Choose the date</span>
+                            <span class="input-cover">
+                                <span class="input-cover__title-icon"></span>
+                                <span class="input-cover__placeholder">Date</span>
+                                <span class="input-cover__arrow-icon input-cover__arrow-icon_down"></span>
+                            </span>
                         </label>
                         <label class="label-time" for="input-time">
                             <input type="time" class="time" id="input-time">
-                            <span class="svg-arrow svg-arrow_down"></span>
-                            <span class="time-overlay">Time</span>
-                            <span class="picker-overlay"></span>
+                            <span class="error-message">Choose the time</span>
+                            <span class="input-cover">
+                                <span class="input-cover__title-icon"></span>
+                                <span class="input-cover__placeholder">Time</span>
+                                <span class="input-cover__arrow-icon input-cover__arrow-icon_down"></span>
+                            </span>
                         </label>
                     </div>
 
                     <div class="fieldset-details__line">
                         <label for="input-name" class="label-name">
                             <input type="text" class="name" id="input-name" placeholder="Name">
-                            <span></span>
+                            <span class="error-message">Specify your name</span>
+                            <span class="input-cover">
+                                <span class="input-cover__title-icon"></span>
+                            </span>
                         </label>
                     </div>
 
                     <div class="fieldset-details__line">
                         <label for="input-email" class="label-email">
                             <input type="email" class="email" id="input-email" placeholder="E-mail">
-                            <span></span>
+                            <span class="error-message">Specify your email</span>
+                            <span class="input-cover">
+                                <span class="input-cover__title-icon"></span>
+                            </span>
                         </label>
                     </div>
 
                     <div class="fieldset-details__line">
                         <label for="input-phone" class="label-phone">
                             <input type="tel" class="phone" id="input-phone" placeholder="Phone">
-                            <span></span>
+                            <span class="error-message">Specify your phone</span>
+                            <span class="input-cover">
+                                <span class="input-cover__title-icon"></span>
+                            </span>
                         </label>
                     </div>
 
@@ -444,9 +459,12 @@
 
                         <label class="label-ticket-type" for="input_ticket-type">
                             <input type="text" class="input_ticket-type" id="input_ticket-type" placeholder="Ticket Type">
-                            <span class="svg-ballot"></span>
-                            <span class="svg-arrow svg-arrow_down"></span>
-                            <span class="chosen-value"></span>
+                            <span class="error-message">Choose the ticket type</span>
+                            <span class="input-cover">
+                                <span class="input-cover__title-icon"></span>
+                                <span class="input-cover__chosen-value">Ticket Type</span>
+                                <span class="input-cover__arrow-icon input-cover__arrow-icon_down"></span>
+                            </span>
                         </label>
 
                         <div class="options">

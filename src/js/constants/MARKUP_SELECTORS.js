@@ -32,8 +32,8 @@ const FORM_CONTAINER = document.querySelector('.form-container');
 const CLOSE_BUTTON = document.querySelector('.close-button');
 const TICKET_TYPE_LABEL = document.querySelector('.label-ticket-type');
 const TICKET_TYPE_INPUT = TICKET_TYPE_LABEL.querySelector('.input_ticket-type');
-const TICKET_TYPE_ARROW = TICKET_TYPE_LABEL.querySelector('.svg-arrow');
-const TICKET_TYPE_TEXTOVERLAY = TICKET_TYPE_LABEL.querySelector('.chosen-value');
+const TICKET_TYPE_ARROW = TICKET_TYPE_LABEL.querySelector('.input-cover__arrow-icon');
+const TICKET_TYPE_TEXTOVERLAY = TICKET_TYPE_LABEL.querySelector('.input-cover__chosen-value');
 const FORM_OPTIONS = document.querySelector('.options');
 const BOOK_BUTTON = document.querySelector('.overview__book-button');
 
