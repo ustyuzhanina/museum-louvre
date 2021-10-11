@@ -30,6 +30,40 @@ const SECTION_TICKETS_BUTTON = document.querySelector('.section_tickets__button'
 //large-form selectors
 const FORM_CONTAINER = document.querySelector('.form-container');
 const CLOSE_BUTTON = document.querySelector('.close-button');
+
+const FORM_LARGE = document.querySelector('.large-form');
+
+//LARGE FORM inputs
+const INPUT_DATE = FORM_LARGE.querySelector('.date');
+const INPUT_TIME = FORM_LARGE.querySelector('.time');
+const INPUT_NAME = FORM_LARGE.querySelector('.name');
+const INPUT_EMAIL = FORM_LARGE.querySelector('.email');
+const INPUT_PHONE = FORM_LARGE.querySelector('.email');
+
+const FORM_LARGE_BASIC_NUMBER = FORM_LARGE.querySelector('#formBasicNumber');
+const FORM_LARGE_SENIOR_NUMBER = FORM_LARGE.querySelector('#formSeniorNumber');
+
+const FORM_LARGE_BASIC_PRICE = FORM_LARGE.querySelector('.fieldset-details__price_basic');
+const FORM_LARGE_SENIOR_PRICE = FORM_LARGE.querySelector('.fieldset-details__price_senior');
+
+//OVERVIEW PURCHASE DATA
+const OVERVIEW_DATE = FORM_LARGE.querySelector('.overview__result_date');
+const OVERVIEW_TIME = FORM_LARGE.querySelector('.overview__result_time');
+const OVERVIEW_TICKET_TYPE = FORM_LARGE.querySelector('.overview__result_ticket-type');
+
+//subtotals
+const OVERVIEW_BASIC_QTY = FORM_LARGE.querySelector('.overview__ticket-count_basic');
+const OVERVIEW_SENIOR_QTY = FORM_LARGE.querySelector('.overview__ticket-count_senior');
+
+const OVERVIEW_BASIC_PRICE = FORM_LARGE.querySelector('.overview__ticket-price_basic');
+const OVERVIEW_SENIOR_PRICE = FORM_LARGE.querySelector('.overview__ticket-price_senior');
+
+const OVERVIEW_BASIC_COST = FORM_LARGE.querySelector('.overview__cost_basic');
+const OVERVIEW_SENIOR_COST = FORM_LARGE.querySelector('.overview__cost_senior');
+
+///total cost
+const FORM_LARGE_COST = FORM_LARGE.querySelector('.overview__total-cost');
+
 const TICKET_TYPE_LABEL = document.querySelector('.label-ticket-type');
 const TICKET_TYPE_INPUT = TICKET_TYPE_LABEL.querySelector('.input_ticket-type');
 const TICKET_TYPE_ARROW = TICKET_TYPE_LABEL.querySelector('.input-cover__arrow-icon');
@@ -52,8 +86,33 @@ export {
   FORM_SMALL_BASIC_NUMBER,
   FORM_SMALL_SENIOR_NUMBER,
   SECTION_TICKETS_BUTTON,
+  //large form
   FORM_CONTAINER,
   CLOSE_BUTTON,
+  //inputs
+  INPUT_DATE,
+  INPUT_TIME,
+  INPUT_NAME,
+  INPUT_EMAIL,
+  INPUT_PHONE,
+  //number container
+  FORM_LARGE_BASIC_NUMBER,
+  FORM_LARGE_SENIOR_NUMBER,
+  FORM_LARGE_BASIC_PRICE,
+  FORM_LARGE_SENIOR_PRICE,
+  //overview
+  ///overview data
+  OVERVIEW_DATE,
+  OVERVIEW_TIME,
+  OVERVIEW_TICKET_TYPE,
+  //overview pricing data
+  OVERVIEW_BASIC_QTY,
+  OVERVIEW_SENIOR_QTY,
+  OVERVIEW_BASIC_PRICE,
+  OVERVIEW_SENIOR_PRICE,
+  OVERVIEW_BASIC_COST,
+  OVERVIEW_SENIOR_COST,
+  FORM_LARGE_COST,
   PAGE,
   PAGE_OVERLAY,
   TICKET_TYPE_LABEL,

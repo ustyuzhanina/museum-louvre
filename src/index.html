@@ -485,7 +485,7 @@
                         <h4 class="section-title section-title_underline">Entry Ticket</h4>
 
                         <div class="fieldset-details__line">
-                            <label for="formBasicNumber">Basic 18+ (20 €)</label>
+                            <label for="formBasicNumber">Basic 18+ (<span class="fieldset-details__price fieldset-details__price_basic"></span> €)</label>
 
                             <div class="number-container">
                                 <button class="button button_minus" type="button" onclick="this.nextElementSibling.stepDown()"></button>
@@ -496,7 +496,7 @@
                         </div>
 
                         <div class="fieldset-details__line">
-                            <label for="formSeniorNumber">Senior 65+ (10 €)</label>
+                            <label for="formSeniorNumber">Senior 65+ (<span class="fieldset-details__price fieldset-details__price_senior"></span> €)</label>
 
                             <div class="number-container">
                                 <button class="button button_minus" type="button" onclick="this.nextElementSibling.stepDown()"></button>
@@ -524,22 +524,23 @@
 
                     <div class="overview__line overview__line_calculation">
                         <div>
-                            <p class="overview__ticket-count overview__ticket-count_basic">2</p>
-                            <p class="overview__ticket-type">Basic (20 €)</p>
+                            <p class="overview__ticket-count overview__ticket-count_basic"></p>
+
+                            <p class="overview__ticket-type">Basic (<span class="overview__ticket-price overview__ticket-price_basic"></span> €)</p>
                         </div>
                         <div>
-                            <p class="overview__cost overview__cost_basic">40</p>
+                            <p class="overview__cost overview__cost_basic"></p>
                             <p class="overview__currency">€</p>
                         </div>
                     </div>
 
                     <div class="overview__line overview__line_calculation">
                         <div>
-                            <p class="overview__ticket-count overview__ticket-count_senior">2</p>
-                            <p class="overview__ticket-type">Senior (10 €)</p>
+                            <p class="overview__ticket-count overview__ticket-count_senior"></p>
+                            <p class="overview__ticket-type">Senior (<span class="overview__ticket-price overview__ticket-price_senior"></span> €)</p>
                         </div>
                         <div>
-                            <p class="overview__cost overview__cost_senior">20</p>
+                            <p class="overview__cost overview__cost_senior"></p>
                             <p class="overview__currency">€</p>
                         </div>
                     </div>
@@ -549,7 +550,7 @@
                     <div class="overview__line overview__line_total">
                         <p class="overview__total-title">Total:</p>
                         <div>
-                            <p class="overview__total-cost">60</p>
+                            <p class="overview__total-cost"></p>
                             <p class="overview__total-currency">€</p>
                         </div>
                     </div>

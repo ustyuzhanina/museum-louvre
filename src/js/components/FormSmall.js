@@ -4,6 +4,7 @@ import {
   FORM_SMALL,
   FORM_SMALL_BASIC_NUMBER,
   FORM_SMALL_SENIOR_NUMBER,
+  SECTION_TICKETS_BUTTON,
 } from '../constants/MARKUP_SELECTORS';
 
 export default class FormSmall {
@@ -13,6 +14,7 @@ export default class FormSmall {
     this.basicNumber = 0;
     this.seniorNumber = 0;
     this.cost = 0;
+    this.button = SECTION_TICKETS_BUTTON;
     this.calculateCost = this.calculateCost.bind(this);
     this.renderCost = this.renderCost.bind(this);
     this.loadInputs = this.loadInputs.bind(this);
