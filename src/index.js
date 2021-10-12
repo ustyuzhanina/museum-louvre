@@ -20,6 +20,7 @@ import {
   HMBG_BUTTON,
   GO_BACK_BUTTON,
 } from './js/constants/MARKUP_SELECTORS';
+import { showSelfcheck } from './js/utils/showSelfcheck';
 import { API_KEY } from './js/constants/MAPBOX';
 import GalleryList from './js/components/GalleryList';
 import User from './js/components/User';
@@ -32,6 +33,8 @@ import LargeVideo from './js/components/LargeVideo';
 
 //IIFE
 (function () {
+  showSelfcheck();
+
   const galleryList = new GalleryList();
   const user = new User();
   const formSmall = new FormSmall(user);

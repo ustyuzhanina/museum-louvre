@@ -91,6 +91,7 @@ export default class FormValidator {
 
   removeEventListeners() {
     this.form.removeEventListener('input', this.handleInputs, true);
+    this.resetErrors();
   }
 
   //* функция, меняющая состояние кнопки сабмита
@@ -105,6 +106,9 @@ export default class FormValidator {
   resetErrors() {
     this.form.reset();
     const errors = this.form.querySelectorAll('.error-message');
-    errors.forEach(error => (error.textContent = ''));
+    errors.forEach(error => {
+      error.textContent = '';
+      error.parentNode.querySelector('input').classList.remove('error');
+    });
   }
 }
