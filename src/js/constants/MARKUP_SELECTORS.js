@@ -88,6 +88,7 @@ export {
   SECTION_TICKETS_BUTTON,
   //large form
   FORM_CONTAINER,
+  FORM_LARGE,
   CLOSE_BUTTON,
   //inputs
   INPUT_DATE,

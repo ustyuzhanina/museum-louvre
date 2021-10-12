@@ -387,7 +387,7 @@
             <div class="parallax"></div>
         </section>
 
-        <div class="form-container form-container_visible">
+        <div class="form-container">
 
 
             <form class="large-form" action="submit">
@@ -406,7 +406,7 @@
 
                     <div class="fieldset-details__line fieldset-details__line_date-time">
                         <label class="label-date" for="input-date">
-                            <input type="date" class="date" id="input-date">
+                            <input type="date" class="date" id="input-date" required>
                             <span class="error-message">Choose the date</span>
                             <span class="input-cover">
                                 <span class="input-cover__title-icon"></span>
@@ -415,7 +415,7 @@
                             </span>
                         </label>
                         <label class="label-time" for="input-time">
-                            <input type="time" class="time" id="input-time">
+                            <input type="time" class="time" id="input-time" required>
                             <span class="error-message">Choose the time</span>
                             <span class="input-cover">
                                 <span class="input-cover__title-icon"></span>
@@ -427,8 +427,8 @@
 
                     <div class="fieldset-details__line">
                         <label for="input-name" class="label-name">
-                            <input type="text" class="name" id="input-name" placeholder="Name">
-                            <span class="error-message">Specify your name</span>
+                            <input type="text" class="name" id="input-name" placeholder="Name" required minlength="3" maxlength="15" pattern="[A-Za-zА-Яа-я ]+">
+                            <span class="error-message"></span>
                             <span class="input-cover">
                                 <span class="input-cover__title-icon"></span>
                             </span>
@@ -437,8 +437,8 @@
 
                     <div class="fieldset-details__line">
                         <label for="input-email" class="label-email">
-                            <input type="email" class="email" id="input-email" placeholder="E-mail">
-                            <span class="error-message">Specify your email</span>
+                            <input type="email" class="email" id="input-email" placeholder="E-mail" required pattern="([a-zA-Z\d]{1}(([-_])?[a-zA-Z\d]+)+){2,14}@([a-z]){4,}\.([a-z]){2,3}">
+                            <span class="error-message"></span>
                             <span class="input-cover">
                                 <span class="input-cover__title-icon"></span>
                             </span>
@@ -447,8 +447,8 @@
 
                     <div class="fieldset-details__line">
                         <label for="input-phone" class="label-phone">
-                            <input type="tel" class="phone" id="input-phone" placeholder="Phone">
-                            <span class="error-message">Specify your phone</span>
+                            <input type="tel" class="phone" id="input-phone" placeholder="Phone" required pattern="(\d{1,10})|([(\d{2})(\d{3})]+([ -]((\d{2})|(\d{3})))*)" maxlength="14">
+                            <span class="error-message"></span>
                             <span class="input-cover">
                                 <span class="input-cover__title-icon"></span>
                             </span>
@@ -458,7 +458,7 @@
                     <div class="fieldset-details__line fieldset-details__line_ticket-type">
 
                         <label class="label-ticket-type" for="input_ticket-type">
-                            <input type="text" class="input_ticket-type" id="input_ticket-type" placeholder="Ticket Type">
+                            <input type="text" class="input_ticket-type" id="input_ticket-type" placeholder="Ticket Type" required>
                             <span class="error-message">Choose the ticket type</span>
                             <span class="input-cover">
                                 <span class="input-cover__title-icon"></span>
@@ -607,7 +607,7 @@
                     </div>
 
                     <div class="overview__line overview__line_book">
-                        <button class="button overview__book-button">Book</button>
+                        <button class="button overview__book-button" type="submit">Book</button>
 
                     </div>
 

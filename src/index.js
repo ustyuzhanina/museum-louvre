@@ -25,6 +25,7 @@ import GalleryList from './js/components/GalleryList';
 import User from './js/components/User';
 import FormSmall from './js/components/FormSmall';
 import FormLarge from './js/components/FormLarge';
+import FormValidator from './js/components/FormValidator';
 import CarouselVideo from './js/components/CarouselVideo';
 import CarouselWelcome from './js/components/CarouselWelcome';
 import LargeVideo from './js/components/LargeVideo';
@@ -35,6 +36,7 @@ import LargeVideo from './js/components/LargeVideo';
   const user = new User();
   const formSmall = new FormSmall(user);
   const formLarge = new FormLarge(user);
+  const formValidator = new FormValidator(formLarge);
 
   user.checkUser();
   if (user.checkUser()) {
@@ -78,7 +80,14 @@ import LargeVideo from './js/components/LargeVideo';
   formSmall.button.addEventListener('click', e => {
     e.preventDefault();
     formLarge.open();
+    formValidator.setEventListeners();
   });
 
   formLarge.setEventListeners();
+
+  formLarge.closeBtn.addEventListener('click', e => {
+    e.preventDefault();
+    formLarge.close();
+    formValidator.removeEventListeners();
+  });
 })();

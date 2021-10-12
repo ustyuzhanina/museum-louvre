@@ -422,13 +422,20 @@
         line-height: 22px;
         font-weight: 400;
         transition: background-color $speed-fast;
+
+        &:hover {
+            background-color: $font-gold;
+        }
+
+        &:disabled {
+            cursor: default;
+            background-color: #BCBCBC;
+
+            &:hover {
+                background-color: #BCBCBC;
+            }
+        }
     }
-
-    &__book-button:hover {
-        background-color: $font-gold;
-    }
-
-
 
 }
 

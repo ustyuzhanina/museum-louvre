@@ -47,6 +47,7 @@ export default class FormLarge {
     this.container = FORM_CONTAINER;
     this.button = BOOK_BUTTON;
     this.closeBtn = CLOSE_BUTTON;
+    this.form = FORM_LARGE;
     this.open = this.open.bind(this);
     this.close = this.close.bind(this);
     this.calculateCost = this.calculateCost.bind(this);
@@ -57,6 +58,7 @@ export default class FormLarge {
   }
 
   open() {
+    this.button.removeAttribute('disabled');
     // код для выезда большой формы
     this.loadInputs();
     this.renderNumberContainer();
@@ -221,11 +223,6 @@ export default class FormLarge {
       setTimeout(() => {
         ripple.remove();
       }, 1000);
-    });
-
-    this.closeBtn.addEventListener('click', e => {
-      e.preventDefault();
-      this.close();
     });
   }
 }
