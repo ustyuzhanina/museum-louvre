@@ -209,11 +209,13 @@ export default class FormLarge {
       // Add span to the button
       this.button.append(ripple);
 
+      const buttonPosition = this.button.getBoundingClientRect();
+
       // Get position of X
-      let x = e.clientX - e.target.offsetLeft;
+      let x = e.clientX - buttonPosition.x;
 
       // Get position of Y
-      let y = e.clientY - e.target.offsetTop;
+      let y = e.clientY - buttonPosition.y;
 
       // Position the span element
       ripple.style.left = `${x}px`;
