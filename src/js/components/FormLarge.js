@@ -197,17 +197,17 @@ export default class FormLarge {
       FORM_OPTIONS.addEventListener('click', handleInput);
     });
 
-    this.button.addEventListener('click', function (e) {
+    this.button.addEventListener('click', e => {
       e.preventDefault();
 
       // Create span element
       let ripple = document.createElement('span');
 
       // Add ripple class to span
-      ripple.classList.add('button', 'button__ripple-effect');
+      ripple.classList.add('button__ripple-effect');
 
       // Add span to the button
-      this.appendChild(ripple);
+      this.button.append(ripple);
 
       // Get position of X
       let x = e.clientX - e.target.offsetLeft;

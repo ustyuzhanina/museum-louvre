@@ -33,7 +33,7 @@ import LargeVideo from './js/components/LargeVideo';
 
 //IIFE
 (function () {
-  showSelfcheck();
+  // showSelfcheck();
 
   const galleryList = new GalleryList();
   const user = new User();
