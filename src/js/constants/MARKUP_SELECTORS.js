@@ -36,6 +36,7 @@ const FORM_LARGE = document.querySelector('.large-form');
 //LARGE FORM inputs
 const INPUT_DATE = FORM_LARGE.querySelector('.date');
 const INPUT_TIME = FORM_LARGE.querySelector('.time');
+const INPUT_TIME_OPTIONS = FORM_LARGE.querySelector('#time-options');
 const INPUT_NAME = FORM_LARGE.querySelector('.name');
 const INPUT_EMAIL = FORM_LARGE.querySelector('.email');
 const INPUT_PHONE = FORM_LARGE.querySelector('.email');
@@ -72,6 +73,48 @@ const FORM_OPTIONS = document.querySelector('.options');
 const BOOK_BUTTON = document.querySelector('.overview__book-button');
 
 const INITIAL_PAINTINGS_ARRAY = [2, 9, 4, 6, 11, 1, 8, 3, 5, 13, 7, 10, 15, 12, 14];
+
+//Exhibition working hours
+INPUT_TIME.min = '09:00';
+INPUT_TIME.max = '17:30';
+//step is 30 minutes
+const step = 30;
+INPUT_TIME.step = String(step * 60);
+
+//INPUT_TIME_OPTIONS
+const visitStartHourStr = INPUT_TIME.min.split(':')[0];
+const visitEndHourStr = INPUT_TIME.max.split(':')[0];
+const visitStartHour = +visitStartHourStr;
+const visitEndHour = +visitEndHourStr;
+const visitDurationHours = visitEndHour - visitStartHour + 1;
+const visitTimeKoef = 60 / step;
+const visitTimeOptions = visitDurationHours * visitTimeKoef;
+
+let hourCount = 9;
+const timeOptionsArray = [];
+for (let i = 1; i <= visitTimeOptions; i++) {
+  const timeOption = document.createElement('option');
+
+  let hourValue;
+  if (hourCount < 10) {
+    hourValue = `0${hourCount}`;
+  } else {
+    hourValue = `${hourCount}`;
+  }
+
+  let minuteValue;
+
+  if (i % 2 === 0) {
+    minuteValue = `${step}`;
+    hourCount++;
+  } else {
+    minuteValue = '00';
+  }
+
+  timeOption.value = `${hourValue}:${minuteValue}`;
+  timeOptionsArray.push(timeOption);
+}
+INPUT_TIME_OPTIONS.append(...timeOptionsArray);
 
 export {
   PROGRESS_BAR,

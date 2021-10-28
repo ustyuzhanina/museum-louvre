@@ -415,13 +415,17 @@
                             </span>
                         </label>
                         <label class="label-time" for="input-time">
-                            <input type="time" class="time" id="input-time" required>
+                            <input type="time" class="time" id="input-time" list="time-options" required>
                             <span class="error-message">Choose the time</span>
                             <span class="input-cover">
                                 <span class="input-cover__title-icon"></span>
                                 <span class="input-cover__placeholder">Time</span>
                                 <span class="input-cover__arrow-icon input-cover__arrow-icon_down"></span>
                             </span>
+                            <div style="overflow:scroll; height:100px;" hidden>
+                                <datalist id="time-options">
+                                </datalist>
+                            </div>
                         </label>
                     </div>
 

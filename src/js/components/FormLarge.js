@@ -153,6 +153,9 @@ export default class FormLarge {
   }
 
   setEventListeners() {
+    const today = new Date();
+
+    INPUT_DATE.min = today.toISOString().split('T')[0];
     INPUT_DATE.addEventListener('focus', e => toggleInputCover(e));
     INPUT_DATE.addEventListener('blur', e => toggleInputCover(e));
 
