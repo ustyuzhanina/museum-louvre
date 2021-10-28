@@ -32,6 +32,7 @@ import {
   OVERVIEW_BASIC_COST,
   OVERVIEW_SENIOR_COST,
 } from '../constants/MARKUP_SELECTORS';
+import toggleInputCover from '../utils/toggleInputCover';
 
 export default class FormLarge {
   constructor(user) {
@@ -152,12 +153,12 @@ export default class FormLarge {
   }
 
   setEventListeners() {
-    // INPUT_DATE.addEventListener('change', e => {
-    //   validateDate(e);
-    // });
-    // INPUT_TIME.addEventListener('change', e => {
-    //   validateTime(e);
-    // });
+    INPUT_DATE.addEventListener('focus', e => toggleInputCover(e));
+    INPUT_DATE.addEventListener('blur', e => toggleInputCover(e));
+
+    INPUT_TIME.addEventListener('focus', e => toggleInputCover(e));
+    INPUT_TIME.addEventListener('blur', e => toggleInputCover(e));
+
     // INPUT_NAME.addEventListener('change', e => {
     //   validateName(e);
     // });

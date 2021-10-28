@@ -68,6 +68,8 @@ const cssLoaders = (extra) => {
   return loaders;
 };
 
+const websiteTitle = "Museum";
+
 module.exports = {
   context: path.resolve(__dirname, "src"),
 
@@ -102,7 +104,7 @@ module.exports = {
     //new WebpackMd5Hash(),
 
     new HtmlWebpackPlugin({
-      title: "museum",
+      title: websiteTitle,
       template: "./index.html",
       filename: 'index.html',
       inject: true,
@@ -115,7 +117,7 @@ module.exports = {
     }),
 
     new HtmlWebpackPlugin({
-      title: "museum",
+      title: websiteTitle,
       template: "./tours/welcome/index.html",
       filename: 'tours/welcome/index.html',
       inject: true,
@@ -127,7 +129,7 @@ module.exports = {
     }),
 
     new HtmlWebpackPlugin({
-      title: "museum",
+      title: websiteTitle,
       template: "./tours/colonnade/index.html",
       filename: 'tours/colonnade/index.html',
       hash: true,
@@ -139,7 +141,7 @@ module.exports = {
     }),
 
     new HtmlWebpackPlugin({
-      title: "museum",
+      title: websiteTitle,
       template: "./tours/denonWing/index.html",
       filename: 'tours/denonWing/index.html',
       hash: true,
@@ -151,7 +153,7 @@ module.exports = {
     }),
 
     new HtmlWebpackPlugin({
-      title: "museum",
+      title: websiteTitle,
       template: "./tours/greekHall/index.html",
       filename: 'tours/greekHall/index.html',
       hash: true,
@@ -163,7 +165,7 @@ module.exports = {
     }),
 
     new HtmlWebpackPlugin({
-      title: "museum",
+      title: websiteTitle,
       template: "./tours/monaLisa/index.html",
       filename: 'tours/monaLisa/index.html',
       hash: true,
@@ -175,7 +177,7 @@ module.exports = {
     }),
 
     new HtmlWebpackPlugin({
-      title: "museum",
+      title: websiteTitle,
       template: "./tours/nightPalace/index.html",
       filename: 'tours/nightPalace/index.html',
       hash: true,
@@ -187,7 +189,7 @@ module.exports = {
     }),
 
     new HtmlWebpackPlugin({
-      title: "museum",
+      title: websiteTitle,
       template: "./tours/royalPalace/index.html",
       filename: 'tours/royalPalace/index.html',
       hash: true,
