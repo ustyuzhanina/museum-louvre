@@ -39,7 +39,7 @@ const INPUT_TIME = FORM_LARGE.querySelector('.time');
 const INPUT_TIME_OPTIONS = FORM_LARGE.querySelector('#time-options');
 const INPUT_NAME = FORM_LARGE.querySelector('.name');
 const INPUT_EMAIL = FORM_LARGE.querySelector('.email');
-const INPUT_PHONE = FORM_LARGE.querySelector('.email');
+const INPUT_PHONE = FORM_LARGE.querySelector('.phone');
 
 const FORM_LARGE_BASIC_NUMBER = FORM_LARGE.querySelector('#formBasicNumber');
 const FORM_LARGE_SENIOR_NUMBER = FORM_LARGE.querySelector('#formSeniorNumber');

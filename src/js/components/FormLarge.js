@@ -37,6 +37,9 @@ import toggleInputCover from '../utils/toggleInputCover';
 export default class FormLarge {
   constructor(user) {
     this.userClass = user;
+    this.name = '';
+    this.email = '';
+    this.phone = '';
     this.ticketType = '';
     this.basicNumber = 0;
     this.seniorNumber = 0;
@@ -57,6 +60,7 @@ export default class FormLarge {
     this.renderOverview = this.renderOverview.bind(this);
     this.loadInputs = this.loadInputs.bind(this);
     this.renderNumberContainer = this.renderNumberContainer.bind(this);
+    this.pickDataForSaving = this.pickDataForSaving.bind(this);
     this.setEventListeners = this.setEventListeners.bind(this);
   }
 
@@ -92,6 +96,37 @@ export default class FormLarge {
     this.date = this.userClass.purchase.date;
     this.time = this.userClass.purchase.time;
 
+    if (this.userClass.purchase.date) {
+      this.date = this.userClass.purchase.date;
+      INPUT_DATE.value = this.date;
+      const cover = INPUT_DATE.closest('label').querySelector('.input-cover');
+      cover.style.background = 'linear-gradient(to right, transparent 80%, #fff 20%)';
+      cover.style.color = 'transparent';
+    }
+
+    if (this.userClass.purchase.time) {
+      this.time = this.userClass.purchase.time;
+      INPUT_TIME.value = this.time;
+      const cover = INPUT_TIME.closest('label').querySelector('.input-cover');
+      cover.style.background = 'linear-gradient(to right, transparent 80%, #fff 20%)';
+      cover.style.color = 'transparent';
+    }
+
+    if (this.userClass.name) {
+      this.name = this.userClass.name;
+      INPUT_NAME.value = this.name;
+    }
+
+    if (this.userClass.email) {
+      this.email = this.userClass.email;
+      INPUT_EMAIL.value = this.email;
+    }
+
+    if (this.userClass.phone) {
+      this.phone = this.userClass.phone;
+      INPUT_PHONE.value = this.phone;
+    }
+
     if (this.userClass.purchase.ticketType) {
       TICKET_TYPE_INPUT.value = this.userClass.purchase.ticketType;
       TICKET_TYPE_TEXTOVERLAY.textContent = this.userClass.purchase.ticketType;
@@ -125,6 +160,25 @@ export default class FormLarge {
     FORM_LARGE_SENIOR_PRICE.textContent = String(this.seniorPrice);
   }
 
+  pickDataForSaving() {
+    const purchase = {
+      date: this.date,
+      time: this.time,
+      ticketType: this.ticketType,
+      basicNumber: this.basicNumber,
+      seniorNumber: this.seniorNumber,
+    };
+
+    const dataForStorage = {
+      name: this.name || this.userClass.name,
+      email: this.email || this.userClass.email,
+      phone: this.phone || this.userClass.phone,
+      purchase,
+    };
+
+    this.userClass.storeData(dataForStorage);
+  }
+
   renderOverview() {
     const options = { weekday: 'long', month: 'long', day: 'numeric' };
     const date = new Date(Date.parse(this.date));
@@ -153,21 +207,7 @@ export default class FormLarge {
     //render OVERVIEW total cost
     FORM_LARGE_COST.textContent = String(this.cost);
 
-    const purchase = {
-      date: this.date,
-      time: this.time,
-      ticketType: this.ticketType,
-      basicNumber: this.basicNumber,
-      seniorNumber: this.seniorNumber,
-    };
-
-    const dataForStorage = {
-      name: this.userClass.name || 'Unknown',
-      email: this.userClass.email || 'Unknown',
-      purchase,
-    };
-
-    this.userClass.storeData(dataForStorage);
+    this.pickDataForSaving();
   }
 
   setEventListeners() {
@@ -191,7 +231,6 @@ export default class FormLarge {
 
       datalist.style.display = 'block';
     });
-
     datalist.addEventListener('mousedown', e => {
       if (e.target.tagName === 'OPTION') {
         INPUT_TIME.value = e.target.closest('option').value;
@@ -199,21 +238,24 @@ export default class FormLarge {
         this.renderOverview();
       }
     });
-
     INPUT_TIME.addEventListener('blur', e => {
       toggleInputCover(e);
       datalist.style.display = 'none';
     });
 
-    // INPUT_NAME.addEventListener('change', e => {
-    //   validateName(e);
-    // });
-    // INPUT_EMAIL.addEventListener('change', e => {
-    //   validateEmail(e);
-    // });
-    // INPUT_PHONE.addEventListener('change', e => {
-    //   validatePhone(e);
-    // });
+    INPUT_NAME.addEventListener('blur', e => {
+      this.name = e.target.value;
+      console.log(this.name);
+      this.pickDataForSaving();
+    });
+    INPUT_EMAIL.addEventListener('blur', e => {
+      this.email = e.target.value;
+      this.pickDataForSaving();
+    });
+    INPUT_PHONE.addEventListener('blur', e => {
+      this.phone = e.target.value;
+      this.pickDataForSaving();
+    });
 
     TICKET_TYPE_INPUT.addEventListener('click', e => {
       function toggleOptionsDropdown() {

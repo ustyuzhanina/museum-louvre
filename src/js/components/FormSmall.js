@@ -10,6 +10,8 @@ import {
 export default class FormSmall {
   constructor(user) {
     this.userClass = user;
+    this.date = '';
+    this.time = '';
     this.ticketType = '';
     this.basicNumber = 0;
     this.seniorNumber = 0;
@@ -28,6 +30,8 @@ export default class FormSmall {
     //set values for calculation and further saving in localStorage
     this.basicNumber = this.userClass.purchase.basicNumber;
     this.seniorNumber = this.userClass.purchase.seniorNumber;
+    this.date = this.userClass.purchase.date;
+    this.time = this.userClass.purchase.time;
 
     const radios = FORM_SMALL.querySelectorAll('input[type=radio]');
     radios.forEach(radio => {
@@ -55,14 +59,17 @@ export default class FormSmall {
     FORM_SMALL_COST.textContent = String(this.cost);
 
     const purchase = {
+      date: this.date,
+      time: this.time,
       ticketType: this.ticketType,
       basicNumber: this.basicNumber,
       seniorNumber: this.seniorNumber,
     };
 
     const dataForStorage = {
-      name: this.userClass.name || 'Unknown',
-      email: this.userClass.email || 'Unknown',
+      name: this.userClass.name,
+      email: this.userClass.email,
+      phone: this.userClass.phone,
       purchase,
     };
 

@@ -428,7 +428,7 @@
 
                     <div class="fieldset-details__line">
                         <label for="input-name" class="label-name">
-                            <input type="text" class="name" id="input-name" placeholder="Name" required minlength="3" maxlength="15" pattern="[A-Za-zА-Яа-я ]+">
+                            <input type="text" class="name" id="input-name" placeholder="Name" required minlength="3" maxlength="15" pattern="[A-Za-zА-Яа-я ]+" autocomplete="off">
                             <span class="error-message"></span>
                             <span class="input-cover">
                                 <span class="input-cover__title-icon"></span>
@@ -438,7 +438,7 @@
 
                     <div class="fieldset-details__line">
                         <label for="input-email" class="label-email">
-                            <input type="email" class="email" id="input-email" placeholder="E-mail" required pattern="([a-zA-Z\d]{1}(([-_])?[a-zA-Z\d]+)+){2,14}@([a-z]){4,}\.([a-z]){2,3}">
+                            <input type="email" class="email" id="input-email" placeholder="E-mail" required pattern="([a-zA-Z\d]{1}(([-_])?[a-zA-Z\d]+)+){2,14}@([a-z]){4,}\.([a-z]){2,3}" autocomplete="off">
                             <span class="error-message"></span>
                             <span class="input-cover">
                                 <span class="input-cover__title-icon"></span>
@@ -448,7 +448,7 @@
 
                     <div class="fieldset-details__line">
                         <label for="input-phone" class="label-phone">
-                            <input type="tel" class="phone" id="input-phone" placeholder="Phone" required pattern="(\d{1,10})|([(\d{2})(\d{3})]+([ -]((\d{2})|(\d{3})))*)" maxlength="14">
+                            <input type="tel" class="phone" id="input-phone" placeholder="Phone" required pattern="(\d{1,10})|([(\d{2})(\d{3})]+([ -]((\d{2})|(\d{3})))*)" maxlength="14" autocomplete="off">
                             <span class="error-message"></span>
                             <span class="input-cover">
                                 <span class="input-cover__title-icon"></span>

@@ -2,6 +2,7 @@ export default class User {
   constructor() {
     this.name = null;
     this.email = null;
+    this.phone = null;
     this.purchase = {};
     this.checkUser = this.checkUser.bind(this);
     this.save = this.save.bind(this);
@@ -30,6 +31,7 @@ export default class User {
     return {
       name: this.name,
       email: this.email,
+      phone: this.phone,
       purchase: this.purchase,
     };
   }
@@ -37,6 +39,7 @@ export default class User {
   storeData(data) {
     this.name = data.name;
     this.email = data.email;
+    this.phone = data.phone;
     this.purchase = data.purchase;
     this.save(data);
   }
