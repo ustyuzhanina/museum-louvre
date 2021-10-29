@@ -45,6 +45,8 @@ export default class FormLarge {
     this.basicCost = 0;
     this.seniorCost = 0;
     this.cost = 0;
+    this.date = '';
+    this.time = '';
     this.container = FORM_CONTAINER;
     this.button = BOOK_BUTTON;
     this.closeBtn = CLOSE_BUTTON;
@@ -87,6 +89,8 @@ export default class FormLarge {
     //set values for calculation and further saving in localStorage
     this.basicNumber = this.userClass.purchase.basicNumber;
     this.seniorNumber = this.userClass.purchase.seniorNumber;
+    this.date = this.userClass.purchase.date;
+    this.time = this.userClass.purchase.time;
 
     if (this.userClass.purchase.ticketType) {
       TICKET_TYPE_INPUT.value = this.userClass.purchase.ticketType;
@@ -122,6 +126,12 @@ export default class FormLarge {
   }
 
   renderOverview() {
+    //render OVERVIEW DATE
+    OVERVIEW_DATE.textContent = this.date || '-';
+
+    //render OVERVIEW TIME
+    OVERVIEW_TIME.textContent = this.time || '-';
+
     //render OVERVIEW QTYs
     OVERVIEW_BASIC_QTY.textContent = String(this.basicNumber);
     OVERVIEW_SENIOR_QTY.textContent = String(this.seniorNumber);
@@ -138,6 +148,8 @@ export default class FormLarge {
     FORM_LARGE_COST.textContent = String(this.cost);
 
     const purchase = {
+      date: this.date,
+      time: this.time,
       ticketType: this.ticketType,
       basicNumber: this.basicNumber,
       seniorNumber: this.seniorNumber,
@@ -159,7 +171,13 @@ export default class FormLarge {
 
     INPUT_DATE.min = today.toISOString().split('T')[0];
     INPUT_DATE.addEventListener('focus', e => toggleInputCover(e));
-    INPUT_DATE.addEventListener('blur', e => toggleInputCover(e));
+    INPUT_DATE.addEventListener('blur', e => {
+      toggleInputCover(e);
+    });
+    INPUT_DATE.addEventListener('change', e => {
+      this.date = e.target.value;
+      this.renderOverview();
+    });
 
     INPUT_TIME.addEventListener('focus', e => {
       e.preventDefault();
@@ -171,6 +189,8 @@ export default class FormLarge {
     datalist.addEventListener('mousedown', e => {
       if (e.target.tagName === 'OPTION') {
         INPUT_TIME.value = e.target.closest('option').value;
+        this.time = e.target.value;
+        this.renderOverview();
       }
     });
 
