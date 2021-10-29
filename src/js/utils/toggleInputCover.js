@@ -1,7 +1,7 @@
 export default function toggleInputCover(event) {
   if (event.type === 'focus') {
     event.target.closest('label').querySelector('.input-cover').style.background =
-      'linear-gradient(to right, transparent 90%, #fff 10%)';
+      'linear-gradient(to right, transparent 80%, #fff 20%)';
     event.target.closest('label').querySelector('.input-cover').style.color = 'transparent';
   }
 

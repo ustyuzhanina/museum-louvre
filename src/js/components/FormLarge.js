@@ -154,13 +154,30 @@ export default class FormLarge {
 
   setEventListeners() {
     const today = new Date();
+    const inputTimeLabel = INPUT_TIME.closest('label');
+    const datalist = inputTimeLabel.querySelector('datalist');
 
     INPUT_DATE.min = today.toISOString().split('T')[0];
     INPUT_DATE.addEventListener('focus', e => toggleInputCover(e));
     INPUT_DATE.addEventListener('blur', e => toggleInputCover(e));
 
-    INPUT_TIME.addEventListener('focus', e => toggleInputCover(e));
-    INPUT_TIME.addEventListener('blur', e => toggleInputCover(e));
+    INPUT_TIME.addEventListener('focus', e => {
+      e.preventDefault();
+      toggleInputCover(e);
+
+      datalist.style.display = 'block';
+    });
+
+    datalist.addEventListener('mousedown', e => {
+      if (e.target.tagName === 'OPTION') {
+        INPUT_TIME.value = e.target.closest('option').value;
+      }
+    });
+
+    INPUT_TIME.addEventListener('blur', e => {
+      toggleInputCover(e);
+      datalist.style.display = 'none';
+    });
 
     // INPUT_NAME.addEventListener('change', e => {
     //   validateName(e);

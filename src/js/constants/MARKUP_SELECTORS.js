@@ -112,6 +112,7 @@ for (let i = 1; i <= visitTimeOptions; i++) {
   }
 
   timeOption.value = `${hourValue}:${minuteValue}`;
+  timeOption.textContent = `${hourValue}:${minuteValue}`;
   timeOptionsArray.push(timeOption);
 }
 INPUT_TIME_OPTIONS.append(...timeOptionsArray);
