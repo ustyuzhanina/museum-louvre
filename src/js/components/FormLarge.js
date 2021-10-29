@@ -126,11 +126,17 @@ export default class FormLarge {
   }
 
   renderOverview() {
+    const options = { weekday: 'long', month: 'long', day: 'numeric' };
+    const date = new Date(Date.parse(this.date));
+
     //render OVERVIEW DATE
-    OVERVIEW_DATE.textContent = this.date || '-';
+    OVERVIEW_DATE.textContent = this.date ? date.toLocaleString('en-US', options) : '-';
 
     //render OVERVIEW TIME
-    OVERVIEW_TIME.textContent = this.time || '-';
+    OVERVIEW_TIME.textContent = this.time ? `${String(this.time).replace(':', ' : ')}` : '-';
+
+    //render OVERVIEW TICKET TYPE
+    OVERVIEW_TICKET_TYPE.textContent = this.ticketType || '-';
 
     //render OVERVIEW QTYs
     OVERVIEW_BASIC_QTY.textContent = String(this.basicNumber);
