@@ -172,9 +172,9 @@
         cursor: auto;
     }
 
-    // & .time::-webkit-calendar-picker-indicator {
-    //     cursor: pointer;
-    // }
+    & .time::-webkit-calendar-picker-indicator {
+        pointer-events: none;
+    }
 
     & .label-time {
         width: calc((100% - 16px)/2);

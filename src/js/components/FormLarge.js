@@ -33,6 +33,8 @@ import {
   OVERVIEW_SENIOR_COST,
 } from '../constants/MARKUP_SELECTORS';
 import toggleInputCover from '../utils/toggleInputCover';
+import toggleArrow from '../utils/toggleArrow';
+import toggleOptionsDropdown from '../utils/toggleOptionsDropdown';
 
 export default class FormLarge {
   constructor(user) {
@@ -219,6 +221,7 @@ export default class FormLarge {
     INPUT_DATE.addEventListener('focus', e => toggleInputCover(e));
     INPUT_DATE.addEventListener('blur', e => {
       toggleInputCover(e);
+      this.pickDataForSaving();
     });
     INPUT_DATE.addEventListener('change', e => {
       this.date = e.target.value;
@@ -240,6 +243,7 @@ export default class FormLarge {
     });
     INPUT_TIME.addEventListener('blur', e => {
       toggleInputCover(e);
+      this.pickDataForSaving();
       datalist.style.display = 'none';
     });
 
@@ -258,32 +262,23 @@ export default class FormLarge {
     });
 
     TICKET_TYPE_INPUT.addEventListener('click', e => {
-      function toggleOptionsDropdown() {
-        FORM_OPTIONS.classList.toggle('options_visible');
-      }
-
-      function toggleArrow() {
-        TICKET_TYPE_ARROW.classList.toggle('input-cover__arrow-icon_down');
-        TICKET_TYPE_ARROW.classList.toggle('input-cover__arrow-icon_up');
-      }
-
-      function handleInput(e) {
-        const chosenOption = e.target.closest('.option').textContent;
-        TICKET_TYPE_INPUT.value = chosenOption.trim();
-        TICKET_TYPE_TEXTOVERLAY.textContent = chosenOption;
-        toggleArrow();
-        toggleOptionsDropdown();
-        FORM_OPTIONS.removeEventListener('click', handleInput);
-      }
-
       //rotate arrow
-      toggleArrow();
+      toggleArrow(TICKET_TYPE_ARROW);
 
       //make options (in)visible
-      toggleOptionsDropdown();
+      toggleOptionsDropdown(FORM_OPTIONS);
+    });
 
-      //add list-er to option for inserting value to input and make options invisible
-      FORM_OPTIONS.addEventListener('click', handleInput);
+    //add list-er to option for inserting value to input and make options invisible
+    FORM_OPTIONS.addEventListener('click', e => {
+      const chosenOption = e.target.closest('.option').textContent;
+      TICKET_TYPE_INPUT.value = chosenOption.trim();
+      TICKET_TYPE_TEXTOVERLAY.textContent = chosenOption;
+      toggleArrow(TICKET_TYPE_ARROW);
+      toggleOptionsDropdown(FORM_OPTIONS);
+      this.ticketType = TICKET_TYPE_INPUT.value;
+      this.calculateCost();
+      this.renderOverview();
     });
 
     this.button.addEventListener('click', e => {
