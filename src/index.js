@@ -35,6 +35,7 @@ import LargeVideo from './js/components/LargeVideo';
 (function () {
   // showSelfcheck();
 
+  const carouselWelcome = new CarouselWelcome();
   const galleryList = new GalleryList();
   const user = new User();
   const formSmall = new FormSmall(user);
@@ -58,6 +59,7 @@ import LargeVideo from './js/components/LargeVideo';
   }
   document.addEventListener('scroll', addGoBackBtn);
 
+  carouselWelcome.setEventListeners();
   galleryList.render();
 
   //event listeners

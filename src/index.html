@@ -123,7 +123,7 @@
                     <div class="carousel__container">
                         <img class="carousel__image carousel__image_active" src="./assets/img/welcome-slider/1.jpg" alt="welcome image 1">
                         <img class="carousel__image carousel__image_next" src="./assets/img/welcome-slider/2.jpg" alt="welcome image 2">
-                        <img class="carousel__image carousel__image_previous" src="./assets/img/welcome-slider/3.jpg" alt="welcome image 3">
+                        <img class="carousel__image" src="./assets/img/welcome-slider/3.jpg" alt="welcome image 3">
                         <img class="carousel__image" src="./assets/img/welcome-slider/4.jpg" alt="welcome image 4">
                         <img class="carousel__image" src="./assets/img/welcome-slider/5.jpg" alt="welcome image 5">
                         <div class="overlay carousel__overlay"></div>
@@ -561,7 +561,7 @@
                         <div class="overview__bank-card overview__bank-card_reverse">
                             <div class="overview__black-line"></div>
                             <label class="overview__cvv-label">
-                                <input type="tel" class="overview__cvv">
+                                <input type="tel" class="overview__cvv" required pattern="\d{3,4}" minLength="3" maxLength="4">
                                 <span class="overview__cvv-title">CVC/CVV</span>
                                 <span class="overview__cvv-explanation">The last<br>
                                     3 or 4 digits on back of the card</span>
@@ -574,19 +574,19 @@
                                 <div class="overview__card-numbers">
 
                                     <label class="overview__card-number-label">
-                                        <input class="overview__card-number" type="tel">
+                                        <input class="overview__card-number" type="tel" required>
                                         <span class="overview__field-title">Card number</span>
                                     </label>
 
                                     <div class="overview__exp-date">
 
                                         <label class="overview__exp-month-label">
-                                            <input class="overview__exp-month" type="number">
+                                            <input class="overview__exp-month" type="number" required placeholder="Month" min="1" max="12">
                                             <span class="overview__field-title">Expiration date</span>
                                         </label>
 
                                         <label class="overview__exp-year-label">
-                                            <input class="overview__exp-year" type="number">
+                                            <input class="overview__exp-year" type="number" required placeholder="Year">
                                         </label>
 
                                     </div>
@@ -601,7 +601,7 @@
                             </div>
 
                             <label class="overview__cardholder-name-label">
-                                <input class="overview__cardholder-name" type="text">
+                                <input class="overview__cardholder-name" type="text" required>
                                 <span class="overview__field-title">Cardholder name</span>
                             </label>
                         </div>

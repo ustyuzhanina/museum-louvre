@@ -10,6 +10,9 @@ const HMBG_BUTTON = document.querySelector('.hamburger-button');
 //go back button
 const GO_BACK_BUTTON = document.querySelector('.go-up-link');
 
+//SECTION WELCOME CAROUSEL
+const CAROUSEL_CONTAINER = document.querySelector('.carousel__container');
+
 //section_video
 const PROGRESS_BAR = document.querySelector('.progress-bar');
 const VOLUME_BAR = document.querySelector('.volume-bar');
@@ -118,13 +121,18 @@ for (let i = 1; i <= visitTimeOptions; i++) {
 INPUT_TIME_OPTIONS.append(...timeOptionsArray);
 
 export {
+  //section welcome carousel
+  CAROUSEL_CONTAINER,
+  //section video
   PROGRESS_BAR,
   VOLUME_BAR,
+  //section gallery
   GALLERY_CONTAINER,
   INITIAL_PAINTINGS_ARRAY,
   GALLERY_CONTAINER_COLUMN_1,
   GALLERY_CONTAINER_COLUMN_2,
   GALLERY_CONTAINER_COLUMN_3,
+  //section tickets
   FORM_SMALL,
   FORM_SMALL_COST,
   FORM_SMALL_BASIC_NUMBER,
