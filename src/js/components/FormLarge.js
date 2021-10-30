@@ -269,7 +269,6 @@ export default class FormLarge {
       toggleOptionsDropdown(FORM_OPTIONS);
     });
 
-    //add list-er to option for inserting value to input and make options invisible
     FORM_OPTIONS.addEventListener('click', e => {
       const chosenOption = e.target.closest('.option').textContent;
       TICKET_TYPE_INPUT.value = chosenOption.trim();
@@ -280,6 +279,26 @@ export default class FormLarge {
       this.calculateCost();
       this.renderOverview();
     });
+
+    FORM_LARGE_BASIC_NUMBER.closest('.number-container')
+      .querySelectorAll('button')
+      .forEach(button => {
+        button.addEventListener('click', e => {
+          this.basicNumber = FORM_LARGE_BASIC_NUMBER.value;
+          this.calculateCost();
+          this.renderOverview();
+        });
+      });
+
+    FORM_LARGE_SENIOR_NUMBER.closest('.number-container')
+      .querySelectorAll('button')
+      .forEach(button => {
+        button.addEventListener('click', e => {
+          this.seniorNumber = FORM_LARGE_SENIOR_NUMBER.value;
+          this.calculateCost();
+          this.renderOverview();
+        });
+      });
 
     this.button.addEventListener('click', e => {
       e.preventDefault();
