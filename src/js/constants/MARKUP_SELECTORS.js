@@ -12,6 +12,10 @@ const GO_BACK_BUTTON = document.querySelector('.go-up-link');
 
 //SECTION WELCOME CAROUSEL
 const CAROUSEL_CONTAINER = document.querySelector('.carousel__container');
+const CAROUSEL_CONTROLS = document.querySelector('.carousel__controls');
+const CAROUSEL_TOTAL_QTY = document.querySelector('.carousel__total-qty');
+const CAROUSEL_BTN_CONTAINER = document.querySelector('.carousel__button-container');
+const CAROUSEL_ARROW_CONTAINER = document.querySelector('.carousel__arrow-container');
 
 //section_video
 const PROGRESS_BAR = document.querySelector('.progress-bar');
@@ -123,6 +127,10 @@ INPUT_TIME_OPTIONS.append(...timeOptionsArray);
 export {
   //section welcome carousel
   CAROUSEL_CONTAINER,
+  CAROUSEL_CONTROLS,
+  CAROUSEL_TOTAL_QTY,
+  CAROUSEL_BTN_CONTAINER,
+  CAROUSEL_ARROW_CONTAINER,
   //section video
   PROGRESS_BAR,
   VOLUME_BAR,
