@@ -1,18 +1,18 @@
 .error {
-    border: 2px solid#fa1111 !important;
+    border-color: #fa1111 !important;
 
     &-message {
         display: none;
         position: absolute;
-        top: -1rem;
-        height: .8rem;
+        top: -.9rem;
+        height: .7rem;
         left: 0;
         width: 100%;
         color: #fa1111;
         font-family: $font-major;
-        font-size: .8rem;
+        font-size: .7rem;
         font-weight: 300;
-        line-height: .8rem;
+        line-height: .7rem;
     }
 
     &+.error-message {

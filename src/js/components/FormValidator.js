@@ -1,4 +1,11 @@
-import { ERROR_GENERAL, ERROR_NAME, ERROR_EMAIL, ERROR_PHONE } from '../constants/ERROR_MESSAGES';
+import {
+  ERROR_GENERAL,
+  ERROR_DATE,
+  ERROR_TIME,
+  ERROR_NAME,
+  ERROR_EMAIL,
+  ERROR_PHONE,
+} from '../constants/ERROR_MESSAGES';
 
 export default class FormValidator {
   constructor(formClass) {
@@ -34,6 +41,25 @@ export default class FormValidator {
     if (inputElement.validity.patternMismatch && inputElement.type === 'text') {
       inputElement.setCustomValidity(ERROR_NAME.wrongPattern);
       return false;
+    }
+
+    //date validation
+    if (inputElement.type === 'date' && inputElement.validity.rangeUnderflow) {
+      inputElement.setCustomValidity(ERROR_DATE.wrongDate);
+      return false;
+    }
+
+    //time validation
+    if (inputElement.type === 'time') {
+      if (inputElement.validity.rangeUnderflow || inputElement.validity.rangeOverflow) {
+        inputElement.setCustomValidity(ERROR_TIME.wrongPeriod);
+        return false;
+      }
+
+      if (inputElement.validity.stepMismatch) {
+        inputElement.setCustomValidity(ERROR_TIME.wrongStep);
+        return false;
+      }
     }
 
     if (
@@ -87,10 +113,14 @@ export default class FormValidator {
 
   setEventListeners() {
     this.form.addEventListener('input', this.handleInputs, true);
+    this.form.addEventListener('change', this.handleInputs, true);
+    this.form.addEventListener('click', this.handleInputs, true);
   }
 
   removeEventListeners() {
     this.form.removeEventListener('input', this.handleInputs, true);
+    this.form.removeEventListener('change', this.handleInputs, true);
+    this.form.removeEventListener('click', this.handleInputs, true);
     this.resetErrors();
   }
 
@@ -104,7 +134,7 @@ export default class FormValidator {
   }
 
   resetErrors() {
-    this.form.reset();
+    //this.form.reset();
     const errors = this.form.querySelectorAll('.error-message');
     errors.forEach(error => {
       error.textContent = '';

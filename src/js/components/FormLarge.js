@@ -249,7 +249,6 @@ export default class FormLarge {
 
     INPUT_NAME.addEventListener('blur', e => {
       this.name = e.target.value;
-      console.log(this.name);
       this.pickDataForSaving();
     });
     INPUT_EMAIL.addEventListener('blur', e => {

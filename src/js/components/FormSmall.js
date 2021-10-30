@@ -38,7 +38,6 @@ export default class FormSmall {
       const label = radio.closest('.label');
       if (label.textContent.trim() === this.userClass.purchase.ticketType) {
         label.querySelector('input').checked = 'checked';
-        //this.ticketType = this.userClass.purchase.ticketType;
       }
     });
     if (this.userClass.purchase.ticketType) {
