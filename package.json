@@ -9,15 +9,15 @@
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/rolling-scopes-school/ustyuzhanina-JSFE2021Q3.git"
+        "url": "git+https://github.com/ustyuzhanina/museum-louvre.git"
     },
     "keywords": [],
     "author": "Elena Ustyuzhanina",
     "license": "ISC",
     "bugs": {
-        "url": "https://github.com/rolling-scopes-school/ustyuzhanina-JSFE2021Q3/issues"
+        "url": "https://github.com/ustyuzhanina/museum-louvre/issues"
     },
-    "homepage": "https://github.com/rolling-scopes-school/ustyuzhanina-JSFE2021Q3#readme",
+    "homepage": "https://github.com/ustyuzhanina/museum-louvre#readme",
     "devDependencies": {
         "@babel/cli": "^7.14.3",
         "@babel/core": "^7.14.3",
@@ -74,6 +74,7 @@
         "stylelint-prettier": "^1.2.0",
         "stylelint-scss": "^3.21.0",
         "terser-webpack-plugin": "^4.2.3",
+        "trim-newlines": "^3.0.1",
         "webpack": "^4.41.2",
         "webpack-cli": "^3.3.9",
         "webpack-dev-server": "^3.11.0"

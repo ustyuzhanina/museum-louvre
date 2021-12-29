@@ -12,6 +12,7 @@ const GO_BACK_BUTTON = document.querySelector('.go-up-link');
 
 //SECTION WELCOME CAROUSEL
 const CAROUSEL_CONTAINER = document.querySelector('.carousel__container');
+const CAROUSEL_IMAGE_BOX = document.querySelector('.carousel__image-box');
 const CAROUSEL_CONTROLS = document.querySelector('.carousel__controls');
 const CAROUSEL_TOTAL_QTY = document.querySelector('.carousel__total-qty');
 const CAROUSEL_BTN_CONTAINER = document.querySelector('.carousel__button-container');
@@ -127,6 +128,7 @@ INPUT_TIME_OPTIONS.append(...timeOptionsArray);
 export {
   //section welcome carousel
   CAROUSEL_CONTAINER,
+  CAROUSEL_IMAGE_BOX,
   CAROUSEL_CONTROLS,
   CAROUSEL_TOTAL_QTY,
   CAROUSEL_BTN_CONTAINER,

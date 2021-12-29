@@ -1,3 +1,23 @@
+@keyframes left {
+    from {
+        left: 0;
+    }
+
+    to {
+        left: -100%;
+    }
+}
+
+@keyframes right {
+    from {
+        left: 100%;
+    }
+
+    to {
+        left: 0;
+    }
+}
+
 .carousel {
     position: relative;
     width: 100%;
@@ -21,6 +41,17 @@
     }
 
     &__container {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: calc(700 / 1024 * 100vw);
+        max-width: 1000px;
+        height: calc((700 / 1024 * 100vw) * 525 / 700);
+        max-height: 750px;
+        z-index: 0;
+    }
+
+    &__image-box {
         display: flex;
         position: absolute;
         flex-direction: row;
@@ -40,10 +71,36 @@
         max-width: 1000px;
         height: calc((700 / 1024 * 100vw) * 525 / 700);
         max-height: 750px;
+        animation: .5s ease-in-out;
+
+        &_to-left {
+            animation-name: left;
+        }
+
+        &_to-right {
+            animation-name: right;
+            animation-direction: reverse;
+        }
+
+        &_from-left {
+            animation-name: left;
+            animation-direction: reverse;
+        }
+
+        &_from-right {
+            animation-name: right;
+        }
     }
 
-    &__image_active {
+    &__image_active,
+    &__image_next {
         display: block;
+    }
+
+    &__image_next {
+        position: absolute;
+        top: 0;
+        width: 100%;
     }
 
     &__overlay.overlay {
@@ -51,6 +108,7 @@
         height: calc((700 / 1024 * 100vw) * 525 / 700);
         max-height: 750px;
         bottom: 0;
+        pointer-events: none;
     }
 
     &__controls {
@@ -223,6 +281,12 @@
             height: calc((100vw - 40px) * 546 / 728);
             z-index: 0;
 
+        }
+
+        &__image-box {
+            width: calc(100vw - 40px);
+            height: calc((100vw - 40px) * 546 / 728);
+            z-index: 0;
         }
 
         &__image {
