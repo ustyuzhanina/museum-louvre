@@ -66,6 +66,18 @@ export default class CarouselWelcome {
   }
 
   setEventListeners() {
+    for (let i = 0; i < this.btns.length; i++) {
+      this.btns[i].addEventListener('click', () => {
+        if (this.isEnabled) {
+          if (this.currentItem < i) {
+            this.nextItem(i - 1);
+          } else if (this.currentItem > i) {
+            this.previousItem(i + 1);
+          }
+        }
+      });
+    }
+
     this.arrowLeft.addEventListener('click', () => {
       if (this.isEnabled) {
         this.previousItem(this.currentItem);

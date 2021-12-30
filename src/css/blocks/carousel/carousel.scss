@@ -95,10 +95,10 @@
     &__image_active,
     &__image_next {
         display: block;
+        position: absolute;
     }
 
     &__image_next {
-        position: absolute;
         top: 0;
         width: 100%;
     }
