@@ -23,11 +23,14 @@ export default class CarouselWelcome {
     this.arrowRight = CAROUSEL_CONTROLS.querySelector('.carousel__arrow-right');
     this.isEnabled = true;
     this.currentItem = 0;
+    this.btnOrderNum = 1;
     this.images = CAROUSEL_IMAGE_BOX.querySelectorAll('img');
+    this.btns = CAROUSEL_BTN_CONTAINER.querySelectorAll('.carousel__button');
     this.setEventListeners = this.setEventListeners.bind(this);
   }
 
   changeCurrentItem(n) {
+    this.btns[this.currentItem].classList.remove('carousel__button_active');
     this.currentItem = (n + this.images.length) % this.images.length;
   }
 
@@ -44,6 +47,7 @@ export default class CarouselWelcome {
     this.images[this.currentItem].addEventListener('animationend', e => {
       e.target.classList.remove('carousel__image_next', direction);
       e.target.classList.add('carousel__image_active');
+      this.btns[this.currentItem].classList.add('carousel__button_active');
       this.isEnabled = true;
     });
   }

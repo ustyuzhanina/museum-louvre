@@ -1,4 +1,3 @@
-# ustyuzhanina-JSFE2021Q3
-Private repository for @ustyuzhanina
+# Museum Task for RS School
 
-[Link to museum-dom gh-pages deployment]()
+[A link to gh-pages deployment](https://ustyuzhanina.github.io/museum-louvre/)
