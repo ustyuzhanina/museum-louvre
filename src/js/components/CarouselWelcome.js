@@ -48,6 +48,7 @@ export default class CarouselWelcome {
       e.target.classList.remove('carousel__image_next', direction);
       e.target.classList.add('carousel__image_active');
       this.btns[this.currentItem].classList.add('carousel__button_active');
+      document.querySelector('.carousel__img-order-num').textContent = '0' + (this.currentItem + 1);
       this.isEnabled = true;
     });
   }
