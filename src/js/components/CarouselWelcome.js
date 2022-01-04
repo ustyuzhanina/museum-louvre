@@ -26,6 +26,10 @@ export default class CarouselWelcome {
     this.btnOrderNum = 1;
     this.images = CAROUSEL_IMAGE_BOX.querySelectorAll('img');
     this.btns = CAROUSEL_BTN_CONTAINER.querySelectorAll('.carousel__button');
+    this.dragXStart = 0;
+    this.dragXEnd = 0;
+    this.dragYStart = 0;
+    this.dragYEnd = 0;
     this.setEventListeners = this.setEventListeners.bind(this);
   }
 
@@ -66,6 +70,7 @@ export default class CarouselWelcome {
   }
 
   setEventListeners() {
+    //color switching of the control buttons on active slide change
     for (let i = 0; i < this.btns.length; i++) {
       this.btns[i].addEventListener('click', () => {
         if (this.isEnabled) {
@@ -87,6 +92,28 @@ export default class CarouselWelcome {
     this.arrowRight.addEventListener('click', () => {
       if (this.isEnabled) {
         this.nextItem(this.currentItem);
+      }
+    });
+
+    CAROUSEL_IMAGE_BOX.addEventListener('pointerdown', e => {
+      e.preventDefault();
+      this.dragXStart = e.pageX;
+      this.dragYStart = e.pageY;
+    });
+
+    CAROUSEL_IMAGE_BOX.addEventListener('pointerup', e => {
+      this.dragXEnd = e.pageX;
+      this.dragYEnd = e.pageY;
+
+      if (this.dragXStart > this.dragXEnd) {
+        e.preventDefault();
+        if (this.isEnabled) {
+          this.nextItem(this.currentItem);
+        }
+      } else if (this.dragXStart < this.dragXEnd) {
+        if (this.isEnabled) {
+          this.previousItem(this.currentItem);
+        }
       }
     });
   }
