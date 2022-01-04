@@ -17,7 +17,7 @@ export default class CarouselWelcome {
       toRight: 'carousel__image_to-right',
       fromLeft: 'carousel__image_from-left',
       fromRight: 'carousel__image_from-right',
-      btnActive: 'carousel__button_active',
+      //btnActive: 'carousel__button_active',
     };
     this.arrowLeft = CAROUSEL_CONTROLS.querySelector('.carousel__arrow-left');
     this.arrowRight = CAROUSEL_CONTROLS.querySelector('.carousel__arrow-right');
