@@ -105,12 +105,16 @@ export default class CarouselWelcome {
       this.dragXEnd = e.pageX;
       this.dragYEnd = e.pageY;
 
-      if (this.dragXStart > this.dragXEnd) {
+      //we take coef of 4 to make sure that we swipe horizontally excluding page scrolling actions
+      const distX = this.dragXEnd - this.dragXStart;
+      const distY = this.dragYEnd - this.dragYStart;
+
+      if (this.dragXStart > this.dragXEnd && distX / distY > 4) {
         e.preventDefault();
         if (this.isEnabled) {
           this.nextItem(this.currentItem);
         }
-      } else if (this.dragXStart < this.dragXEnd) {
+      } else if (this.dragXStart < this.dragXEnd && distX / distY > 4) {
         if (this.isEnabled) {
           this.previousItem(this.currentItem);
         }
