@@ -95,13 +95,13 @@ export default class CarouselWelcome {
       }
     });
 
-    CAROUSEL_IMAGE_BOX.addEventListener('pointerdown', e => {
+    CAROUSEL_IMAGE_BOX.addEventListener('mousedown', e => {
       e.preventDefault();
       this.dragXStart = e.pageX;
       this.dragYStart = e.pageY;
     });
 
-    CAROUSEL_IMAGE_BOX.addEventListener('pointerup', e => {
+    CAROUSEL_IMAGE_BOX.addEventListener('mouseup', e => {
       this.dragXEnd = e.pageX;
       this.dragYEnd = e.pageY;
 
