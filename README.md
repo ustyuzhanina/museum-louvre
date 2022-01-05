@@ -1,18 +1,19 @@
-# Museum Task for RS School
+# Museum Task for RS School / HTML and CSS part - ready, JS - in progress
+
+[**Website Link >**](https://ustyuzhanina.github.io/museum-louvre/)
 
 This is a task aimed at thorough practicing flexible and adaptive markup combined with a good deal of Javascript code. 
 Below you will find a short functional descripton of every section of the website.
+
+---
 
 Your comments and advice are always welcome at elena.ustyuzhanina.rus@gmail.com
 
 ---
 
-[**Website Link >**](https://ustyuzhanina.github.io/museum-louvre/)
-
----
 ## 1. **Section Welcome** / *Done*
 
-<img src="./src/assets/img/readme/welcome.jpg" width="90%" height="auto" style="border-radius: 4px; box-shadow: 0 0 16px 1px grey">
+<img src="./src/assets/img/readme/welcome.jpg" width="100%" height="auto" style="border-radius: 4px; box-shadow: 0 0 16px 1px grey">
 
 - you can change pictures by clicking on left/right arrow buttons [+]
 - you can swipe pictures through mouse clicking or touch [+]
@@ -25,7 +26,7 @@ Your comments and advice are always welcome at elena.ustyuzhanina.rus@gmail.com
 
 ## 2. **Section Explore** / *TODO*
 
-<img src="./src/assets/img/readme/explore.jpg" width="90%" height="auto" style="border-radius: 4px; box-shadow: 0 0 16px 1px grey">
+<img src="./src/assets/img/readme/explore.jpg" width="100%" height="auto" style="border-radius: 4px; box-shadow: 0 0 16px 1px grey">
 
 - you can drag the dividing bar horizontally
 - the dividing bar never goes beyond the picture side borders
@@ -74,18 +75,18 @@ Your comments and advice are always welcome at elena.ustyuzhanina.rus@gmail.com
 
 ## 4. **Section Gallery** / *TODO*
 
-<img src="./src/assets/img/readme/gallery.jpg" width="90%" height="auto" style="border-radius: 4px; box-shadow: 0 0 16px 1px grey">
+<img src="./src/assets/img/readme/gallery.jpg" width="100%" height="auto" style="border-radius: 4px; box-shadow: 0 0 16px 1px grey">
 
 - on page renewal the order of pictures changes [+]
-- при прокрутке страницы вниз появление картин секции Gallery сопровождается анимацией: изображения плавно поднимаются снизу вверх, увеличиваясь и создавая эффект выплывания. В качестве образца анимации используйте анимацию на сайте Лувра https://www.louvre.fr/ 
-- если прокрутить страницу вверх и затем снова прокручивать вниз, анимация появления картин повторяется 
-- при обновлении страницы, если она к тому моменту была прокручена до секции Galery, анимация картин повторяется 
+- on page scrolling down the pictures come into view with animation: the images are smoothly elevated gradually growing. The animation example is at Louvre's website https://www.louvre.fr/ [+]
+- if you scroll up and then start scrolling down again the animation will repeat [+]
+-  on page renewal, if it was scrolled to the Section Gallery, the animation should repeat [+] 
 
 ---
 
 ## 5. **Section Tickets** / *Done*
 
-<img src="./src/assets/img/readme/tickets.jpg" width="90%" height="auto" style="border-radius: 4px; box-shadow: 0 0 16px 1px grey">
+<img src="./src/assets/img/readme/tickets.jpg" width="100%" height="auto" style="border-radius: 4px; box-shadow: 0 0 16px 1px grey">
 
 - on changing quantity of the Basic/Senior tickets the total sum is recalculated [+]
 - the ticket price chnages depending on the ticket type. On changing the ticket type the total price is recalculated. [+]
@@ -93,32 +94,32 @@ Your comments and advice are always welcome at elena.ustyuzhanina.rus@gmail.com
 
 ---
 
-## 6. **Booking Form** / *Done + pending minor error elimination*
+## 6. **Booking Form** / *Done + pending error elimination*
 
-<img src="./src/assets/img/readme/booking.jpg" width="90%" height="auto" style="border-radius: 4px; box-shadow: 0 0 16px 1px grey">
+<img src="./src/assets/img/readme/booking.jpg" width="100%" height="auto" style="border-radius: 4px; box-shadow: 0 0 16px 1px grey">
 
 ### 6.1. **Calculator** / *Done*
 
-- когда при клике по кнопке Buy now открывается форма, она уже содержит данные, указанные на странице сайта - количество билетов, их тип, общая цена за них +2
-- когда пользователь выбирает дату в форме слева, она отображается в билете справа +2
-- нельзя выбрать дату в прошлом +2
-- когда пользователь выбирает время в форме слева, оно отображается в билете справа +2
-- время можно выбирать с 9:00 до 18:00 с интервалом в 30 минут +2
-можно изменить тип билета в поле Ticket type слева при этом меняется тип билета, цена билета и общая стоимость билетов справа +2
-- можно изменить количество билетов каждого типа в поле слева при этом меняется количество билетов и общая стоимость билетов справа +2
+- after clicking on 'Buy now' button, the booking form opens. The opened form already has the data chosen in the preliminary form from Section Tickets (tickets qty, type and the total cost) [+]
+- when you choose the date on the left side, it shows up on the right side [+]
+- you cannot choose the date fom the past [+]
+- when you choose the time on the left side, it shows up on the right side [+]
+- you can choose the time from 9:00 till 18:00 with a 30 minutes step [+]
+- you can change the ticket type on the left. This will change the ticket type, ticket price and the total cost on the right side [+]
+- you can change the tickets qty of each ticket type on the left. This will change the qty and the total cost on the right side [+]
 
 ### 6.2. **Form Validation** / *Done*
 
-- валидация имени пользователя. Имя пользователя должно содержать от 3 до 15 символов, в качестве символов могут быть использованы буквы английского или русского алфавита в нижнем или верхнем регистре и пробелы +4
-- валидация e-mail должна пропускать только адреса вида username@example.com, где: username - имя пользователя, должно содержать от 3 до 15 символов (буквы, цифры, знак подчёркивания, дефис), не должно содержать пробелов; @ - символ собачки; example - домен первого уровня состоит минимум из 4 латинских букв; com - домен верхнего уровня, отделяется от домена первого уровня точкой и состоит минимум из 2 латинских букв +4
-- валидация номера телефона: номер содержит только цифры; без разделения или с разделением на две или три цифры; разделение цифр может быть через дефис или пробел; с ограничением по количеству цифр не больше 10 цифр +4
-- при попытке ввода в input невалидного значения, его граница подсвечивается красным, выводится текстовое предупреждение в человекочитаемом формате +4
+- the user's name is valid if it has 3-15 characters (letters of the English or Russian alphabet, upper and lower case and spaces) [+]
+- email validation should pass only addresses of the following pattern: **username@example.com**, where **username** is a name consisting of 3-15 characters (leters, digits, underscore, hiphen), should have no spaces; **@** - special email symbol; **example** - domain name consisting of no less than 4 Latin letters; **com** - top-level domain consisting of no no less than 2 Latin letters and separated from the domain name with a dot [+]
+- the phone number should consist of digits only, without separation or split into groups of 2 or 3 digits with spaces or hiphens. No more than 10 digits [+]
+- in case of invalid input the field border is highlighted with red color and a clear error message shows up [+]
 
 ---
 
 ## 7. **Section Contacts** / *TODO*
 
-<img src="./src/assets/img/readme/contacts.jpg" width="90%" height="auto" style="border-radius: 4px; box-shadow: 0 0 16px 1px grey">
+<img src="./src/assets/img/readme/contacts.jpg" width="100%" height="auto" style="border-radius: 4px; box-shadow: 0 0 16px 1px grey">
 
 - the map is interactive
 - the map shows the markers located and styled in compliance with the design
