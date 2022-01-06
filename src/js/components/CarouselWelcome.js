@@ -99,6 +99,7 @@ export default class CarouselWelcome {
       e.preventDefault();
       this.dragXStart = e.pageX;
       this.dragYStart = e.pageY;
+      console.log(e.type);
     });
 
     CAROUSEL_IMAGE_BOX.addEventListener('mouseup', e => {
@@ -115,6 +116,32 @@ export default class CarouselWelcome {
           this.nextItem(this.currentItem);
         }
       } else if (this.dragXStart < this.dragXEnd && distX / distY > 4) {
+        e.preventDefault();
+        if (this.isEnabled) {
+          this.previousItem(this.currentItem);
+        }
+      }
+    });
+
+    CAROUSEL_IMAGE_BOX.addEventListener('touchstart', e => {
+      e.preventDefault();
+      this.dragXStart = e.touches[0].clientX;
+      this.dragYStart = e.touches[0].clientY;
+    });
+
+    CAROUSEL_IMAGE_BOX.addEventListener('touchend', e => {
+      this.dragXEnd = e.changedTouches[0].clientX;
+      const distX = this.dragXEnd - this.dragXStart;
+
+      //swiping to the right
+      if (this.dragXStart > this.dragXEnd && Math.abs(distX) > 30) {
+        e.preventDefault();
+        if (this.isEnabled) {
+          this.nextItem(this.currentItem);
+        }
+        //swiping to the left - works
+      } else if (this.dragXStart < this.dragXEnd && Math.abs(distX) > 30) {
+        e.preventDefault();
         if (this.isEnabled) {
           this.previousItem(this.currentItem);
         }
