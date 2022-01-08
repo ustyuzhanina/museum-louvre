@@ -96,7 +96,7 @@
         &__img-before img,
         &__img-after img {
             display: block;
-            object-fit: contain;
+            object-fit: cover;
             width: 100%;
             height: auto;
         }

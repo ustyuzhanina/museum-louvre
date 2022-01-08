@@ -18,6 +18,11 @@ const CAROUSEL_TOTAL_QTY = document.querySelector('.carousel__total-qty');
 const CAROUSEL_BTN_CONTAINER = document.querySelector('.carousel__button-container');
 const CAROUSEL_ARROW_CONTAINER = document.querySelector('.carousel__arrow-container');
 
+//SECTION EXPLORE slider
+const BAR = document.querySelector('.section_explore__bar');
+const OVERLAY_IMAGE = document.querySelector('.section_explore__img-after');
+const SLIDER_CONTAINER = document.querySelector('.container section_explore__img-container');
+
 //section_video
 const PROGRESS_BAR = document.querySelector('.progress-bar');
 const VOLUME_BAR = document.querySelector('.volume-bar');
@@ -136,6 +141,10 @@ export {
   //section video
   PROGRESS_BAR,
   VOLUME_BAR,
+  //section explore
+  BAR,
+  OVERLAY_IMAGE,
+  SLIDER_CONTAINER,
   //section gallery
   GALLERY_CONTAINER,
   INITIAL_PAINTINGS_ARRAY,
