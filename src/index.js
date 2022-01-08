@@ -23,6 +23,7 @@ import {
 import { showSelfcheck } from './js/utils/showSelfcheck';
 import { API_KEY } from './js/constants/MAPBOX';
 import GalleryList from './js/components/GalleryList';
+import ExploreSlider from './js/components/ExploreSlider';
 import User from './js/components/User';
 import FormSmall from './js/components/FormSmall';
 import FormLarge from './js/components/FormLarge';
@@ -36,6 +37,7 @@ import LargeVideo from './js/components/LargeVideo';
   // showSelfcheck();
 
   const carouselWelcome = new CarouselWelcome();
+  const exploreSlider = new ExploreSlider();
   const galleryList = new GalleryList();
   const user = new User();
   const formSmall = new FormSmall(user);
@@ -60,6 +62,7 @@ import LargeVideo from './js/components/LargeVideo';
   document.addEventListener('scroll', addGoBackBtn);
 
   carouselWelcome.setEventListeners();
+  exploreSlider.setEventListeners();
   galleryList.render();
 
   //event listeners

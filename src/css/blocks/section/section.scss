@@ -60,12 +60,53 @@
             width: 720px;
             max-width: 720px;
             align-self: center;
+            position: relative;
+            height: calc(668/1440 * 100vw);
+            max-height: 700px;
         }
 
-        &__img {
-            display: inline-block;
-            width: 100%;
+        &__bar {
+            position: absolute;
             height: 100%;
+            top: 0;
+            left: 59%;
+            width: 39px;
+            z-index: 2;
+            cursor: grab;
+        }
+
+        &__bar:hover>path {
+            fill: $link-hover;
+        }
+
+        &__bar:active>path {
+            fill: $link-active;
+        }
+
+        &__img-before,
+        &__img-after {
+            width: 100%;
+            height: auto;
+            position: absolute;
+            top: 0;
+            left: 0;
+            overflow: hidden;
+        }
+
+        &__img-before img,
+        &__img-after img {
+            display: block;
+            object-fit: contain;
+            width: 100%;
+            height: auto;
+        }
+
+        &__img-before {
+            z-index: 0;
+        }
+
+        &__img-after {
+            z-index: 1;
         }
 
 
