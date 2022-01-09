@@ -1,4 +1,4 @@
-import { BAR, OVERLAY_IMAGE, SLIDER_CONTAINER } from '../constants/MARKUP_SELECTORS';
+import { BAR, OVERLAY_IMAGE } from '../constants/MARKUP_SELECTORS';
 
 export default class ExploreSlider {
   constructor() {
@@ -11,7 +11,6 @@ export default class ExploreSlider {
     this.bar = BAR;
     this.overlay = OVERLAY_IMAGE;
     this.rect = null;
-    this.container = SLIDER_CONTAINER;
   }
 
   initialize(percent) {
