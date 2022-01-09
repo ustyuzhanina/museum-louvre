@@ -6,20 +6,28 @@ export default class ExploreSlider {
     this.slideReady = this.slideReady.bind(this);
     this.slideFinish = this.slideFinish.bind(this);
     this.slideMove = this.slideMove.bind(this);
+    this.initialize = this.initialize.bind(this);
     this.clicked = 0;
     this.bar = BAR;
-    this.barWidth = 0;
     this.overlay = OVERLAY_IMAGE;
+    this.rect = null;
     this.container = SLIDER_CONTAINER;
-    this.width = 0;
-    this.height = 0;
+  }
+
+  initialize(percent) {
+    this.rect = this.overlay.getBoundingClientRect();
+    this.barRect = this.bar.getBoundingClientRect();
+    let shift = this.barRect.width / 2;
+    let polygonX = percent + (shift / this.rect.width) * 100;
+
+    this.bar.style.left = percent + '%';
+    this.overlay.style.clipPath = `polygon(0 0, ${polygonX}% 0, ${polygonX}% 100%, 0 100%)`;
   }
 
   getCursorPos(e) {
-    console.log(e);
     e = e.changedTouches ? e.changedTouches[0] : e;
-    let rect = this.overlay.getBoundingClientRect();
-    let x = e.clientX - rect.left;
+    this.rect = this.overlay.getBoundingClientRect();
+    let x = e.clientX - this.rect.left;
     return x;
   }
 
@@ -37,21 +45,21 @@ export default class ExploreSlider {
   slideMove(e) {
     if (this.clicked == 0) return false;
 
+    this.barRect = this.bar.getBoundingClientRect();
     let pos = this.getCursorPos(e);
-    let overlayWidth = this.overlay.offsetWidth;
-    //let barWidth = getSize(this.bar).width;
 
-    /* Prevent the slider from being positioned outside the image: */
     if (pos < 0) pos = 0;
-    if (pos > overlayWidth) pos = overlayWidth;
+    if (pos > this.rect.width - this.barRect.width) pos = this.rect.width - this.barRect.width;
+    //console.log(pos);
     this.slide(pos);
   }
 
   slide(x) {
-    //resize the image
-    this.overlay.style.width = x + 'px';
+    let shift = this.barRect.width / 2;
+    let polygonX = ((x + shift) / this.rect.width) * 100;
+    this.overlay.style.clipPath = `polygon(0 0, ${polygonX}% 0, ${polygonX}% 100%, 0 100%)`;
     //position the slider
-    this.bar.style.left = this.overlay.offsetWidth - this.bar.offsetWidth / 2 + 'px';
+    this.bar.style.left = x + 'px';
   }
 
   setEventListeners() {

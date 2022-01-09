@@ -102,11 +102,12 @@
         }
 
         &__img-before {
-            z-index: 0;
+            z-index: 1;
+            clip-path: polygon(0 0, 62% 0, 62% 100%, 0 100%);
         }
 
         &__img-after {
-            z-index: 1;
+            z-index: 0;
         }
 
 

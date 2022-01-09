@@ -20,7 +20,7 @@ const CAROUSEL_ARROW_CONTAINER = document.querySelector('.carousel__arrow-contai
 
 //SECTION EXPLORE slider
 const BAR = document.querySelector('.section_explore__bar');
-const OVERLAY_IMAGE = document.querySelector('.section_explore__img-after');
+const OVERLAY_IMAGE = document.querySelector('.section_explore__img-before');
 const SLIDER_CONTAINER = document.querySelector('.container section_explore__img-container');
 
 //section_video

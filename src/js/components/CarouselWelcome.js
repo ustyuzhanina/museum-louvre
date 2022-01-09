@@ -99,23 +99,21 @@ export default class CarouselWelcome {
       e.preventDefault();
       this.dragXStart = e.pageX;
       this.dragYStart = e.pageY;
-      console.log(e.type);
     });
 
     CAROUSEL_IMAGE_BOX.addEventListener('mouseup', e => {
       this.dragXEnd = e.pageX;
       this.dragYEnd = e.pageY;
 
-      //we take coef of 4 to make sure that we swipe horizontally excluding page scrolling actions
       const distX = this.dragXEnd - this.dragXStart;
       const distY = this.dragYEnd - this.dragYStart;
 
-      if (this.dragXStart > this.dragXEnd && distX / distY > 4) {
+      if (this.dragXStart > this.dragXEnd && Math.abs(distX) > 30) {
         e.preventDefault();
         if (this.isEnabled) {
           this.nextItem(this.currentItem);
         }
-      } else if (this.dragXStart < this.dragXEnd && distX / distY > 4) {
+      } else if (this.dragXStart < this.dragXEnd && Math.abs(distX) > 30) {
         e.preventDefault();
         if (this.isEnabled) {
           this.previousItem(this.currentItem);

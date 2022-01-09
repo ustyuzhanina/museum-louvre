@@ -62,7 +62,10 @@ import LargeVideo from './js/components/LargeVideo';
   document.addEventListener('scroll', addGoBackBtn);
 
   carouselWelcome.setEventListeners();
+
+  exploreSlider.initialize(59);
   exploreSlider.setEventListeners();
+
   galleryList.render();
 
   //event listeners
