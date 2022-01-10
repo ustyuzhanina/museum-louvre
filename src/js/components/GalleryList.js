@@ -11,6 +11,7 @@ export default class GalleryList {
   constructor() {
     this.render = this.render.bind(this);
     this.fillColumn = this.fillColumn.bind(this);
+    this.setEventListeners = this.setEventListeners.bind(this);
   }
 
   render() {
@@ -35,4 +36,6 @@ export default class GalleryList {
       column.appendChild(img);
     }
   }
+
+  setEventListeners() {}
 }

@@ -63,10 +63,12 @@ import LargeVideo from './js/components/LargeVideo';
 
   carouselWelcome.setEventListeners();
 
+  //choose the extent in % to which the initial picture should be shown
   exploreSlider.initialize(59);
   exploreSlider.setEventListeners();
 
   galleryList.render();
+  galleryList.setEventListeners();
 
   //event listeners
 
