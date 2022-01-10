@@ -78,9 +78,9 @@ Your comments and advice are always welcome at elena.ustyuzhanina.rus@gmail.com
 <img src="./src/assets/img/readme/gallery.jpg" width="100%" height="auto" style="border-radius: 4px; box-shadow: 0 0 16px 1px grey">
 
 - on page renewal the order of pictures changes [+]
-- on page scrolling down the pictures come into view with animation: the images are smoothly elevated gradually growing. The animation example is at Louvre's website https://www.louvre.fr/ [+]
-- if you scroll up and then start scrolling down again the animation will repeat [+]
--  on page renewal, if it was scrolled to the Section Gallery, the animation should repeat [+] 
+- on page scrolling down the pictures come into view with animation: the images are smoothly elevated gradually growing. The animation example is at Louvre's website https://www.louvre.fr/ 
+- if you scroll up and then start scrolling down again the animation will repeat 
+-  on page renewal, if it was scrolled to the Section Gallery, the animation should repeat  
 
 ---
 

@@ -72,14 +72,59 @@
             width: 39px;
             z-index: 2;
             cursor: grab;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: nowrap;
+            justify-content: flex-start;
+            align-items: center;
         }
 
-        &__bar:hover>path {
-            fill: $link-hover;
+        &__bar-topline,
+        &__bar-bottomline {
+            background-color: #fff;
+            border: none;
+            flex-shrink: 1;
+            flex-grow: 1;
+            height: 50%;
+            width: 5px;
+            pointer-events: none;
         }
 
-        &__bar:active>path {
-            fill: $link-active;
+        &__bar-circle {
+            background-color: transparent;
+            border: 5px solid #fff;
+            flex-shrink: 0;
+            flex-grow: 0;
+            pointer-events: none;
+            width: 39px;
+            max-width: 39px;
+            height: 39px;
+            max-height: 39px;
+            border-radius: 50%;
+        }
+
+        &__bar:hover &__bar-topline {
+            background-color: $link-hover;
+        }
+
+        &__bar:active &__bar-topline {
+            background-color: $link-active;
+        }
+
+        &__bar:hover &__bar-bottomline {
+            background-color: $link-hover;
+        }
+
+        &__bar:active &__bar-bottomline {
+            background-color: $link-active;
+        }
+
+        &__bar:hover &__bar-circle {
+            border-color: $link-hover;
+        }
+
+        &__bar:focus &__bar-circle {
+            border-color: $link-active;
         }
 
         &__img-before,
@@ -95,7 +140,7 @@
         &__img-before img,
         &__img-after img {
             display: block;
-            object-fit: contain;
+            object-fit: cover;
             width: 100%;
             height: auto;
         }
@@ -909,6 +954,21 @@
                 overflow: hidden;
             }
 
+            &__bar {
+                width: 35px;
+            }
+
+            &__bar-topline,
+            &__bar-bottomline {
+                width: 4px;
+            }
+
+            &__bar-circle {
+                border: 4px solid #fff;
+                width: 35px;
+                height: 35px;
+            }
+
             &__img-before,
             &__img-after {
                 height: calc(368 / 420 * 100vw);
@@ -1088,6 +1148,27 @@
     }
 }
 
+@media (max-width: 500px) {
+    .section {
+        &_explore {
+            &__bar {
+                width: 30px;
+            }
+
+            &__bar-topline,
+            &__bar-bottomline {
+                width: 4px;
+            }
+
+            &__bar-circle {
+                border: 4px solid #fff;
+                width: 30px;
+                height: 30px;
+            }
+        }
+    }
+}
+
 @media (max-width: 420px) {
     .section {
 
@@ -1112,6 +1193,21 @@
 
             &__description {
                 margin-bottom: calc(23 / 420* 100vw);
+            }
+
+            &__bar {
+                width: 20px;
+            }
+
+            &__bar-topline,
+            &__bar-bottomline {
+                width: 2px;
+            }
+
+            &__bar-circle {
+                border: 2px solid #fff;
+                width: 20px;
+                height: 20px;
             }
         }
 
