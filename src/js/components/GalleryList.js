@@ -46,7 +46,7 @@ export default class GalleryList {
   }
 
   checkVisibility(elem) {
-    const visibilityBorder = 150;
+    const visibilityBorder = 20;
     const elemRect = elem.getBoundingClientRect();
     return Boolean(elemRect.top + visibilityBorder - window.innerHeight <= 0);
   }
