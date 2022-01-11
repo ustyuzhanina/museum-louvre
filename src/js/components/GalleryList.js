@@ -11,7 +11,11 @@ export default class GalleryList {
   constructor() {
     this.render = this.render.bind(this);
     this.fillColumn = this.fillColumn.bind(this);
+    this.animateScroll = this.animateScroll.bind(this);
+    this.checkVisibility = this.checkVisibility.bind(this);
     this.setEventListeners = this.setEventListeners.bind(this);
+    this.scrollCache = 0;
+    this.gallery = document.querySelector('.section_gallery');
   }
 
   render() {
@@ -37,5 +41,31 @@ export default class GalleryList {
     }
   }
 
-  setEventListeners() {}
+  checkScrollDown(e) {
+    return window.scrollY > this.scrollCache;
+  }
+
+  checkVisibility(elem) {
+    const visibilityBorder = 150;
+    const elemRect = elem.getBoundingClientRect();
+    return Boolean(elemRect.top + visibilityBorder - window.innerHeight <= 0);
+  }
+
+  animateScroll() {
+    if (!this.checkVisibility(this.gallery)) return false;
+
+    let images = document.querySelectorAll('.gallery-container__item');
+    images.forEach(image => {
+      if (
+        !this.checkVisibility(image) ||
+        image.classList.contains('gallery-container__item_animated')
+      )
+        return false;
+      image.classList.add('gallery-container__item_animated');
+    });
+  }
+
+  setEventListeners() {
+    window.addEventListener('scroll', this.animateScroll);
+  }
 }
