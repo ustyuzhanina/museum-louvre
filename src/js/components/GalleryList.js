@@ -16,6 +16,10 @@ export default class GalleryList {
     this.setEventListeners = this.setEventListeners.bind(this);
     this.scrollCache = 0;
     this.gallery = document.querySelector('.section_gallery');
+    this.imageClass = {
+      common: '.gallery-container__item',
+      animated: 'gallery-container__item_animated',
+    };
   }
 
   render() {
@@ -51,18 +55,28 @@ export default class GalleryList {
     return Boolean(elemRect.top + visibilityBorder - window.innerHeight <= 0);
   }
 
+  //TODO: refactor resetting animation for better look
   animateScroll() {
     if (!this.checkVisibility(this.gallery)) return false;
 
-    let images = document.querySelectorAll('.gallery-container__item');
+    let newScroll = window.scrollY;
+
+    let images = document.querySelectorAll(this.imageClass.common);
     images.forEach(image => {
-      if (
-        !this.checkVisibility(image) ||
-        image.classList.contains('gallery-container__item_animated')
-      )
-        return false;
-      image.classList.add('gallery-container__item_animated');
+      //on scroll down
+      if (newScroll > this.scrollCache) {
+        if (!this.checkVisibility(image) || image.classList.contains(this.imageClass.animated))
+          return false;
+        image.classList.add(this.imageClass.animated);
+      } else {
+        //on scroll up
+        if (this.checkVisibility(image) && image.classList.contains(this.imageClass.animated)) {
+          image.classList.remove(this.imageClass.animated);
+        }
+      }
     });
+
+    this.scrollCache = newScroll <= 0 ? 0 : newScroll;
   }
 
   setEventListeners() {
