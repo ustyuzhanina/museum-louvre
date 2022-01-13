@@ -24,15 +24,15 @@ Your comments and advice are always welcome at elena.ustyuzhanina.rus@gmail.com
 
 ---
 
-## 2. **Section Explore** / *TODO*
+## 2. **Section Explore** / *Done*
 
 <img src="./src/assets/img/readme/explore.jpg" width="100%" height="auto" style="border-radius: 4px; box-shadow: 0 0 16px 1px grey">
 
-- you can drag the dividing bar horizontally
-- the dividing bar never goes beyond the picture side borders
-- on dragging from right to left the below picture smoothly shows up
-- on dragging from left to right the top picture smoothly shows up
-- on page renewal the dividing bar returns to its initial state
+- you can drag the dividing bar horizontally [+]
+- the dividing bar never goes beyond the picture side borders [+]
+- on dragging from right to left the below picture smoothly shows up [+]
+- on dragging from left to right the top picture smoothly shows up [+]
+- on page renewal the dividing bar returns to its initial state [+]
 
 ---
 
@@ -73,7 +73,7 @@ Your comments and advice are always welcome at elena.ustyuzhanina.rus@gmail.com
 
 ---
 
-## 4. **Section Gallery** / *TODO*
+## 4. **Section Gallery** / *Done*
 
 <img src="./src/assets/img/readme/gallery.jpg" width="100%" height="auto" style="border-radius: 4px; box-shadow: 0 0 16px 1px grey">
 
