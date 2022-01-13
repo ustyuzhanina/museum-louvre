@@ -45,36 +45,33 @@ export default class GalleryList {
     }
   }
 
-  checkScrollDown(e) {
-    return window.scrollY > this.scrollCache;
-  }
-
   checkVisibility(elem) {
     const visibilityBorder = 20;
     const elemRect = elem.getBoundingClientRect();
     return Boolean(elemRect.top + visibilityBorder - window.innerHeight <= 0);
   }
 
-  //TODO: refactor resetting animation for better look
   animateScroll() {
     if (!this.checkVisibility(this.gallery)) return false;
 
     let newScroll = window.scrollY;
-
     let images = document.querySelectorAll(this.imageClass.common);
-    images.forEach(image => {
-      //on scroll down
-      if (newScroll > this.scrollCache) {
+
+    //on scroll down
+    if (newScroll > this.scrollCache) {
+      images.forEach(image => {
         if (!this.checkVisibility(image) || image.classList.contains(this.imageClass.animated))
           return false;
         image.classList.add(this.imageClass.animated);
-      } else {
-        //on scroll up
-        if (this.checkVisibility(image) && image.classList.contains(this.imageClass.animated)) {
+      });
+    } else if (newScroll < this.scrollCache) {
+      //on scroll up
+      images.forEach(image => {
+        if (!this.checkVisibility(image) && image.classList.contains(this.imageClass.animated)) {
           image.classList.remove(this.imageClass.animated);
         }
-      }
-    });
+      });
+    }
 
     this.scrollCache = newScroll <= 0 ? 0 : newScroll;
   }
