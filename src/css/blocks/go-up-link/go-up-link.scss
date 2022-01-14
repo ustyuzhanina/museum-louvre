@@ -8,7 +8,7 @@
     height: 45px;
     bottom: 2%;
     right: .5%;
-    z-index: 20;
+    z-index: 4;
     border-radius: 50%;
     text-decoration: none;
     text-align: center;
@@ -31,6 +31,12 @@
         transform: translateY(-50%);
         transition-property: all;
         transition-duration: .5s;
+    }
+
+    &_visible:active &__arrow {
+        transform: translateY(0);
+        transition-property: all;
+        transition-duration: .1s;
     }
 
 
