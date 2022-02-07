@@ -24,6 +24,7 @@ import {
 } from './js/constants/MARKUP_SELECTORS';
 import { showSelfcheck } from './js/utils/showSelfcheck';
 import { MAPBOX } from './js/constants/MAPBOX';
+import { MAPBOX_MARKERS } from './js/constants/MAPBOX_MARKERS';
 import GalleryList from './js/components/GalleryList';
 import ExploreSlider from './js/components/ExploreSlider';
 import User from './js/components/User';
@@ -33,7 +34,7 @@ import FormValidator from './js/components/FormValidator';
 import CarouselVideo from './js/components/CarouselVideo';
 import CarouselWelcome from './js/components/CarouselWelcome';
 import LargeVideo from './js/components/LargeVideo';
-import mapboxgl from 'mapbox-gl';
+import mapboxgl from '!mapbox-gl';
 
 //IIFE
 (function () {
@@ -115,5 +116,19 @@ import mapboxgl from 'mapbox-gl';
     center: [2.3364, 48.86091],
     zoom: 15.7,
     bearing: 7,
+  });
+
+  //add markers to the map
+  MAPBOX_MARKERS.features.forEach(marker => {
+    const el = document.createElement('div');
+
+    if (marker.properties.title === 'Marker 1') {
+      el.className = 'section_contacts__marker section_contacts__marker_highlight';
+    } else if (marker.properties.title === 'Marker 2') {
+      el.className = 'section_contacts__marker section_contacts__marker_common';
+    }
+
+    //make a marker for every feature and add it to the map
+    new mapboxgl.Marker(el).setLngLat(marker.geometry.coordinates).addTo(map);
   });
 })();

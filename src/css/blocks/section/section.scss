@@ -576,6 +576,24 @@
             box-shadow: 0 0 1px#666666;
         }
 
+        &__marker {
+            width: 25px;
+            height: 35px;
+            background-color: transparent;
+            cursor: pointer;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: auto;
+
+            &_highlight {
+                background-image: url('./assets/svg/contacts/marker-highlight.svg');
+            }
+
+            &_common {
+                background-image: url('./assets/svg/contacts/marker-common.svg');
+            }
+        }
+
     }
 
 }
