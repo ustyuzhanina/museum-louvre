@@ -8,6 +8,7 @@
     <link rel="shortcut icon" href="./assets/svg/favicon.ico">
     <title><%=
       htmlWebpackPlugin.options.title %></title>
+    <!-- <link href='https://api.mapbox.com/mapbox-gl-js/v2.7.0/mapbox-gl.css' rel='stylesheet'> -->
 </head>
 
 <body class="page">
@@ -646,7 +647,7 @@
                             <a href="mailto:info@louvre.fr">info@louvre.fr</a></p>
                     </div>
 
-                    <img class="section_contacts__map" src="./assets/img/contacts/map.jpg" alt="Map of Louvre">
+                    <div class="section_contacts__map" id="map"></div>
 
                 </div>
 
@@ -706,8 +707,6 @@
             <p class="username">Ustyuzhanina</p>
         </div>
     </footer>
-
-
 
 </body>
 

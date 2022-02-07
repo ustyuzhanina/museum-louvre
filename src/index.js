@@ -1,6 +1,7 @@
 import 'normalize.css';
 import './assets/fonts/fonts.scss';
 import './index.scss';
+import 'mapbox-gl/dist/mapbox-gl.css';
 
 // connect with js files
 import {
@@ -19,9 +20,10 @@ import {
   MOBILE_MENU,
   HMBG_BUTTON,
   GO_BACK_BUTTON,
+  //MAP_CONTAINER,
 } from './js/constants/MARKUP_SELECTORS';
 import { showSelfcheck } from './js/utils/showSelfcheck';
-import { API_KEY } from './js/constants/MAPBOX';
+import { MAPBOX } from './js/constants/MAPBOX';
 import GalleryList from './js/components/GalleryList';
 import ExploreSlider from './js/components/ExploreSlider';
 import User from './js/components/User';
@@ -31,6 +33,7 @@ import FormValidator from './js/components/FormValidator';
 import CarouselVideo from './js/components/CarouselVideo';
 import CarouselWelcome from './js/components/CarouselWelcome';
 import LargeVideo from './js/components/LargeVideo';
+import mapboxgl from 'mapbox-gl';
 
 //IIFE
 (function () {
@@ -102,5 +105,15 @@ import LargeVideo from './js/components/LargeVideo';
     e.preventDefault();
     formLarge.close();
     formValidator.removeEventListeners();
+  });
+
+  //mapbox
+  mapboxgl.accessToken = MAPBOX.accessToken;
+  const map = new mapboxgl.Map({
+    container: 'map',
+    style: MAPBOX.styleUrl,
+    center: [2.3364, 48.86091],
+    zoom: 15.7,
+    bearing: 7,
   });
 })();
