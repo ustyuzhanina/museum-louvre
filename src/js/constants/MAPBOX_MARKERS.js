@@ -3,7 +3,8 @@ export const MAPBOX_MARKERS = {
     {
       type: 'Feature',
       properties: {
-        title: 'Marker 1',
+        title: 'Louvre Museum',
+        description: 'You should definitely visit this place!',
       },
       geometry: {
         coordinates: [2.3364, 48.86091],
@@ -13,7 +14,8 @@ export const MAPBOX_MARKERS = {
     {
       type: 'Feature',
       properties: {
-        title: 'Marker 2',
+        title: 'Tunnel des Tuileries',
+        description: 'You should definitely visit this place!',
       },
       geometry: {
         coordinates: [2.3333, 48.8602],
@@ -23,7 +25,8 @@ export const MAPBOX_MARKERS = {
     {
       type: 'Feature',
       properties: {
-        title: 'Marker 2',
+        title: `Sarcophage d'Abou Roach`,
+        description: 'You should definitely visit this place!',
       },
       geometry: {
         coordinates: [2.3397, 48.8607],
@@ -33,7 +36,8 @@ export const MAPBOX_MARKERS = {
     {
       type: 'Feature',
       properties: {
-        title: 'Marker 2',
+        title: 'Arc de triomphe du Carrousel',
+        description: 'You should definitely visit this place!',
       },
       geometry: {
         coordinates: [2.333, 48.8619],
@@ -43,7 +47,8 @@ export const MAPBOX_MARKERS = {
     {
       type: 'Feature',
       properties: {
-        title: 'Marker 2',
+        title: 'Rue de Rivoli',
+        description: 'You should definitely visit this place!',
       },
       geometry: {
         coordinates: [2.3365, 48.8625],

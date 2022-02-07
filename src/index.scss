@@ -10,6 +10,19 @@ html {
 
 @import "./css/variables";
 
+//mapbox styles
+button {
+    outline: none;
+}
+
+.mapboxgl-popup {
+    max-width: 100px;
+}
+
+.mapboxgl-popup-content {
+    font-family: $font-major;
+}
+
 @import "./css/blocks/page/page.scss";
 @import "./css/blocks/content/content.scss";
 @import "./css/blocks/header/header.scss";

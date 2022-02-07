@@ -114,7 +114,7 @@ import mapboxgl from '!mapbox-gl';
     container: 'map',
     style: MAPBOX.styleUrl,
     center: [2.3364, 48.86091],
-    zoom: 15.7,
+    zoom: 16,
     bearing: 7,
   });
 
@@ -122,13 +122,22 @@ import mapboxgl from '!mapbox-gl';
   MAPBOX_MARKERS.features.forEach(marker => {
     const el = document.createElement('div');
 
-    if (marker.properties.title === 'Marker 1') {
+    if (marker.properties.title === 'Louvre Museum') {
       el.className = 'section_contacts__marker section_contacts__marker_highlight';
-    } else if (marker.properties.title === 'Marker 2') {
+    } else {
       el.className = 'section_contacts__marker section_contacts__marker_common';
     }
 
     //make a marker for every feature and add it to the map
-    new mapboxgl.Marker(el).setLngLat(marker.geometry.coordinates).addTo(map);
+    new mapboxgl.Marker(el)
+      .setLngLat(marker.geometry.coordinates)
+      .setPopup(
+        new mapboxgl.Popup({ offset: 25 }).setHTML(
+          '<h3>' + marker.properties.title + '</h3><p>' + marker.properties.description + '</p>',
+        ),
+      )
+      .addTo(map);
   });
+
+  map.addControl(new mapboxgl.NavigationControl());
 })();
