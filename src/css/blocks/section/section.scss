@@ -569,8 +569,10 @@
 
         &__map {
             display: inline-block;
-            width: 960px;
-            height: 620px;
+            flex-basis: 960px;
+            max-width: 960px;
+            height: calc(100vw * 620 / 1480);
+            max-height: 620px;
             flex-shrink: 1;
             background-color: #eee;
             box-shadow: 0 0 1px#666666;
@@ -654,11 +656,6 @@
     .section {
 
         &_contacts {
-            &__map {
-                width: calc(960 / 1480 * 100vw);
-                ;
-                height: auto;
-            }
 
             &__details {
                 width: 282px;
@@ -902,9 +899,10 @@
             }
 
             &__map {
-                max-width: none;
+                flex-shrink: 0;
+                flex-basis: auto;
                 width: 100%;
-                height: auto;
+                height: calc(100vw * 476 / 768);
             }
 
 
@@ -1346,6 +1344,7 @@
 
             &__map {
                 margin-top: 25px;
+                height: calc(100vw * 248 / 420);
             }
         }
     }

@@ -20,9 +20,7 @@ import {
   MOBILE_MENU,
   HMBG_BUTTON,
   GO_BACK_BUTTON,
-  //MAP_CONTAINER,
 } from './js/constants/MARKUP_SELECTORS';
-import { showSelfcheck } from './js/utils/showSelfcheck';
 import { MAPBOX } from './js/constants/MAPBOX';
 import { MAPBOX_MARKERS } from './js/constants/MAPBOX_MARKERS';
 import GalleryList from './js/components/GalleryList';
@@ -38,8 +36,6 @@ import mapboxgl from '!mapbox-gl';
 
 //IIFE
 (function () {
-  // showSelfcheck();
-
   const carouselWelcome = new CarouselWelcome();
   const exploreSlider = new ExploreSlider();
   const galleryList = new GalleryList();

@@ -40,9 +40,6 @@ const FORM_SMALL_BASIC_NUMBER = FORM_SMALL.querySelector('#basicNumber');
 const FORM_SMALL_SENIOR_NUMBER = FORM_SMALL.querySelector('#seniorNumber');
 const SECTION_TICKETS_BUTTON = document.querySelector('.section_tickets__button');
 
-//section_contacts
-const MAP_CONTAINER = document.querySelector('.section_contacts__map');
-
 //large-form selectors
 const FORM_CONTAINER = document.querySelector('.form-container');
 const CLOSE_BUTTON = document.querySelector('.close-button');
@@ -160,8 +157,6 @@ export {
   FORM_SMALL_BASIC_NUMBER,
   FORM_SMALL_SENIOR_NUMBER,
   SECTION_TICKETS_BUTTON,
-  //section_contacts
-  MAP_CONTAINER,
   //large form
   FORM_CONTAINER,
   FORM_LARGE,
