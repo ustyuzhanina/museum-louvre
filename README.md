@@ -117,10 +117,10 @@ Your comments and advice are always welcome at elena.ustyuzhanina.rus@gmail.com
 
 ---
 
-## 7. **Section Contacts** / *TODO*
+## 7. **Section Contacts** / *Done*
 
 <img src="./src/assets/img/readme/contacts.jpg" width="100%" height="auto" style="border-radius: 4px; box-shadow: 0 0 16px 1px grey">
 
-- the map is interactive
-- the map shows the markers located and styled in compliance with the design
-- the map is styled in compliance with the design
+- the map is interactive [+]
+- the map shows the markers located and styled in compliance with the design [+]
+- the map is styled in compliance with the design [+]

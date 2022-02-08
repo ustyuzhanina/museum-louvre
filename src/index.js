@@ -37,6 +37,7 @@ import mapboxgl from '!mapbox-gl';
 //IIFE
 (function () {
   const carouselWelcome = new CarouselWelcome();
+  const carouselVideo = new CarouselVideo();
   const exploreSlider = new ExploreSlider();
   const galleryList = new GalleryList();
   const user = new User();
@@ -72,15 +73,15 @@ import mapboxgl from '!mapbox-gl';
 
   //event listeners
 
-  // PROGRESS_BAR.addEventListener('input', function (e) {
-  //   const value = e.target.value;
-  //   this.style.background = `linear-gradient(to right, #710707 0%, #710707 ${value}%, #C4C4C4 ${value}%, #C4C4C4 100%)`;
-  // });
+  PROGRESS_BAR.addEventListener('input', function (e) {
+    const value = e.target.value;
+    this.style.background = `linear-gradient(to right, #710707 0%, #710707 ${value}%, #C4C4C4 ${value}%, #C4C4C4 100%)`;
+  });
 
-  // VOLUME_BAR.addEventListener('input', function (e) {
-  //   const value = e.target.value;
-  //   this.style.background = `linear-gradient(to right, #710707 0%, #710707 ${value}%, #C4C4C4 ${value}%, #C4C4C4 100%)`;
-  // });
+  VOLUME_BAR.addEventListener('input', function (e) {
+    const value = e.target.value;
+    this.style.background = `linear-gradient(to right, #710707 0%, #710707 ${value}%, #C4C4C4 ${value}%, #C4C4C4 100%)`;
+  });
 
   function toggleMobileMenu() {
     MOBILE_MENU.classList.toggle('mobile-menu_open');
