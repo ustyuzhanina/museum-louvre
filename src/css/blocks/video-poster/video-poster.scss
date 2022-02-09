@@ -1,3 +1,23 @@
+@keyframes left {
+    from {
+        left: 0;
+    }
+
+    to {
+        left: -100%;
+    }
+}
+
+@keyframes right {
+    from {
+        left: 100%;
+    }
+
+    to {
+        left: 0;
+    }
+}
+
 .video-poster {
     position: relative;
     display: flex;
@@ -7,115 +27,47 @@
     max-width: 452px;
     max-height: 254px;
     background-color: $bg-temp;
+    box-sizing: border-box;
+    animation: .5s ease-in-out;
+
+    &_to-left {
+        animation-name: left;
+    }
+
+    &_to-right {
+        animation-name: right;
+        animation-direction: reverse;
+    }
+
+    &_from-left {
+        animation-name: left;
+        animation-direction: reverse;
+    }
+
+    &_from-right {
+        animation-name: right;
+    }
+
+    &__image_active,
+    &__image_next {
+        display: block;
+        position: absolute;
+    }
+
+    &__image_next {
+        top: 0;
+        width: 100%;
+    }
 
     &__iframe {
-        position: absolute;
-        z-index: 0;
-        top: 0;
-        left: 0;
+        border: none;
         width: 100%;
         height: 100%;
     }
 
-    &__overlay {
-        display: flex;
-        background-position: center center;
-        background-size: cover;
-        background-repeat: no-repeat;
-    }
-
-    &__top-line {
-        padding: 7px 28px 0 10px;
-        z-index: 10;
-        top: 0;
-        left: 0;
-        right: 0;
-        height: 25%;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-    }
-
-    &__overlay__button-line {
-        z-index: 9;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-    }
-
-    &__overlay_1 {
-        background-image: url('./assets/img/video/poster1.jpg');
-    }
-
-    &__overlay_2 {
-        background-image: url('./assets/img/video/poster2.jpg');
-    }
-
-    &__overlay_3 {
-        background-image: url('./assets/img/video/poster3.jpg');
-    }
-
-    &__icon {
-        display: block;
-        margin-right: 10px;
-        width: 40px;
-        height: 40px;
-    }
-
-    &__heading {
-        font-family: $font-major;
-        color: $light;
-        font-weight: 400;
-        font-size: 18px;
-        line-height: 18px;
-        //margin-right: 10px;
-        width: calc(188 / 1024 * 100vw);
-        max-width: 342px;
-        text-overflow: ellipsis;
-        white-space: nowrap;
-        // max-height: 18px;
-        overflow: hidden;
-    }
-
-    &__options {
-        height: 20px;
-        width: 18px;
-        background-position: center center;
-        background-repeat: no-repeat;
-        background-color: transparent;
-        margin-left: auto;
-        background-image: url('./assets/svg/video/icon-options.svg');
-    }
-
-    &__youtube-button {
-        background-color: transparent;
-        width: calc(68 / 1024 * 100vw);
-        height: calc(48 / 1024 * 100vw);
-        max-height: 60px;
-        max-width: 80px;
-        margin: auto;
-        //margin-top: 10%;
-        background-image: url('./assets/svg/icon-youtube-play.svg');
-        background-position: center center;
-        background-repeat: no-repeat;
-        background-color: transparent;
-        background-size: contain;
-        transition: all $speed-fast;
-    }
-
-    &__youtube-button:hover {
-        transform: scale(1.3);
-    }
 }
 
-@media (max-width: 1024px) {
-    .video-poster {
-        &__top-line {
-            padding-top: 18px;
-        }
-    }
-}
+
 
 @media (max-width: 950px) {
     .video-poster {
@@ -125,58 +77,5 @@
         &_3 {
             display: none;
         }
-
-        &__heading {
-            width: calc(183 / 768 * 100vw);
-            max-width: 183px;
-        }
-
-        &__youtube-button {
-            width: calc(68 / 768 * 100vw);
-            height: calc(48 / 768 * 100vw);
-            max-height: 48px;
-            max-width: 68px;
-        }
-    }
-}
-
-@media (max-width: 670px) {
-    .video-poster {
-
-        &__top-line {
-            margin-top: 10px;
-            padding: 0 10px 0 10px;
-        }
-
-        &__heading {
-            width: calc(108 / 420 * 100vw);
-            max-width: 342px;
-        }
-
-        &__youtube-button {
-            width: calc(68 / 420 * 100vw);
-            height: calc(48 / 420 * 100vw);
-            max-height: 48px;
-            max-width: 68px;
-        }
-    }
-}
-
-@media (max-width: 420px) {
-    .video-poster {
-
-        &__top-line {
-            justify-content: flex-start;
-            height: 39px;
-        }
-
-        &__options {
-            display: none;
-        }
-
-        &__button-line {
-            z-index: 10;
-        }
-
     }
 }

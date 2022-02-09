@@ -5,8 +5,6 @@ import 'mapbox-gl/dist/mapbox-gl.css';
 
 // connect with js files
 import {
-  PROGRESS_BAR,
-  VOLUME_BAR,
   FORM_CONTAINER,
   CLOSE_BUTTON,
   PAGE,
@@ -29,14 +27,15 @@ import User from './js/components/User';
 import FormSmall from './js/components/FormSmall';
 import FormLarge from './js/components/FormLarge';
 import FormValidator from './js/components/FormValidator';
-import CarouselVideo from './js/components/CarouselVideo';
+import Videoplayer from './js/components/Videoplayer';
 import CarouselWelcome from './js/components/CarouselWelcome';
-import LargeVideo from './js/components/LargeVideo';
+import CarouselVideo from './js/components/CarouselVideo';
 import mapboxgl from '!mapbox-gl';
 
 //IIFE
 (function () {
   const carouselWelcome = new CarouselWelcome();
+  const videoplayer = new Videoplayer();
   const carouselVideo = new CarouselVideo();
   const exploreSlider = new ExploreSlider();
   const galleryList = new GalleryList();
@@ -71,17 +70,7 @@ import mapboxgl from '!mapbox-gl';
   galleryList.render();
   galleryList.setEventListeners();
 
-  //event listeners
-
-  PROGRESS_BAR.addEventListener('input', function (e) {
-    const value = e.target.value;
-    this.style.background = `linear-gradient(to right, #710707 0%, #710707 ${value}%, #C4C4C4 ${value}%, #C4C4C4 100%)`;
-  });
-
-  VOLUME_BAR.addEventListener('input', function (e) {
-    const value = e.target.value;
-    this.style.background = `linear-gradient(to right, #710707 0%, #710707 ${value}%, #C4C4C4 ${value}%, #C4C4C4 100%)`;
-  });
+  videoplayer.setEventListeners();
 
   function toggleMobileMenu() {
     MOBILE_MENU.classList.toggle('mobile-menu_open');
