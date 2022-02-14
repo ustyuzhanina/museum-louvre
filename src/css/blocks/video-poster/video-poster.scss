@@ -21,7 +21,8 @@
 .video-poster {
     position: relative;
     display: flex;
-    overflow: hidden;
+    //overflow: hidden;
+    flex-shrink: 0;
     width: calc((100vw - 40px - 42px * 2) / 3);
     height: calc(((100vw - 40px - 42px * 2) / 3) * 254 / 452);
     max-width: 452px;
@@ -29,6 +30,7 @@
     background-color: $bg-temp;
     box-sizing: border-box;
     animation: .5s ease-in-out;
+    margin-right: 42px;
 
     &_to-left {
         animation-name: left;
@@ -73,9 +75,8 @@
     .video-poster {
         width: calc((100vw - 40px - 20px) / 2);
         height: calc(((100vw - 40px - 20px) / 2) * 199 / 354);
+        margin-right: 20px;
 
-        &_3 {
-            display: none;
-        }
+
     }
 }

@@ -94,6 +94,9 @@ import mapboxgl from '!mapbox-gl';
     formValidator.removeEventListeners();
   });
 
+  carouselVideo.render();
+  carouselVideo.setEventListeners();
+
   //mapbox
   mapboxgl.accessToken = MAPBOX.accessToken;
   const map = new mapboxgl.Map({
