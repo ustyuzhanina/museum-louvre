@@ -1,27 +1,6 @@
-@keyframes left {
-    from {
-        left: 0;
-    }
-
-    to {
-        left: -100%;
-    }
-}
-
-@keyframes right {
-    from {
-        left: 100%;
-    }
-
-    to {
-        left: 0;
-    }
-}
-
 .video-poster {
     position: relative;
     display: flex;
-    //overflow: hidden;
     flex-shrink: 0;
     width: calc((100vw - 40px - 42px * 2) / 3);
     height: calc(((100vw - 40px - 42px * 2) / 3) * 254 / 452);
@@ -29,42 +8,15 @@
     max-height: 254px;
     background-color: $bg-temp;
     box-sizing: border-box;
-    animation: .5s ease-in-out;
-    margin-right: 42px;
+    //animation: .5s ease-in-out;
+    //margin-right: 42px;
 
-    &_to-left {
-        animation-name: left;
-    }
-
-    &_to-right {
-        animation-name: right;
-        animation-direction: reverse;
-    }
-
-    &_from-left {
-        animation-name: left;
-        animation-direction: reverse;
-    }
-
-    &_from-right {
-        animation-name: right;
-    }
-
-    &__image_active,
-    &__image_next {
-        display: block;
-        position: absolute;
-    }
-
-    &__image_next {
-        top: 0;
-        width: 100%;
-    }
 
     &__iframe {
         border: none;
         width: 100%;
         height: 100%;
+        object-fit: cover;
     }
 
 }
@@ -75,7 +27,7 @@
     .video-poster {
         width: calc((100vw - 40px - 20px) / 2);
         height: calc(((100vw - 40px - 20px) / 2) * 199 / 354);
-        margin-right: 20px;
+        //margin-right: 20px;
 
 
     }

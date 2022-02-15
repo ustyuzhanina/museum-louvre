@@ -82,8 +82,10 @@
     "dependencies": {
         "babel-polyfill": "^6.26.0",
         "core-js": "3.4.1",
+        "jquery": "^3.6.0",
         "mapbox-gl": "^2.7.0",
-        "normalize.css": "^8.0.1"
+        "normalize.css": "^8.0.1",
+        "slick-carousel": "^1.8.1"
     },
     "resolutions": {
         "image-webpack-loader/imagemin-pngquant": "5.0.1"

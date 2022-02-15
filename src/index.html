@@ -6,6 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="./assets/svg/favicon.ico">
+    <!-- Add the slick-theme.css if you want default styling -->
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <!-- Add the slick-theme.css if you want default styling -->
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
     <title><%=
       htmlWebpackPlugin.options.title %></title>
 </head>
@@ -240,7 +244,7 @@
                 </div>
 
                 <div class="subcontainer large-video">
-                    <iframe class="large-video__iframe" width="1440" height="650" src="https://www.youtube.com/embed/zp1BXPX8jcU?controls=0?autoplay=0" title="YouTube video player" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" loading="lazy" allowfullscreen></iframe>
+                    <iframe class="large-video__iframe" width="1440" height="650" src="https://www.youtube.com/embed/zp1BXPX8jcU?controls=0?autoplay=0" title="YouTube video player" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" loading="auto" allowfullscreen></iframe>
                     <div class="overlay large-video__overlay large-video__overlay_0">
                         <button class="button button_play_large"></button>
                     </div>
@@ -257,23 +261,23 @@
                 <div class="subcontainer subcontainer__video-slider">
 
                     <div class="video-poster">
-                        <iframe class="video-poster__iframe" width="452" height="254" src="https://www.youtube.com/embed/zp1BXPX8jcU?controls=0?autoplay=0" title="YouTube video player" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" loading="lazy" allowfullscreen></iframe>
+                        <iframe class="video-poster__iframe" width="452" height="254" src="https://www.youtube.com/embed/zp1BXPX8jcU?controls=0?autoplay=0" title="YouTube video player" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" loading="auto" allowfullscreen></iframe>
                     </div>
 
                     <div class="video-poster">
-                        <iframe class="video-poster__iframe" width="452" height="254" src="https://www.youtube.com/embed/aWmJ5DgyWPI?controls=0?autoplay=0" title="YouTube video player" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" loading="lazy" allowfullscreen></iframe>
+                        <iframe class="video-poster__iframe" width="452" height="254" src="https://www.youtube.com/embed/aWmJ5DgyWPI?controls=0?autoplay=0" title="YouTube video player" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" loading="auto" allowfullscreen></iframe>
                     </div>
 
                     <div class="video-poster">
-                        <iframe class="video-poster__iframe" width="452" height="254" src="https://www.youtube.com/embed/Vi5D6FKhRmo?controls=0?autoplay=0" title="YouTube video player" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" loading="lazy" allowfullscreen></iframe>
+                        <iframe class="video-poster__iframe" width="452" height="254" src="https://www.youtube.com/embed/Vi5D6FKhRmo?controls=0?autoplay=0" title="YouTube video player" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" loading="auto" allowfullscreen></iframe>
                     </div>
 
                     <div class="video-poster">
-                        <iframe class="video-poster__iframe" width="452" height="254" src="https://www.youtube.com/embed/NOhDysLnTvY?controls=0?autoplay=0" title="YouTube video player" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" loading="lazy" allowfullscreen></iframe>
+                        <iframe class="video-poster__iframe" width="452" height="254" src="https://www.youtube.com/embed/NOhDysLnTvY?controls=0?autoplay=0" title="YouTube video player" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" loading="auto" allowfullscreen></iframe>
                     </div>
 
                     <div class="video-poster">
-                        <iframe class="video-poster__iframe" width="452" height="254" src="https://www.youtube.com/embed/2OR0OCr6uRE?controls=0?autoplay=0" title="YouTube video player" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" loading="lazy" allowfullscreen></iframe>
+                        <iframe class="video-poster__iframe" width="452" height="254" src="https://www.youtube.com/embed/2OR0OCr6uRE?controls=0?autoplay=0" title="YouTube video player" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" loading="auto" allowfullscreen></iframe>
                     </div>
 
                 </div>
@@ -281,12 +285,15 @@
                 <div class="video-pagination section_video__video-pagination">
                     <button class="button video-pagination__arrow video-pagination__arrow_left"></button>
 
-                    <div class="video-pagination__dots-container">
-                        <button class="button video-pagination__dot video-pagination__dot_active"></button>
-                        <button class="button video-pagination__dot"></button>
-                        <button class="button video-pagination__dot"></button>
-                        <button class="button video-pagination__dot"></button>
-                        <button class="button video-pagination__dot"></button>
+                    <div class="video-pagination__dots-container slick-dots">
+                        <ul>
+                            <li><button class="button video-pagination__dot"></button></li>
+                            <li><button class="button video-pagination__dot"></button></li>
+                            <li><button class="button video-pagination__dot"></button></li>
+                            <li><button class="button video-pagination__dot"></button></li>
+                            <li><button class="button video-pagination__dot"></button></li>
+                        </ul>
+
                     </div>
 
                     <button class="button video-pagination__arrow video-pagination__arrow_right"></button>
@@ -675,6 +682,7 @@
             <p class="username">Ustyuzhanina</p>
         </div>
     </footer>
+
 
 </body>
 
