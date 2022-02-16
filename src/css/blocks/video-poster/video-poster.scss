@@ -3,21 +3,31 @@
     display: flex;
     flex-shrink: 0;
     width: calc((100vw - 40px - 42px * 2) / 3);
-    height: calc(((100vw - 40px - 42px * 2) / 3) * 254 / 452);
+    //height: calc(((100vw - 40px - 42px * 2) / 3) * 254 / 452);
+    padding-bottom: 56.25%;
+    /* 16:9 */
+
+    height: 0;
     max-width: 452px;
     max-height: 254px;
     background-color: $bg-temp;
     box-sizing: border-box;
-    padding: 0;
     //animation: .5s ease-in-out;
     //margin-right: 42px;
 
 
     &__iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
         border: none;
         width: 100%;
         height: 100%;
-        object-fit: cover;
+        margin: 0;
+        box-sizing: border-box;
+    }
+
+    &__iframe * {
         margin: 0;
     }
 
@@ -28,7 +38,7 @@
 @media (max-width: 950px) {
     .video-poster {
         width: calc((100vw - 40px - 20px) / 2);
-        height: calc(((100vw - 40px - 20px) / 2) * 199 / 354);
+        //height: calc(((100vw - 40px - 20px) / 2) * 199 / 354);
         //margin-right: 20px;
 
 

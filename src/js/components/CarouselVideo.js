@@ -17,7 +17,7 @@ export default class CarouselVideo {
       slidesToShow: 3,
       slidesToScroll: 1,
       speed: 300,
-      initialSlide: 1,
+      initialSlide: 0,
       dots: true,
       prevArrow: '.video-pagination__arrow_left',
       nextArrow: '.video-pagination__arrow_right',

@@ -43,3 +43,40 @@
     opacity: 1;
     filter: $dot-active-filter;
 }
+
+/* fix margins between slides to fit the initial design */
+.slick-slide {
+    margin: 0 28px;
+    box-sizing: border-box;
+}
+
+/* the parent */
+.slick-list {
+    margin: 0 -28px;
+    box-sizing: border-box;
+}
+
+@media (max-width: 950px) {
+
+    /* fix margins between slides to fit the initial design */
+    .slick-slide {
+        margin: 0 20px;
+    }
+
+    /* the parent */
+    .slick-list {
+        margin: 0 -20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .slick-dots {
+        bottom: -42px;
+    }
+}
+
+@media (max-width: 420px) {
+    .slick-dots {
+        bottom: -60px;
+    }
+}
