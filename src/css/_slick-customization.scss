@@ -1,0 +1,45 @@
+.slick-dots {
+    bottom: -56px;
+}
+
+.slick-dotted.slick-slider {
+    margin-bottom: 0;
+}
+
+.slick-dots li {
+    position: static;
+    display: inline-block;
+    width: auto;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+}
+
+.slick-dots li button {
+    width: 12px;
+    height: 12px;
+    margin: 10px;
+    filter: $dot-common-filter;
+    background-image: url('./assets/svg/dot.svg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+
+    font-size: 0;
+    line-height: 0;
+    display: block;
+    padding: 0;
+
+    cursor: pointer;
+}
+
+.slick-dots li button:hover,
+.slick-dots li button:active {
+    filter: $dot-hover-filter;
+}
+
+.slick-dots li.slick-active button {
+    opacity: 1;
+    filter: $dot-active-filter;
+}

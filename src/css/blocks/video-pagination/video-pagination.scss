@@ -6,31 +6,6 @@
     margin: 0 auto;
     width: 211px;
 
-    &__dots-container {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-
-    &__dot {
-        width: 12px;
-        height: 12px;
-        margin: 10px;
-        filter: $dot-common-filter;
-        background-image: url('./assets/svg/dot.svg');
-        background-repeat: no-repeat;
-        background-position: center center;
-        background-size: contain;
-    }
-
-    &__dot_active {
-        filter: $dot-active-filter;
-    }
-
-
-    &__dot:hover {
-        filter: $dot-hover-filter;
-    }
 
     &__arrow {
         width: 10px;

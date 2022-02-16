@@ -8,6 +8,7 @@
     max-height: 254px;
     background-color: $bg-temp;
     box-sizing: border-box;
+    padding: 0;
     //animation: .5s ease-in-out;
     //margin-right: 42px;
 
@@ -17,6 +18,7 @@
         width: 100%;
         height: 100%;
         object-fit: cover;
+        margin: 0;
     }
 
 }
