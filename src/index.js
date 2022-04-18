@@ -32,6 +32,50 @@ import CarouselWelcome from './js/components/CarouselWelcome';
 import CarouselVideo from './js/components/CarouselVideo';
 import mapboxgl from '!mapbox-gl';
 
+//YouTube API - NOT WORKING - START
+const players = ['player0', 'player1', 'player2', 'player3', 'player4'];
+const videoIdArray = ['aWmJ5DgyWPI', 'Vi5D6FKhRmo', 'NOhDysLnTvY', '2OR0OCr6uRE', 'zp1BXPX8jcU'];
+let player0;
+
+//console.log(document.querySelectorAll('script'));
+
+window.onload = () => {
+  //This code loads the IFrame Player API code asynchronously.
+  const tag = document.createElement('script');
+  tag.src = 'http://www.youtube.com/player_api';
+  const firstScriptTag = document.getElementsByTagName('script')[0];
+  firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+  function onYouTubeIframeAPIReady() {
+    const i = 0;
+    player0 = new YT.Player(`video-poster__iframe_${i}`, {
+      videoId: videoIdArray[i],
+      playerVars: { rel: 0 },
+      events: {
+        onReady: onPlayerReady,
+        onStateChange: onPlayerStateChange,
+      },
+    });
+  }
+
+  function onPlayerReady(event) {
+    player0.playVideo();
+  }
+  function getPlayerState() {
+    return player0.getPlayerState();
+  }
+  function pauseVideo() {
+    player0.pauseVideo();
+  }
+
+  function playVideo() {
+    player0.playVideo();
+  }
+  //player0.playVideo();
+};
+
+//YouTube API - NOT WORKING - END
+
 //IIFE
 (function () {
   const carouselWelcome = new CarouselWelcome();

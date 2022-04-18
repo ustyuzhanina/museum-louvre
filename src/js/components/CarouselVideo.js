@@ -33,34 +33,6 @@ export default class CarouselVideo {
   }
 
   setEventListeners() {
-    const iframesArray = document.querySelectorAll(`.video-poster__iframe`);
-
-    // This code loads the IFrame Player API code asynchronously.
-    const tag = document.createElement('script');
-    tag.src = 'http://www.youtube.com/player_api';
-    const firstScriptTag = document.getElementsByTagName('script')[0];
-    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-
-    // This function creates an <iframe> (and YouTube player)
-    //    after the API code downloads.
-
-    iframesArray.forEach((iframe, i) => {
-      const uri = iframe.src;
-      const videoId = uri.match(/embed\/?/)[0];
-      let player;
-      function onYouTubePlayerAPIReady() {
-        player = new YT.Player(`video-poster__iframe_${iframe[i]}`, {
-          height: '254',
-          width: '452',
-          videoId: videoId,
-          events: {
-            onReady: onPlayerReady,
-            onStateChange: onPlayerStateChange,
-          },
-        });
-      }
-    });
-
     $(this.sliderClass).on('beforeChange', function (event, slick, currentSlide, nextSlide) {});
   }
 }
